@@ -1,10 +1,10 @@
 {
-  "name": "my-solid-website",
+  "name": "kurtisrogers.com",
   "author": {
-    "name": "RogueTrufflePig"
+    "name": "Kurtis Rogers"
   },
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Personal project to build a web app with Solid JS",
   "type": "module",
   "scripts": {
     "start": "vite",
