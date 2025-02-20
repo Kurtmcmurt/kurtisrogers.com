@@ -22,7 +22,7 @@ export default function Header( props: Readonly<Props> ) {
 
   return (
     <header on:scroll={handleScroll}>
-      {/* <A href="#main-content" class="button content-skipper">Skip to main content</A> */}
+      <A href="#main-content" class="button content-skipper">Skip to main content</A>
       <div class="content">
         <A href="/" class="logo text-white"><strong>Kurtis Rogers</strong></A>
         <div>

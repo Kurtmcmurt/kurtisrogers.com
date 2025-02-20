@@ -1,10 +1,12 @@
 import { Layout } from "@/helpers/layouts";
-import {Home as HomeContent, About as AboutContent} from "@/data/content";
+import {
+  Home as HomeContent,
+  About as AboutContent,
+  NotFound as NotFoundContent
+} from "@/data/content";
+import { JSX } from "solid-js";
 
-// either build something custom and light OR
-// look into: https://github.com/hannoeru/vite-plugin-pages?tab=readme-ov-file#solid-1
-
-export const Navigation = (children?: any) => [
+export const Navigation = (children?: JSX.Element[]) => [
   {
     path: "/",
     component: () => <Layout components={HomeContent} />,
@@ -19,6 +21,6 @@ export const Navigation = (children?: any) => [
   },
   {
     path: "*",
-    component: () => <Layout components={[]}>{children}</Layout>,
+    component: () => <Layout components={NotFoundContent} />,
   },
 ];

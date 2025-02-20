@@ -5,6 +5,10 @@ const AboutData = [
   {
     component: Banner,
     title: 'About',
+    children: <>
+      <p>I love space.</p>
+      <p>I love the mystery which surrounds space.</p>
+    </>,
     backgroundImage: {
       src: 'https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       alt: 'Soemthing',
