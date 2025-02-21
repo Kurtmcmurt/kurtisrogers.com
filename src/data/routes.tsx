@@ -20,7 +20,7 @@ export const Navigation = (children?: JSX.Element[]) => [
     component: () => <Layout components={[]} />,
   },
   {
-    path: "*",
+    path: "*404",
     component: () => <Layout components={NotFoundContent} />,
   },
 ];
