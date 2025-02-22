@@ -1,12 +1,12 @@
 # dirs
 node_modules
 dist
+storybook-static
 
 # files
 .env
 .env.example
 *storybook.log
-
 
 # Apple
 .DS_Store
