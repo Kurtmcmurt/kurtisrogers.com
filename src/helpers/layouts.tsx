@@ -28,8 +28,6 @@ const { components, meta } = props;
     <>
       {/* global meta content */}
       <MetaProvider>
-        <Meta charset="utf-8" />
-        <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <For each={meta}>
           {(item) => item.type === 'title' ? <Title>{`${item.content} | kurtisrogers.com`}</Title> : <Meta name={item.type} content={item.content} />}
         </For>
