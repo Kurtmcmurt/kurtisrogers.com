@@ -9,18 +9,18 @@ import { JSX } from "solid-js";
 export const Navigation = (children?: JSX.Element[]) => [
   {
     path: "/",
-    component: () => <Layout components={HomeContent} />,
+    component: () => <Layout {...HomeContent} />,
   },
   {
     path: "/about",
-    component: () => <Layout components={AboutContent} />,
+    component: () => <Layout {...AboutContent} />,
   },
   {
     path: "/about-us/:user",
-    component: () => <Layout components={[]} />,
+    component: () => <Layout meta={[]} components={[]} />,
   },
   {
     path: "*404",
-    component: () => <Layout components={NotFoundContent} />,
+    component: () => <Layout {...NotFoundContent} />,
   },
 ];

@@ -1,8 +1,14 @@
 import { For } from 'solid-js';
 import Header from "@/components/organisms/Header"
 import Footer from "@/components/organisms/Footer"
+import { MetaProvider, Meta, Title } from "@solidjs/meta";
 
 import { Dynamic } from 'solid-js/web';
+
+type MetaData = {
+  type: string;
+  content: string;
+}
 
 type ComponentBlock = {
   component: any;
@@ -11,15 +17,27 @@ type ComponentBlock = {
 
 interface Props {
   components: ComponentBlock[];
+  meta: MetaData[];
   children?: any;
 }
 
 export const Layout = (props: Props) => {
+const { components, meta } = props;
+
   return (
     <>
+      {/* global meta content */}
+      <MetaProvider>
+        <Meta charset="utf-8" />
+        <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <For each={meta}>
+          {(item) => item.type === 'title' ? <Title>{`${item.content} | kurtisrogers.com`}</Title> : <Meta name={item.type} content={item.content} />}
+        </For>
+      </MetaProvider>
+      {/* end of meta content */}
       <Header />
       <main id='main-content'>
-        <For each={props.components} fallback={<div>Loading...</div>}>
+        <For each={components} fallback={<div>Loading...</div>}>
           {(item) => <Dynamic {...item} />}
         </For>
         {props.children}

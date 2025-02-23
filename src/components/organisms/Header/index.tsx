@@ -20,8 +20,13 @@ export default function Header( props: Readonly<Props> ) {
     console.log('something');
   };
 
+  /**
+   * TODO: implement mobile changes
+   */
+
   return (
     <header on:scroll={handleScroll}>
+      {/* TODO: implement scroll action for the header */}
       <A href="#main-content" class="button content-skipper">Skip to main content</A>
       <div class="content">
         <A href="/" class="logo text-white"><strong>Kurtis Rogers</strong></A>
