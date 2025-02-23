@@ -4,8 +4,6 @@ import { Router, Route } from "@solidjs/router";
 import { Navigation as NavData } from "@/data/routes"
 import { MetaProvider } from '@solidjs/meta';
 
-import "css/global.css";
-
 const root = document.getElementById('root');
 
 render(
