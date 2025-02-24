@@ -29,7 +29,7 @@ const HomeData = {
         <a class="button" href="/about">Read more about me</a>
       </>,
       backgroundImage: {
-        src: 'https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        src: '/images/milkyway-galaxy.jpeg',
         alt: 'Soemthing',
       },
       gridLayout: "wide",
