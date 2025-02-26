@@ -1,6 +1,4 @@
-import type { Meta, StoryObj } from 'storybook-solidjs';
 import Header from '@/components/organisms/Header';
-import { Router, Route } from '@solidjs/router';
 
 export default {
   title: 'Example/Header',
@@ -11,18 +9,10 @@ export default {
     // More on how to position stories at: https://storybook.js.org/docs/solid/configure/story-layout
     layout: 'fullscreen',
   },
-  args: {
-    title: 'something',
-  },
 }
 
 const Template = (args: any) => (
-  <Router>
-    <Header {...args} />
-  </Router>
+  <Header {...args} />
 );
 
 export const Default = Template.bind({})
-Default.args = {
-  title: 'something',
-} as any;
