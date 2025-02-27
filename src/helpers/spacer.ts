@@ -1,18 +1,26 @@
-import type { sizes } from '@/types/grid';
+import type { sizes, positions } from "@/types/grid";
 
-export const handleLayout = (size: sizes, orientation: "top" | "bottom", spacingType: string) => {
+export const handleLayout = (
+  size: sizes,
+  orientation: "top" | "bottom",
+  spacingType: "padding" | "margin"
+) => {
   if (!size) return;
 
-  const handleCheck = (_size: any, position: any) => size === _size && orientation === position;
+  const handleCheck = (_size: sizes, position: positions) =>
+    size === _size && orientation === position;
 
-  const sizes: any = {
-    sm: handleCheck('sm', 'top') ? `${spacingType}-sm-top` : handleCheck('sm', 'bottom') ? `${spacingType}-sm-bottom` : `${spacingType}-sm`,
-    md: handleCheck('md', 'top') ? `${spacingType}-md-top` : handleCheck('md', 'bottom') ? `${spacingType}-md-bottom` : `${spacingType}-md`,
-    lg: handleCheck('lg', 'top') ? `${spacingType}-lg-top` : handleCheck('lg', 'bottom') ? `${spacingType}-lg-bottom` : `${spacingType}-lg`,
-    xl: handleCheck('xl', 'top') ? `${spacingType}-xl-top` : handleCheck('xl', 'bottom') ? `${spacingType}-xl-bottom` : `${spacingType}-xl`,
-    xxl: handleCheck('xxl', 'top') ? `${spacingType}-xxl-top` : handleCheck('xxl', 'bottom') ? `${spacingType}-xxl-bottom` : `${spacingType}-xxl`,
-    default: `${spacingType}-lg`,
+  const handleAlternativeClasses = (size: sizes) =>
+    handleCheck(size, "bottom") ? `${spacingType}-${size}-bottom` : `${spacingType}-xs`;
+
+  const sizes = {
+    xs: handleCheck("xs", "top") ? `${spacingType}-xs-top` : handleAlternativeClasses("xs"),
+    sm: handleCheck("sm", "top") ? `${spacingType}-sm-top` : handleAlternativeClasses("sm"),
+    md: handleCheck("md", "top") ? `${spacingType}-md-top` : handleAlternativeClasses("md"),
+    lg: handleCheck("lg", "top") ? `${spacingType}-lg-top` : handleAlternativeClasses("lg"),
+    xl: handleCheck("xl", "top") ? `${spacingType}-xl-top` : handleAlternativeClasses("xl"),
+    default: `${spacingType}-lg`
   };
 
-  return spacingType[sizes] || spacingType["default"];
-}
+  return sizes[size] || sizes["default"];
+};

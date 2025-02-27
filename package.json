@@ -16,7 +16,8 @@
     "storybook:build": "storybook build",
     "test": "vitest",
     "test:update": "vitest -u",
-    "postinstall": "husky"
+    "postinstall": "husky",
+    "lint": "npx eslint"
   },
   "license": "MIT",
   "devDependencies": {
@@ -31,11 +32,17 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.6.1",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
     "husky": "^9.1.7",
     "jsdom": "^26.0.0",
+    "prettier": "3.5.2",
     "solid-devtools": "^0.29.3",
     "storybook": "^8.6.0",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.25.0",
     "vite": "^6.1.0",
     "vite-plugin-solid": "^2.11.1",
     "vitest": "^3.0.6"

@@ -1,22 +1,24 @@
 // Based on the Strapi image API response
 
-import type { ImageResponse } from '@/types/branding'
+import type { ImageResponse } from "@/types/branding";
 
 export type Data = {
   data: ImageResponse;
 };
 
 const responsiveImages = ({ data }: Data) => {
-  if (!data) return (
-    <></>
-  );
+  if (!data) return <></>;
 
   const _default = data.attributes;
   const { xlarge, large, medium, small, thumbnail } = data.attributes.formats || {};
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   xlarge && (xlarge.minWidth = 1420);
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   large && (large.minWidth = 960);
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   medium && (medium.minWidth = 768);
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   small && (small.minWidth = 320);
 
   // reorder the object in a way which makes sense for the images sort i the DOM (biggest first)
@@ -25,21 +27,21 @@ const responsiveImages = ({ data }: Data) => {
     ...(large && { large }),
     ...(medium && { medium }),
     ...(small && { small }),
-    ...(thumbnail && { thumbnail }),
+    ...(thumbnail && { thumbnail })
   };
 
   const imageSizes = Object.values(reformatted);
   // eslint-disable-next-line prefer-const
   let imageSources: string[] = [];
 
-  imageSizes.forEach((size) => {
+  imageSizes.forEach(size => {
     const _minWidth = `${size?.minWidth}px`;
     const url = size?.src;
-    const altText = _default.alternativeText ? _default.alternativeText : '';
+    const altText = _default.alternativeText ? _default.alternativeText : "";
 
     // fallback/smallest will always be the thumbnail
     imageSources.push(
-      url?.includes('-thumbnail')
+      url?.includes("-thumbnail")
         ? `<img
             class="w-full h-full object-cover"
             src="${url}"
@@ -52,9 +54,7 @@ const responsiveImages = ({ data }: Data) => {
     );
   });
 
-  return (
-    <picture innerHTML={imageSources.join(' ')} />
-  );
+  return <picture innerHTML={imageSources.join(" ")} />;
 };
 
 export default responsiveImages;

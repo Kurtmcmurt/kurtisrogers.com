@@ -4,23 +4,18 @@ import {
   About as AboutContent,
   NotFound as NotFoundContent
 } from "@/data/content";
-import { JSX } from "solid-js";
 
-export const Navigation = (children?: JSX.Element[]) => [
+export const Navigation = () => [
   {
     path: "/",
-    component: () => <Layout {...HomeContent} />,
+    component: () => <Layout {...HomeContent} />
   },
   {
     path: "/about",
-    component: () => <Layout {...AboutContent} />,
-  },
-  {
-    path: "/about-us/:user",
-    component: () => <Layout meta={[]} components={[]} />,
+    component: () => <Layout {...AboutContent} />
   },
   {
     path: "*404",
-    component: () => <Layout {...NotFoundContent} />,
-  },
+    component: () => <Layout {...NotFoundContent} />
+  }
 ];
