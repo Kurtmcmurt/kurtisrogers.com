@@ -29,8 +29,33 @@ const HomeData = {
         <a class="button" href="/about">Read more about me</a>
       </>,
       backgroundImage: {
-        src: '/images/milkyway-galaxy.jpeg',
-        alt: 'Soemthing',
+        data: {
+          attributes: {
+            alternativeText: 'A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...',
+            url: '/images/milkyway-galaxy-thumbnail.webp',
+            formats: {
+              thumbnail: {
+                src: '/images/milkyway-galaxy-thumbnail.webp',
+              },
+              small: {
+                src: '/images/milkyway-galaxy-sm.webp',
+                minWidth: 320,
+              },
+              medium: {
+                src: '/images/milkyway-galaxy-md.webp',
+                minWidth: 768,
+              },
+              large: {
+                src: '/images/milkyway-galaxy-lg.webp',
+                minWidth: 960,
+              },
+              xlarge: {
+                src: '/images/milkyway-galaxy-xl.webp',
+                minWidth: 1420,
+              },
+            },
+          },
+        },
       },
       gridLayout: "wide",
     },

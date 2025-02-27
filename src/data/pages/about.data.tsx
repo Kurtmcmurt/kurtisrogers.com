@@ -21,8 +21,33 @@ const AboutData = {
         <p>I love the mystery which surrounds space.</p>
       </>,
       backgroundImage: {
-        src: 'https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        alt: 'Soemthing',
+        data: {
+          attributes: {
+            alternativeText: 'A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...',
+            url: '/images/pexels-jack-davis-86003658-9069564-thumbnail.webp',
+            formats: {
+              thumbnail: {
+                src: '/images/pexels-jack-davis-86003658-9069564-thumbnail.webp',
+              },
+              small: {
+                src: '/images/pexels-jack-davis-86003658-9069564-sm.webp',
+                minWidth: 320,
+              },
+              medium: {
+                src: '/images/pexels-jack-davis-86003658-9069564-md.webp',
+                minWidth: 768,
+              },
+              large: {
+                src: '/images/pexels-jack-davis-86003658-9069564-lg.webp',
+                minWidth: 960,
+              },
+              xlarge: {
+                src: '/images/pexels-jack-davis-86003658-9069564-xl.webp',
+                minWidth: 1420,
+              },
+            },
+          },
+        },
       },
       gridLayout: "wide",
     },

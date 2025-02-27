@@ -1,12 +1,15 @@
 import { JSX, Show } from 'solid-js';
-import type { Image } from '@/types/branding';
+import type { ImageResponse } from '@/types/branding';
 import "./style.css";
 
 import type { gridLayoutOptions } from '@/types/grid';
+import responsiveImages from '@/helpers/responsiveImages';
 
 interface Props {
   title?: string;
-  backgroundImage?: Image;
+  backgroundImage: {
+    data: ImageResponse;
+  }
   gridLayout?: gridLayoutOptions;
   children?: JSX.Element[];
 };
@@ -25,11 +28,10 @@ export default function Banner( props: Readonly<Props> ) {
         </div>
         {/* weird image/background colour section - not fully made my mind up */}
         <Show when={backgroundImage}>
+          {/* create an image component - generate images here: https://isrcset.com/generate */}
           <div class="banner__image">
-            <picture>
-              {/* TODO: create a picture component which accepts an array of responsive images */}
-              <img src={backgroundImage?.src} alt={backgroundImage?.alt} />
-            </picture>
+            {/* TODO: create a picture component which accepts an array of responsive images */}
+            { responsiveImages(backgroundImage) }
           </div>
         </Show>
       </div>

@@ -7,4 +7,19 @@ export interface Image {
   alt?: string;
   width?: number;
   height?: number;
+  minWidth?: number;
+}
+
+export interface ImageResponse {
+  attributes: {
+    alternativeText?: string;
+    url: string;
+    formats: {
+      thumbnail?: Image;
+      small?: Image;
+      medium?: Image;
+      large?: Image;
+      xlarge?: Image;
+    };
+  };
 }

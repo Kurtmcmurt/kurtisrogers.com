@@ -28,8 +28,33 @@ describe("Banner", () => {
       <a class="button" href="/about">Read more about me</a>
     </>,
     backgroundImage: {
-      src: 'https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      alt: 'Something',
+      data: {
+        attributes: {
+          alternativeText: 'A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...',
+          url: '/images/pexels-jack-davis-86003658-9069564-thumbnail.webp',
+          formats: {
+            thumbnail: {
+              src: '/images/pexels-jack-davis-86003658-9069564-thumbnail.webp',
+            },
+            small: {
+              src: '/images/pexels-jack-davis-86003658-9069564-sm.webp',
+              minWidth: 320,
+            },
+            medium: {
+              src: '/images/pexels-jack-davis-86003658-9069564-md.webp',
+              minWidth: 768,
+            },
+            large: {
+              src: '/images/pexels-jack-davis-86003658-9069564-lg.webp',
+              minWidth: 960,
+            },
+            xlarge: {
+              src: '/images/pexels-jack-davis-86003658-9069564-xl.webp',
+              minWidth: 1420,
+            },
+          },
+        },
+      },
     },
     gridLayout: "wide",
   }
@@ -49,10 +74,10 @@ describe("Banner", () => {
     render(() => <Banner {...propData} />);
     
     // Find the image inside the picture element
-    const image = screen.getByAltText(/Something/i);
+    const image = screen.getByAltText(/A photo of The Milky Way, lots of stars and some star-making gas clouds far far away.../i);
     
     // Check if the image exists and has the correct alt text
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute("src", propData.backgroundImage.src);
+    expect(image).toHaveAttribute("src", propData.backgroundImage.url);
   });
 });
