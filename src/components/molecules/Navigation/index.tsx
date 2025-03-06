@@ -19,7 +19,7 @@ export default function Navigation() {
 
             return (
               <li>
-                <A href={link} activeClass="current">
+                <A href={link} activeClass="current" end>
                   {text}
                 </A>
               </li>

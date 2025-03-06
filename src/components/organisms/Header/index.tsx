@@ -31,7 +31,7 @@ export default function Header(props: Readonly<Props>) {
         Skip to main content
       </A>
       <div class="content">
-        <A href="/" class="logo text-white">
+        <A href="/" class="logo text-white bg-red" aria-label="Kurtis Rogers homepage">
           <strong>Kurtis Rogers</strong>
         </A>
         <div>

@@ -4,9 +4,10 @@
   height: calc(100vh - 8rem);
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
-  overflow-x: clip;
+  grid-auto-rows: min-content;
+  /* overflow-x: clip; */
   gap: 1rem;
-  margin: 4rem 0px;
+  margin: 0px 0px 4rem;
 }
 
 .banner__content {
@@ -33,4 +34,5 @@
   width: 110%;
   height: calc(100vh - 8rem);
   margin-left: -10%;
+  box-shadow: 20px 20px 60px black;
 }

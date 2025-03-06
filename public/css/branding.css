@@ -56,6 +56,8 @@ body {
   font-family: var(--normal-font);
   font-weight: false;
   word-break: all;
+  text-underline-offset: 0.125rem;
+  text-underline-position: under;
 }
 
 h1,
@@ -110,18 +112,13 @@ small,
 }
 
 /* links */
-
-
-/* buttons */
-a.button,
-button {
-  background: white;
-  min-width: 120px;
-  text-align: center;
-  padding: .5rem 1.125rem;
-  border-radius: 20px;
+a:focus-visible,
+button:focus-visible {
+  outline-color: var(--brand-white);
   color: var(--brand-black);
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
+  background: var(--a11y-focus-yellow);
+}
+
+nav a:not(.current) {
+  text-decoration: none;
 }
