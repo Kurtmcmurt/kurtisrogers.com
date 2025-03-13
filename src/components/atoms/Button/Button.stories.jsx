@@ -1,4 +1,4 @@
-import Button, { Props } from "./index";
+import Button from "./index";
 import "./style.css";
 
 export default {
@@ -6,17 +6,23 @@ export default {
   component: Button,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/solid/writing-docs/docs-page
   tags: ["autodocs"],
+  argTypes: {
+    variant: {
+      options: ["primary", "secondary"],
+      control: { type: "radio" }
+    },
+  },
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/solid/configure/story-layout
     layout: "fullscreen"
   }
 };
 
-const Template = (args: Props) => {
-  return <Button {...args}></Button>;
-};
+const Template = (args) => <Button {...args}>{args.text}</Button>;
 
 export const Default = Template.bind({});
-// Default.args = {
-//   // Add any props you want to pass to the Header component
-// };
+Default.args = {
+  text: "Click me!",
+  variant: "primary",
+  outline: false
+};

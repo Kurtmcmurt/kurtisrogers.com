@@ -122,3 +122,16 @@ button:focus-visible {
 nav a:not(.current) {
   text-decoration: none;
 }
+
+button,
+.btn {
+  border: 2px solid transparent;
+}
+
+.btn--primary.btn--outline {
+  border: 2px solid var(--brand-white);
+}
+
+.btn--secondary.btn--outline {
+  border: 2px solid var(--brand-red);
+}

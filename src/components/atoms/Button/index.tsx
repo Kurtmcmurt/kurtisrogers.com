@@ -1,26 +1,52 @@
 import { handleColourClasses } from "@/helpers/colours";
 import "./style.css";
 import type { Icon } from "@/components/atoms/Icon";
+import { JSX } from "solid-js";
+
+type Href = {
+  url: string;
+  target?: "_blank" | "_self";
+};
 
 export interface Props {
-  text: string;
-  secondary?: boolean;
+  children: JSX.Element;
+  href?: Href;
+  variant?: "primary" | "secondary";
   outline?: boolean;
   icon?: Icon;
-  callback: (event: MouseEvent) => void;
+  callback?: (event: MouseEvent) => void;
 }
 
-export default function Button({ text, callback, secondary, outline }: Readonly<Props>) {
-  const handleButtonStyle = secondary
-    ? handleColourClasses("grey", "background")
-    : handleColourClasses("white", "background");
+export default function Button({
+  children,
+  callback,
+  variant = "primary",
+  outline,
+  href
+}: Readonly<Props>) {
+  const handleButtonStyle =
+    variant === "primary"
+      ? handleColourClasses("red", "background")
+      : handleColourClasses("white", "background");
 
-  return (
+  return href?.url ? (
+    <a
+      href={href.url}
+      target={href.target ?? "_self"}
+      class={["btn", outline ? "btn--outline" : "btn", handleButtonStyle, `btn--${variant}`].join(
+        " "
+      )}
+    >
+      {children}
+    </a>
+  ) : (
     <button
-      class={outline ? `${handleButtonStyle}--outline` : handleButtonStyle}
+      class={["btn", outline ? "btn--outline" : "btn", handleButtonStyle, `btn--${variant}`].join(
+        " "
+      )}
       onClick={callback}
     >
-      {text}
+      {children}
     </button>
   );
 }

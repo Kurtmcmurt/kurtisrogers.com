@@ -69,7 +69,7 @@ const AboutData = {
           </p>
         </>
       ),
-      backgroundColor: "white"
+      variant: "white"
     }
   ]
 };

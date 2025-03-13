@@ -1,4 +1,6 @@
+import Button from "@/components/atoms/Button";
 import Content from "@/components/atoms/Content";
+// import Link from "@/components/atoms/Link";
 import Banner from "@/components/organisms/Banner";
 
 const HomeData = {
@@ -34,9 +36,9 @@ const HomeData = {
             </li>
           </ul>
           <p>Want to know more?</p>
-          <a class="button" href="/about">
-            Read more about me
-          </a>
+          <Button variant="primary" outline={true} href={{ url: "/about" }}>
+            <span>Read more about me</span>
+          </Button>
         </>
       ),
       backgroundImage: {
@@ -84,7 +86,7 @@ const HomeData = {
         </p>
       ),
       gridLayout: "wide",
-      backgroundColor: "white"
+      variant: "white"
     },
     {
       component: Content,

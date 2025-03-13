@@ -12,7 +12,7 @@ export default {
   }
 };
 
-const Template = () => {
+const Template = (args) => {
   return (
     <header>
       <a href="#main-content" class="button content-skipper">

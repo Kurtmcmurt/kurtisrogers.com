@@ -14,24 +14,13 @@ type Props = {
 };
 
 export default function Header(props: Readonly<Props>) {
-  // const [isScrolling, setIsScrolling] = createSignal(false);
-
-  function handleScroll() {
-    console.log("something");
-  }
-
-  /**
-   * TODO: implement mobile changes
-   */
-
   return (
-    <header on:scroll={handleScroll}>
-      {/* TODO: implement scroll action for the header */}
-      <A href="#main-content" class="button content-skipper">
+    <header>
+      <a href="#main" class="btn content-skipper">
         Skip to main content
-      </A>
+      </a>
       <div class="content">
-        <A href="/" class="logo text-white bg-red" aria-label="Kurtis Rogers homepage">
+        <A href="/" class="logo text-white bg-red" aria-label="Go to the homepage">
           <strong>Kurtis Rogers</strong>
         </A>
         <div>

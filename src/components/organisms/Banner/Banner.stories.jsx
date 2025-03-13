@@ -40,25 +40,25 @@ const propData = {
       attributes: {
         alternativeText:
           "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
-        url: "/images/pexels-jack-davis-86003658-9069564-thumbnail.webp",
+        url: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp",
         formats: {
           thumbnail: {
-            src: "/images/pexels-jack-davis-86003658-9069564-thumbnail.webp"
+            src: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp"
           },
           small: {
-            src: "/images/pexels-jack-davis-86003658-9069564-sm.webp",
+            src: "/images/optimised/pexels-jack-davis-86003658-9069564-sm.webp",
             minWidth: 320
           },
           medium: {
-            src: "/images/pexels-jack-davis-86003658-9069564-md.webp",
+            src: "/images/optimised/pexels-jack-davis-86003658-9069564-md.webp",
             minWidth: 768
           },
           large: {
-            src: "/images/pexels-jack-davis-86003658-9069564-lg.webp",
+            src: "/images/optimised/pexels-jack-davis-86003658-9069564-lg.webp",
             minWidth: 960
           },
           xlarge: {
-            src: "/images/pexels-jack-davis-86003658-9069564-xl.webp",
+            src: "/images/optimised/pexels-jack-davis-86003658-9069564-xl.webp",
             minWidth: 1420
           }
         }
@@ -68,9 +68,11 @@ const propData = {
 };
 
 const Template = () => {
+  const { title, backgroundImage, children } = propData;
+
   return (
-    <Banner title={propData.title} backgroundImage={propData.backgroundImage}>
-      {propData.children}
+    <Banner title={title} backgroundImage={backgroundImage}>
+      {children}
     </Banner>
   );
 };

@@ -19,7 +19,7 @@ const NotFound = {
         <>
           <h2>You're out of this world!</h2>
           <p>I mean, this page doesn't exist - you're not meant to be here!</p>
-          <a class="button" href="/">
+          <a class="btn" href="/">
             Go back to the homepage
           </a>
         </>
