@@ -3,6 +3,8 @@ import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import { MetaProvider, Meta, Title } from "@solidjs/meta";
 import { Dynamic } from "solid-js/web";
+import SkipLink from "@/components/atoms/Skiplink";
+import Navigation from "@/components/molecules/Navigation";
 
 type MetaData = {
   type: string;
@@ -37,13 +39,18 @@ export const Layout = (props: Props) => {
         </For>
       </MetaProvider>
       <Header />
-      <main id="main">
+      <main id="maincontent" tabindex="-1">
         <For each={components} fallback={<div>Loading...</div>}>
           {item => <Dynamic {...item} />}
         </For>
         {props.children}
       </main>
-      <Footer />
+      <Footer>
+        <div>
+          <Navigation />
+          <SkipLink id="header" isTag={true} name="header" />
+        </div>
+      </Footer>
     </>
   );
 };

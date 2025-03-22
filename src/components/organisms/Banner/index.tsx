@@ -20,7 +20,7 @@ export default function Banner(props: Readonly<Props>) {
   if (!title) return;
 
   return (
-    <div class={`content-grid ${gridLayout ?? ""}`}>
+    <section class={`content-grid ${gridLayout ?? ""}`}>
       <div class={`banner`}>
         <div class="banner__content">
           <h1>{title}</h1>
@@ -35,6 +35,6 @@ export default function Banner(props: Readonly<Props>) {
           </div>
         </Show>
       </div>
-    </div>
+    </section>
   );
 }

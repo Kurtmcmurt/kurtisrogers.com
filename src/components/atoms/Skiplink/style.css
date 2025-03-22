@@ -1,0 +1,13 @@
+.content-skipper {
+  position: absolute;
+  display: inline-block;
+  inset: -999999px auto auto -999999px;
+  font-size: 0px;
+}
+
+.content-skipper:focus-visible {
+  position: relative;
+  inset: 0px;
+  font-size: 1em;
+  margin: .5rem;
+}

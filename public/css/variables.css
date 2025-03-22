@@ -1,13 +1,26 @@
 :root {
+  /* fonts */
   --normal-font: 'Open Sans', sans-serif;
   --heading-font: 'Oswald', serif;
+
+  /* brand grid width */
   --brand-base-grid: 1280px;
+
+  /* brand colours */
   --brand-red: #96031A;
   --brand-black: #1B1B1E;
   --brand-grey: #6D676E;
   --brand-white: #FBFFFE;
   --brand-yellow: #FAA916;
+
+  /* gradients */
+  --brand-primary-gradient: linear-gradient(90deg, var(--brand-red) 50%, var(--brand-yellow) 100%);
+  --brand-secondary-gradient: linear-gradient(90deg, var(--brand-black) 0%, var(--brand-white) 100%);
+
+  /* focus colour */
   --a11y-focus-yellow: yellow;
+
+  /* font sizes */
   --text-size-xs: 0.38rem;
   --text-size-sm: 0.62rem;
   --text-size-md: 1rem;
@@ -17,5 +30,7 @@
   --text-size-3xl: 6.85rem;
   --text-size-4xl: 11.09rem;
   --text-size-5xl: 17.94rem;
+
+  /* colour schemes */
   color-scheme: light dark;
 }

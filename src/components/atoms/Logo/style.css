@@ -1,0 +1,16 @@
+.logo {
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: 2px solid var(--brand-black);
+  padding: .5rem .75rem;
+}
+
+.logo:focus-visible {
+  outline-color: var(--brand-white);
+  color: var(--brand-black);
+  background: var(--a11y-focus-yellow);
+}
+
+.logo > small {
+  display: block;
+}

@@ -3,33 +3,6 @@ header {
   z-index: 20;
 }
 
-header .logo {
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: 2px solid var(--brand-black);
-  padding: .5rem .75rem;
-}
-
-header .logo:focus-visible {
-  outline-color: var(--brand-white);
-  color: var(--brand-black);
-  background: var(--a11y-focus-yellow);
-}
-
-header > .content-skipper {
-  position: absolute;
-  display: inline-block;
-  inset: -999999px auto auto -999999px;
-  font-size: 0px;
-}
-
-header > .content-skipper:focus-visible {
-  position: relative;
-  inset: 0px;
-  font-size: 1em;
-  margin: .5rem;
-}
-
 header > .content {
   display: flex;
   align-items: center;

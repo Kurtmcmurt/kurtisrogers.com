@@ -1,3 +1,38 @@
 footer {
-  background: green;
+  background: var(--brand-yellow);
+  background: var(--brand-primary-gradient);
+  padding: 4rem 0px;
+  margin-top: 2rem;
+}
+
+footer > .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--brand-base-grid);
+  margin: 0 auto;
+}
+
+footer .logo {
+  display: block;
+  margin-bottom: 0.625rem;
+}
+
+footer nav.site-navigation {
+  text-align: right;
+}
+
+footer nav.site-navigation ul {
+  display: block;
+}
+
+footer nav.site-navigation li {
+  margin-bottom: 0.625rem;
+}
+
+footer nav.site-navigation a {
+  display: inline-flex;
+  color: var(--brand-black);
+  background: var(--brand-white);
 }

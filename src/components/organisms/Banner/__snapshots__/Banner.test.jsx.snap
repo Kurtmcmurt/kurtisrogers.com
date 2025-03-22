@@ -2,7 +2,7 @@
 
 exports[`Banner > renders 1`] = `
 <div>
-  <div
+  <section
     class="content-grid wide"
   >
     <div
@@ -78,6 +78,6 @@ exports[`Banner > renders 1`] = `
         </picture>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
