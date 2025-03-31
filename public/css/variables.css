@@ -14,8 +14,8 @@
   --brand-yellow: #FAA916;
 
   /* gradients */
-  --brand-primary-gradient: linear-gradient(90deg, var(--brand-red) 50%, var(--brand-yellow) 100%);
-  --brand-secondary-gradient: linear-gradient(90deg, var(--brand-black) 0%, var(--brand-white) 100%);
+  --brand-primary-gradient: linear-gradient(135deg, var(--brand-black) 0%, var(--brand-red) 50%, var(--brand-yellow) 100%);
+  --brand-secondary-gradient: linear-gradient(90deg, var(--brand-red) 0%, var(--brand-black) 0%, var(--brand-white) 100%);
 
   /* focus colour */
   --a11y-focus-yellow: yellow;
@@ -31,6 +31,9 @@
   --text-size-4xl: 11.09rem;
   --text-size-5xl: 17.94rem;
 
-  /* colour schemes */
-  color-scheme: light dark;
+  /* border radius */
+  --border-radius: .5rem;
+
+  /* transitions */
+  --transition: .3s ease-in-out;
 }

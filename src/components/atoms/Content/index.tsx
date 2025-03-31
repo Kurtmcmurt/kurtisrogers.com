@@ -8,14 +8,21 @@ export interface Props {
   children: JSX.Element;
   gridLayout?: gridLayoutOptions;
   variant?: Branding["colors"];
+  firstChild: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
 export default function Content(props: Readonly<Props>) {
-  const { children, gridLayout, variant } = props;
+  const { children, gridLayout, variant = "black", firstChild } = props;
 
   const colourClasses = handleColourClasses(variant, "background");
 
-  return <section class={`${gridLayout ?? ""} content-grid ${colourClasses}`}>{children}</section>;
+  return (
+    <section
+      class={`${gridLayout ?? ""} content-grid ${colourClasses} ${firstChild ? "first-element" : "page-sibling"}`}
+    >
+      {children}
+    </section>
+  );
 }

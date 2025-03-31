@@ -1,15 +1,12 @@
 footer {
   background: var(--brand-yellow);
   background: var(--brand-primary-gradient);
-  padding: 4rem 0px;
-  margin-top: 2rem;
+  padding: 4rem 1rem;
 }
 
-footer > .content {
+footer .filterPanel--blur {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
   max-width: var(--brand-base-grid);
   margin: 0 auto;
 }
@@ -19,20 +16,40 @@ footer .logo {
   margin-bottom: 0.625rem;
 }
 
-footer nav.site-navigation {
+footer nav:not(.socials) {
   text-align: right;
 }
 
-footer nav.site-navigation ul {
+footer nav ul {
   display: block;
+  margin: 0px;
 }
 
-footer nav.site-navigation li {
-  margin-bottom: 0.625rem;
+footer nav:not(.socials) li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
 }
 
-footer nav.site-navigation a {
+footer nav a {
   display: inline-flex;
   color: var(--brand-black);
-  background: var(--brand-white);
+  padding: 0px;
+  outline: none;
+  font-weight: 600;
+}
+
+footer div.filterPanel > :first-child {
+  width: calc(100% - 4rem);
+}
+
+.footer .footer__socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .socials ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
 }

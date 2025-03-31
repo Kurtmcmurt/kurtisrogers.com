@@ -1,7 +1,7 @@
 import { describe, expect, vi, beforeEach, afterEach, it } from "vitest";
 import { render } from "@solidjs/testing-library";
-import { screen } from '@testing-library/dom';
-import Banner from '.';
+import { screen } from "@testing-library/dom";
+import Banner from ".";
 
 describe("Banner", () => {
   beforeEach(() => {
@@ -30,26 +30,26 @@ describe("Banner", () => {
     backgroundImage: {
       data: {
         attributes: {
-          alternativeText: 'A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...',
-          url: '/images/pexels-jack-davis-86003658-9069564-thumbnail.webp',
+          alternativeText: "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
+          url: "/images/pexels-jack-davis-86003658-9069564-thumbnail.webp",
           formats: {
             thumbnail: {
-              src: '/images/pexels-jack-davis-86003658-9069564-thumbnail.webp',
+              src: "/images/pexels-jack-davis-86003658-9069564-thumbnail.webp",
             },
             small: {
-              src: '/images/pexels-jack-davis-86003658-9069564-sm.webp',
+              src: "/images/pexels-jack-davis-86003658-9069564-sm.webp",
               minWidth: 320,
             },
             medium: {
-              src: '/images/pexels-jack-davis-86003658-9069564-md.webp',
+              src: "/images/pexels-jack-davis-86003658-9069564-md.webp",
               minWidth: 768,
             },
             large: {
-              src: '/images/pexels-jack-davis-86003658-9069564-lg.webp',
+              src: "/images/pexels-jack-davis-86003658-9069564-lg.webp",
               minWidth: 960,
             },
             xlarge: {
-              src: '/images/pexels-jack-davis-86003658-9069564-xl.webp',
+              src: "/images/pexels-jack-davis-86003658-9069564-xl.webp",
               minWidth: 1420,
             },
           },

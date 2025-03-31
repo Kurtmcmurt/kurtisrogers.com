@@ -5,13 +5,18 @@ import "./style.css";
 
 // faking a request for the navigation items which are already statically set
 
-export default function Navigation() {
+interface Props {
+  label?: string;
+  classes?: string;
+}
+
+export default function Navigation({ label, classes }: Props) {
   const [items] = createResource(() => GET("https://api.chucknorris.io/jokes/random"), {
     initialValue: [{ text: "loading", link: "/" }]
   });
 
   return (
-    <nav class="site-navigation">
+    <nav class={`navigation ${classes}`} aria-label={label ?? "Main menu"}>
       <ul>
         <For each={items()}>
           {item => {

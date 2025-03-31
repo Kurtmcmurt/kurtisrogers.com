@@ -3,7 +3,8 @@
 /* colours */
 
 html, body {
-  background: var(--brand-white);
+  background: var(--brand-black);
+  margin: 0px;
 }
 
 * {
@@ -67,7 +68,7 @@ h4,
 h5 {
   font-family: var(--heading-font);
   font-weight: true;
-  line-height: 1.15;
+  line-height: 1;
 }
 
 h1,
@@ -119,19 +120,11 @@ button:focus-visible {
   background: var(--a11y-focus-yellow);
 }
 
-nav a:not(.current) {
-  text-decoration: none;
-}
-
-button,
-.btn {
-  border: 2px solid transparent;
-}
-
-.btn--primary.btn--outline {
-  border: 2px solid var(--brand-white);
-}
-
-.btn--secondary.btn--outline {
-  border: 2px solid var(--brand-red);
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

@@ -15,7 +15,10 @@ const AboutData = {
   components: [
     {
       component: Banner,
-      title: "About",
+      title: {
+        text: "Space.",
+        headingLevel: "1"
+      },
       children: (
         <>
           <p>I love space.</p>

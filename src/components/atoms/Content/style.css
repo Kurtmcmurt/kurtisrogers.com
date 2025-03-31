@@ -17,3 +17,11 @@
 .content-grid.full > * {
   grid-column: full-width;
 }
+
+.content-grid--light {
+  color: var(--brand-black);
+}
+
+.content-grid--dark {
+  color: var(--brand-white);
+}

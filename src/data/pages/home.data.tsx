@@ -17,7 +17,10 @@ const HomeData = {
   components: [
     {
       component: Banner,
-      title: "Hello.",
+      title: {
+        text: "Hello.",
+        headingLevel: "1"
+      },
       children: (
         <>
           <p>My name is Kurtis Rogers, a proper Software Engineer from Bristol, UK</p>
@@ -46,25 +49,25 @@ const HomeData = {
           attributes: {
             alternativeText:
               "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
-            url: "/images/optimised/milkyway-galaxy-thumbnail.webp",
+            url: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp",
             formats: {
               thumbnail: {
-                src: "/images/optimised/milkyway-galaxy-thumbnail.webp"
+                src: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp"
               },
               small: {
-                src: "/images/optimised/milkyway-galaxy-sm.webp",
+                src: "/images/optimised/pexels-jack-davis-86003658-9069564-sm.webp",
                 minWidth: 320
               },
               medium: {
-                src: "/images/optimised/milkyway-galaxy-md.webp",
+                src: "/images/optimised/pexels-jack-davis-86003658-9069564-md.webp",
                 minWidth: 768
               },
               large: {
-                src: "/images/optimised/milkyway-galaxy-lg.webp",
+                src: "/images/optimised/pexels-jack-davis-86003658-9069564-lg.webp",
                 minWidth: 960
               },
               xlarge: {
-                src: "/images/optimised/milkyway-galaxy-xl.webp",
+                src: "/images/optimised/pexels-jack-davis-86003658-9069564-xl.webp",
                 minWidth: 1420
               }
             }
@@ -99,7 +102,7 @@ const HomeData = {
           tempus lorem ac tristique.
         </p>
       ),
-      gridLayout: "full"
+      gridLayout: "default"
     },
     {
       component: Content,

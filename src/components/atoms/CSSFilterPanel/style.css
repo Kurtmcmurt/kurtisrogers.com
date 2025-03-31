@@ -1,0 +1,6 @@
+div.filterPanel--blur {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(2px);
+}

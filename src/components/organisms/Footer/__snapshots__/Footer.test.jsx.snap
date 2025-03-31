@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Footer /> > renders correctly and has a link to my linkedin profile 1`] = `
+<span
+  class="sr-only"
+>
+  A link to my LinkedIn profile (opens a new tab)
+</span>
+`;

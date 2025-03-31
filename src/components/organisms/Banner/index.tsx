@@ -4,27 +4,42 @@ import "./style.css";
 
 import type { gridLayoutOptions } from "@/types/grid";
 import responsiveImages from "@/helpers/responsiveImages";
+import CSSFilterPanel from "@/components/atoms/CSSFilterPanel";
+import { Dynamic } from "solid-js/web";
+
+type Title = {
+  text: string;
+  headingLevel: "1" | "2" | "3" | "4" | "5" | "6";
+};
 
 interface Props {
-  title?: string;
+  title?: Title | string;
   backgroundImage: {
     data: ImageResponse;
   };
   gridLayout?: gridLayoutOptions;
   children?: JSX.Element;
+  firstChild: boolean;
+  variant: "light" | "dark";
 }
 
 export default function Banner(props: Readonly<Props>) {
-  const { title, backgroundImage, gridLayout, children } = props;
-
-  if (!title) return;
+  const { title, backgroundImage, gridLayout, children, firstChild, variant = "dark" } = props;
 
   return (
-    <section class={`content-grid ${gridLayout ?? ""}`}>
-      <div class={`banner`}>
-        <div class="banner__content">
-          <h1>{title}</h1>
-          {children}
+    <section
+      class={`content-grid ${gridLayout ?? ""} ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
+    >
+      <div class={`banner${backgroundImage ? "--image" : ""}`}>
+        <div class={`banner__content`}>
+          <CSSFilterPanel variant="blur">
+            <Show when={title}>
+              <Dynamic component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}>
+                {typeof title === "string" ? title : title?.text}
+              </Dynamic>
+            </Show>
+            {children}
+          </CSSFilterPanel>
         </div>
         {/* weird image/background colour section - not fully made my mind up */}
         <Show when={backgroundImage}>

@@ -1,14 +1,20 @@
-import Button from "@/components/atoms/Button";
 import "./style.css";
 
 interface Props {
   id: string; // destination of skip link
   isTag?: boolean;
+  variant?: "primary" | "secondary";
   name: string; // where is the user going for this skiplink
-  classes?: string[];
+  visibleOnFocusOnly?: boolean;
 }
 
-export default function SkipLink({ id, isTag = false, name, classes }: Props) {
+export default function SkipLink({
+  id,
+  isTag = false,
+  name,
+  visibleOnFocusOnly = false,
+  variant = "primary"
+}: Props) {
   /**
    * responsible for shifting the focus about
    * @param id
@@ -25,8 +31,11 @@ export default function SkipLink({ id, isTag = false, name, classes }: Props) {
   }
 
   return (
-    <Button classes={classes} callback={() => handleFocus(id ?? "main", isTag)}>
+    <button
+      class={`skiplink ${visibleOnFocusOnly ? "skiplink--visible-on-focus" : "skiplink--visible"} btn btn--${variant}`}
+      onClick={() => handleFocus(id ?? "main", isTag)}
+    >
       Skip to {name ?? "main content"}
-    </Button>
+    </button>
   );
 }

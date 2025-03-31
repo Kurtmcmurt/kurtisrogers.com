@@ -1,0 +1,17 @@
+nav.socials a {
+  display: flex;
+  color: var(--brand-white);
+}
+
+nav.socials a:focus {
+  color: var(--brand-black);
+}
+
+nav.socials ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+nav.socials a:hover {
+  filter: drop-shadow(2px 2px 2px currentColor);
+}

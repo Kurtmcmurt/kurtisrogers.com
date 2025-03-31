@@ -1,4 +1,4 @@
-import { For, JSX, ValidComponent } from "solid-js";
+import { For, JSX, ValidComponent, Component } from "solid-js";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import { MetaProvider, Meta, Title } from "@solidjs/meta";
@@ -41,14 +41,24 @@ export const Layout = (props: Props) => {
       <Header />
       <main id="maincontent" tabindex="-1">
         <For each={components} fallback={<div>Loading...</div>}>
-          {item => <Dynamic {...item} />}
+          {item => {
+            const { name } = item.component as Component;
+            const firstChildCheck = name.includes("Banner") && components[0] === item;
+
+            const componentData = {
+              ...item,
+              firstChild: firstChildCheck
+            };
+
+            return <Dynamic {...componentData} />;
+          }}
         </For>
         {props.children}
       </main>
       <Footer>
         <div>
-          <Navigation />
-          <SkipLink id="header" isTag={true} name="header" />
+          <Navigation label="Footer menu" classes={"light-background"} />
+          <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />
         </div>
       </Footer>
     </>

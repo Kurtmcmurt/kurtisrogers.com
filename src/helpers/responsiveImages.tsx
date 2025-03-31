@@ -46,7 +46,7 @@ const responsiveImages = ({ data }: Data) => {
             class="w-full h-full object-cover"
             src="${url}"
             alt="${altText}"
-            loading="eager"
+            loading="lazy"
             decoding="async">`
         : `<source
             media="(min-width: ${_minWidth})"

@@ -1,13 +1,24 @@
-.content-skipper {
+.skiplink {
   position: absolute;
   display: inline-block;
   inset: -999999px auto auto -999999px;
   font-size: 0px;
+  opacity: 0;
+  transition: opacity var(--transition);
 }
 
-.content-skipper:focus-visible {
+.skiplink--visible-on-focus:focus {
+  position: relative;
+  inset: 0px;
+  font-size: 1em;
+  opacity: 1;
+  margin: .5rem;
+}
+
+.skiplink--visible {
   position: relative;
   inset: 0px;
   font-size: 1em;
   margin: .5rem;
+  opacity: 1;
 }

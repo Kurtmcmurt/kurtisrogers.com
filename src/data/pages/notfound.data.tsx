@@ -1,3 +1,4 @@
+import Button from "@/components/atoms/Button";
 import Banner from "@/components/organisms/Banner";
 
 const NotFound = {
@@ -19,9 +20,9 @@ const NotFound = {
         <>
           <h2>You're out of this world!</h2>
           <p>I mean, this page doesn't exist - you're not meant to be here!</p>
-          <a class="btn" href="/">
-            Go back to the homepage
-          </a>
+          <Button variant="secondary" outline={true} href={{ url: "/" }}>
+            <span>Go back to the homepage</span>
+          </Button>
         </>
       )
     }

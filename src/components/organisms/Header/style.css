@@ -1,5 +1,6 @@
 header {
-  width: 100%;
+  padding: 0 1rem;
+  max-width: 100%;
   z-index: 20;
 }
 
@@ -10,4 +11,24 @@ header > .content {
   width: 100%;
   max-width: var(--brand-base-grid);
   margin: 0 auto;
+}
+
+header nav.site-navigation > ul {
+  display: flex;
+  padding: 0px;
+}
+
+header nav.site-navigation li {
+  list-style-type: none;
+}
+
+header nav.site-navigation a {
+  padding: .5rem .75rem;
+  margin-left: .5rem;
+  outline: 2px solid var(--brand-black);
+  color: var(--brand-white);
+}
+
+header nav.site-navigation a:hover {
+  text-decoration: underline;
 }

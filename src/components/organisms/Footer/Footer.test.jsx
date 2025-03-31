@@ -1,5 +1,5 @@
 import { render } from "@solidjs/testing-library";
-import Header from ".";
+import Footer from ".";
 import { describe, it, expect } from "vitest";
 
 vi.mock(import("@solidjs/router"), async (importOriginal) => {
@@ -10,13 +10,12 @@ vi.mock(import("@solidjs/router"), async (importOriginal) => {
   }
 })
 
-describe("<Header />", () => {
-  it("renders correctly and links to the correct route", () => {
-    const { getByText } = render(() => <Header />);
-    const linkButton = getByText("loading");
+describe("<Footer />", () => {
+  it("renders correctly and has a link to my linkedin profile", () => {
+    const { getByText } = render(() => <Footer />);
+    const linkButton = getByText("A link to my LinkedIn profile (opens a new tab)");
 
     expect(linkButton).toMatchSnapshot();
     expect(linkButton).toBeInTheDocument();
-    expect(linkButton).toHaveAttribute("href", "/");
   });
 });

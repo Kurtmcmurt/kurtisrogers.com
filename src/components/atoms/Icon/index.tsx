@@ -1,5 +1,6 @@
 import { JSX, createMemo } from "solid-js";
 import { handleSVGString } from "@/helpers/parsers";
+import "./style.css";
 
 export type Icon = {
   width?: number;
@@ -22,6 +23,7 @@ export default function Icon({
 
   return (
     <svg
+      class="icon"
       width={`${width}px`}
       height={`${height}px`}
       fill={fill}

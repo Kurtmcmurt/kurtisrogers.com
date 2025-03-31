@@ -3,46 +3,50 @@
 exports[`Banner > renders 1`] = `
 <div>
   <section
-    class="content-grid wide"
+    class="content-grid wide page-sibling content-grid--dark"
   >
     <div
-      class="banner"
+      class="banner--image"
     >
       <div
         class="banner__content"
       >
-        <h1>
-          Welcome to my website
-        </h1>
-        <p>
-          My name is Kurtis Rogers, a proper Software Engineer from Bristol, UK
-        </p>
-        <ul>
-          <li>
-            Specialising in Frontend technology since 2018
-          </li>
-          <li>
-            Expert in leading frameworks including serverside Node development (Express/Koa)
-          </li>
-          <li>
-            Experienced in building and developing accessible themes in both Drupal and WordPress
-          </li>
-          <li>
-            Effective and approachable mentor
-          </li>
-          <li>
-            Team player, able to build robust yet relaxed relationships with colleagues and stakeholders alike
-          </li>
-        </ul>
-        <p>
-          Want to know more?
-        </p>
-        <a
-          class="button"
-          href="/about"
+        <div
+          class="filterPanel--blur"
         >
-          Read more about me
-        </a>
+          <h1>
+            Welcome to my website
+          </h1>
+          <p>
+            My name is Kurtis Rogers, a proper Software Engineer from Bristol, UK
+          </p>
+          <ul>
+            <li>
+              Specialising in Frontend technology since 2018
+            </li>
+            <li>
+              Expert in leading frameworks including serverside Node development (Express/Koa)
+            </li>
+            <li>
+              Experienced in building and developing accessible themes in both Drupal and WordPress
+            </li>
+            <li>
+              Effective and approachable mentor
+            </li>
+            <li>
+              Team player, able to build robust yet relaxed relationships with colleagues and stakeholders alike
+            </li>
+          </ul>
+          <p>
+            Want to know more?
+          </p>
+          <a
+            class="button"
+            href="/about"
+          >
+            Read more about me
+          </a>
+        </div>
       </div>
       <div
         class="banner__image"
@@ -72,7 +76,7 @@ exports[`Banner > renders 1`] = `
             alt="A photo of The Milky Way, lots of stars and some star-making gas clouds far far away..."
             class="w-full h-full object-cover"
             decoding="async"
-            loading="eager"
+            loading="lazy"
             src="/images/pexels-jack-davis-86003658-9069564-thumbnail.webp"
           />
         </picture>

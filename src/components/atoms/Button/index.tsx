@@ -15,7 +15,6 @@ export interface Props {
   outline?: boolean;
   icon?: Icon;
   callback?: (event: MouseEvent) => void;
-  classes?: string[];
 }
 
 export default function Button({
@@ -23,32 +22,26 @@ export default function Button({
   callback,
   variant = "primary",
   outline,
-  href,
-  classes
+  href
 }: Readonly<Props>) {
   const handleButtonStyle =
     variant === "primary"
       ? handleColourClasses("red", "background")
       : handleColourClasses("white", "background");
 
-  function handleClasses(classes: string[]) {
-    return classes.join(" ");
-  }
-
-  const buttonStyles = handleClasses([
-    ...(classes ?? ""),
-    handleButtonStyle ?? "",
-    "btn",
-    outline ? "btn--outline" : "btn",
-    `btn--${variant}`
-  ]);
-
   return href?.url ? (
-    <a href={href.url} target={href.target ?? "_self"} class={buttonStyles}>
+    <a
+      href={href.url}
+      target={href.target ?? "_self"}
+      class={`${handleButtonStyle} ${outline ? "btn--outline" : "btn"} btn--${variant}`}
+    >
       {children}
     </a>
   ) : (
-    <button class={buttonStyles} onClick={callback}>
+    <button
+      class={`${handleButtonStyle} ${outline ? "btn--outline" : "btn"} btn--${variant}`}
+      onClick={callback}
+    >
       {children}
     </button>
   );
