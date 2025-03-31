@@ -6,7 +6,7 @@ import { linkedin } from "@/data/icons";
 
 export default function Socials() {
   return (
-    <nav class="socials" role="menu">
+    <nav class="socials">
       <ul>
         <li>
           <a href="https://www.linkedin.com/in/roguetrufflepig/" target="_blank">
