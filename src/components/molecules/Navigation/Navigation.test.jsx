@@ -1,21 +1,54 @@
-import { render } from "@solidjs/testing-library";
-import { A, Router, Route } from "@solidjs/router";
+import { render, screen } from "@solidjs/testing-library";
+import Navigation from ".";
+import { describe, it, expect } from "vitest";
 
-vi.mock(import("@solidjs/router"), async (importOriginal) => {
-  const actual = await importOriginal()
-  return {
-    ...actual,
-    A: (props) => <a {...props} data-testid="mock-link">{props.children}</a>, // Mock implementation
-    // your mocked methods
-  }
-})
+vi.mock("@solidjs/router", () => ({
+  A: (props) => <a href={props.href} class={props.activeClass}>{props.children}</a>,
+}));
 
-describe("<LinkButton />", () => {
-  it("renders correctly and links to the correct route", () => {
-    const { getByText } = render(() => <A href="/about">Go to About</A>)
+describe("Navigation Component", () => {
+  const mockItems = [
+    { link: "/home", text: "Home" },
+    { link: "/about", text: "About" },
+  ];
 
-    const linkButton = getByText("Go to About");
-    expect(linkButton).toBeInTheDocument();
-    expect(linkButton).toHaveAttribute("href", "/about");
+  it("renders navigation items correctly", () => {
+    render(() => <Navigation items={mockItems} />);
+
+    // Check if the navigation items are rendered
+    mockItems.forEach(item => {
+      expect(screen.getByText(item.text)).toBeInTheDocument();
+      expect(screen.getByText(item.text).closest("a")).toHaveAttribute("href", item.link);
+    });
+  });
+
+  it("applies custom classes", () => {
+    render(() => <Navigation classes="custom-class" items={mockItems} />);
+    
+    const nav = screen.getByRole("navigation");
+    expect(nav).toHaveClass("custom-class");
+  });
+
+  it("uses the provided label for aria-label", () => {
+    render(() => <Navigation label="Custom Navigation" items={mockItems} />);
+    
+    const nav = screen.getByRole("navigation");
+    expect(nav).toHaveAttribute("aria-label", "Custom Navigation");
+  });
+
+  it("defaults to 'Main' for aria-label if no label is provided", () => {
+    render(() => <Navigation items={mockItems} />);
+    
+    const nav = screen.getByRole("navigation");
+    expect(nav).toHaveAttribute("aria-label", "Main");
+  });
+
+  it("renders without items", () => {
+    render(() => <Navigation />);
+    
+    // Check if the navigation renders without crashing
+    const nav = screen.getByRole("navigation");
+    expect(nav).toBeInTheDocument();
+    expect(nav.querySelector("ul")).toBeEmptyDOMElement();
   });
 });

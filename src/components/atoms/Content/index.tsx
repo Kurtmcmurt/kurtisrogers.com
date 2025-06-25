@@ -1,7 +1,7 @@
 import { handleColourClasses } from "@/helpers/colours";
 import type { Branding } from "@/types/branding";
 import type { gridLayoutOptions } from "@/types/grid";
-import { JSX } from "solid-js";
+import { JSX, createMemo } from "solid-js";
 import "./style.css";
 
 export interface Props {
@@ -16,11 +16,11 @@ export interface Props {
 export default function Content(props: Readonly<Props>) {
   const { children, gridLayout, variant = "black", firstChild } = props;
 
-  const colourClasses = handleColourClasses(variant, "background");
+  const colourClasses = createMemo(() => handleColourClasses(variant, "background"));
 
   return (
     <section
-      class={`${gridLayout ?? ""} content-grid ${colourClasses} ${firstChild ? "first-element" : "page-sibling"}`}
+      class={`${gridLayout ?? ""} content-grid ${colourClasses()} ${firstChild ? "first-element" : "page-sibling"}`}
     >
       {children}
     </section>

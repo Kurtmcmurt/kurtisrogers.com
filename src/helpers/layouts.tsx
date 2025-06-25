@@ -5,6 +5,7 @@ import { MetaProvider, Meta, Title } from "@solidjs/meta";
 import { Dynamic } from "solid-js/web";
 import SkipLink from "@/components/atoms/Skiplink";
 import Navigation from "@/components/molecules/Navigation";
+import { main } from "@/data/navigations";
 
 type MetaData = {
   type: string;
@@ -57,7 +58,7 @@ export const Layout = (props: Props) => {
       </main>
       <Footer>
         <div>
-          <Navigation label="Footer menu" classes={"light-background"} />
+          <Navigation label="Footer menu" classes={"light-background"} items={main} />
           <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />
         </div>
       </Footer>

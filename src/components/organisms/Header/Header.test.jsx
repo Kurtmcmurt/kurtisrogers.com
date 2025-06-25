@@ -10,13 +10,56 @@ vi.mock(import("@solidjs/router"), async (importOriginal) => {
   }
 })
 
-describe("<Header />", () => {
-  it("renders correctly and links to the correct route", () => {
-    const { getByText } = render(() => <Header />);
-    const linkButton = getByText("loading");
+vi.mock("@/components/molecules/Navigation", () => {
+  return {
+    default: (props) => <nav class={props.classes}>{props.items.map(item => <a href={item.link}>{item.text}</a>)}</nav>,
+  };
+});
 
-    expect(linkButton).toMatchSnapshot();
-    expect(linkButton).toBeInTheDocument();
-    expect(linkButton).toHaveAttribute("href", "/");
+vi.mock("@/components/atoms/Skiplink", () => {
+  return {
+    default: (props) => <a href={`#${props.id}`} class={props.visibleOnFocusOnly ? "visible-on-focus" : ""}>{props.name}</a>,
+  };
+});
+
+vi.mock("@/components/atoms/Logo", () => {
+  return {
+    default: () => <div>Logo</div>,
+  };
+});
+
+describe("Header Component", () => {
+  const mockMenuItems = [
+    { link: "/", text: "Home" },
+    { link: "/about", text: "About" },
+  ];
+
+  it("renders the header with logo and navigation", () => {
+    const { getByText } = render(() => <Header menuItems={mockMenuItems} />);
+
+    // Check if the logo is rendered
+    expect(getByText("Logo")).toBeInTheDocument();
+
+    // Check if the navigation items are rendered
+    mockMenuItems.forEach(item => {
+      expect(getByText(item.text)).toBeInTheDocument();
+      expect(getByText(item.text).closest("a")).toHaveAttribute("href", item.link);
+    });
+  });
+
+  it("renders the skip link", () => {
+    const { getByRole } = render(() => <Header />);
+
+    // Check if the skip link is rendered
+    const skipLink = getByRole("link", { name: "main content" });
+    expect(skipLink).toBeInTheDocument();
+    expect(skipLink).toHaveAttribute("href", "#main");
+  });
+
+  it("renders children elements", () => {
+    const { getByText } = render(() => <Header><div>Child Content</div></Header>);
+
+    // Check if the child content is rendered
+    expect(getByText("Child Content")).toBeInTheDocument();
   });
 });

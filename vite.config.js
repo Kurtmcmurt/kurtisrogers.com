@@ -30,11 +30,13 @@ export default defineConfig({
     watch: false,
     globals: true, // Use global test functions like describe, it, expect
     environment: 'jsdom', // Use jsdom for DOM testing
-    css: true, // Enable CSS support
+    css: false, // Enable CSS support
     server: {
       deps: {
         inline: ["@solidjs/testing-library", "@solidjs/router"],
       },
     },
+    include: ['**/*.test.jsx', '**/*.test.tsx'], // Include test files
+    exclude: ['node_modules', 'dist'], // Exclude certain directories
   },
 });

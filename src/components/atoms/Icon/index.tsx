@@ -2,12 +2,13 @@ import { JSX, createMemo } from "solid-js";
 import { handleSVGString } from "@/helpers/parsers";
 import "./style.css";
 
-export type Icon = {
+export type IconType = {
   width?: number;
   height?: number;
-  viewbox: string;
+  viewbox?: string;
   fill?: string;
-  icondata: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icondata?: any;
   children?: JSX.Element;
 };
 
@@ -18,7 +19,7 @@ export default function Icon({
   fill = "currentColor",
   icondata,
   children
-}: Readonly<Icon>) {
+}: Readonly<IconType>) {
   const parsedSVG = createMemo(() => handleSVGString(icondata));
 
   return (

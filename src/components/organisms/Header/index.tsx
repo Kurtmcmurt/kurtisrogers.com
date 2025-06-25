@@ -2,6 +2,7 @@ import { JSX } from "solid-js";
 import Navigation from "@/components/molecules/Navigation";
 import SkipLink from "@/components/atoms/Skiplink";
 import Logo from "@/components/atoms/Logo";
+import { main } from "@/data/navigations";
 import "./style.css";
 
 type Item = {
@@ -22,7 +23,7 @@ export default function Header({ children }: Readonly<Props>) {
         <div class="content">
           <Logo />
           <div>
-            <Navigation classes={"site-navigation"} />
+            <Navigation classes={"site-navigation"} items={main} />
             {children}
           </div>
         </div>
