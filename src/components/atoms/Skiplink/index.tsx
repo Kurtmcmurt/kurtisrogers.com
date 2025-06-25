@@ -33,7 +33,7 @@ export default function SkipLink({
   return (
     <button
       class={`skiplink ${visibleOnFocusOnly ? "skiplink--visible-on-focus" : "skiplink--visible"} btn btn--${variant}`}
-      onClick={() => handleFocus(id ?? "main", isTag)}
+      onClick={() => handleFocus(id || "main", isTag)}
     >
       Skip to {name ?? "main content"}
     </button>
