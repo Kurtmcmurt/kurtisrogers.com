@@ -15,7 +15,11 @@ const NotFound = {
   components: [
     {
       component: Banner,
-      title: "404",
+      title: {
+        text: "404",
+        headingLevel: 1,
+        headingClass: "text-size-h2"
+      },
       children: (
         <>
           <h2>You're out of this world!</h2>

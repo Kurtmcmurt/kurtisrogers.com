@@ -36,4 +36,10 @@
 
   /* transitions */
   --transition: .3s ease-in-out;
+
+  /* breakpoints */
+  --breakpoint-xs: 320;
+  --breakpoint-sm: 768;
+  --breakpoint-md: 960;
+  --breakpoint-lg: 1420;
 }

@@ -19,7 +19,7 @@ const responsiveImages = ({ data }: Data) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   medium && (medium.minWidth = 768);
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-  small && (small.minWidth = 320);
+  small && (small.minWidth = 480);
 
   // reorder the object in a way which makes sense for the images sort i the DOM (biggest first)
   const reformatted = {

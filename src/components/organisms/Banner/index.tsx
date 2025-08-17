@@ -10,6 +10,13 @@ import { Dynamic } from "solid-js/web";
 type Title = {
   text: string;
   headingLevel: "1" | "2" | "3" | "4" | "5" | "6";
+  headingClass:
+    | "text-size-h1"
+    | "text-size-h2"
+    | "text-size-h3"
+    | "text-size-h4"
+    | "text-size-h5"
+    | "text-size-h6";
 };
 
 interface Props {
@@ -30,11 +37,14 @@ export default function Banner(props: Readonly<Props>) {
     <section
       class={`content-grid ${gridLayout ?? ""} ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
     >
-      <div class={`banner${backgroundImage ? "--image" : ""}`}>
+      <div class={`banner${!!backgroundImage ? "--image" : ""}`}>
         <div class={`banner__content`}>
           <CSSFilterPanel variant="blur">
             <Show when={title}>
-              <Dynamic component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}>
+              <Dynamic
+                component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}
+                class={typeof title === "string" ? "text-size-h1" : title?.headingClass}
+              >
                 {typeof title === "string" ? title : title?.text}
               </Dynamic>
             </Show>

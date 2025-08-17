@@ -14,7 +14,9 @@ exports[`Banner > renders 1`] = `
         <div
           class="filterPanel--blur"
         >
-          <h1>
+          <h1
+            class="text-size-h1"
+          >
             Welcome to my website
           </h1>
           <p>
@@ -68,7 +70,7 @@ exports[`Banner > renders 1`] = `
           />
            
           <source
-            media="(min-width: 320px)"
+            media="(min-width: 480px)"
             srcset="/images/pexels-jack-davis-86003658-9069564-sm.webp"
           />
            
