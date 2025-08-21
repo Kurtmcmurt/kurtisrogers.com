@@ -15,7 +15,6 @@ export interface ImageResponse {
     alternativeText?: string;
     url: string;
     formats: {
-      thumbnail?: Image;
       small?: Image;
       medium?: Image;
       large?: Image;

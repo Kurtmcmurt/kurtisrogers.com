@@ -41,7 +41,6 @@ const MaintenanceModeData = {
               stakeholders alike.
             </li>
           </ul>
-          <p>Want to know more?</p>
           <Button
             variant="primary"
             outline={true}
@@ -51,9 +50,8 @@ const MaintenanceModeData = {
           </Button>
           <p></p>
           <Button
-            variant="primary"
-            outline={true}
-            href={{ url: "https://www.linkedin.com/in/roguetrufflepig/", target: "_blank" }}
+            variant="secondary"
+            href={{ url: "https://github.com/Kurtmcmurt/kurtisrogers.com", target: "_blank" }}
           >
             <span>GitHub</span>
           </Button>

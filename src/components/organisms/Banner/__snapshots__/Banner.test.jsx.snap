@@ -64,22 +64,12 @@ exports[`Banner > renders 1`] = `
             srcset="/images/pexels-jack-davis-86003658-9069564-lg.webp"
           />
            
-          <source
-            media="(min-width: 768px)"
-            srcset="/images/pexels-jack-davis-86003658-9069564-md.webp"
-          />
-           
-          <source
-            media="(min-width: 480px)"
-            srcset="/images/pexels-jack-davis-86003658-9069564-sm.webp"
-          />
-           
           <img
             alt="A photo of The Milky Way, lots of stars and some star-making gas clouds far far away..."
             class="w-full h-full object-cover"
             decoding="async"
             loading="lazy"
-            src="/images/pexels-jack-davis-86003658-9069564-thumbnail.webp"
+            src="/images/pexels-jack-davis-86003658-9069564-md.webp"
           />
         </picture>
       </div>

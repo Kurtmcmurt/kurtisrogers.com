@@ -10,7 +10,7 @@ const responsiveImages = ({ data }: Data) => {
   if (!data) return <></>;
 
   const _default = data.attributes;
-  const { xlarge, large, medium, small, thumbnail } = data.attributes.formats || {};
+  const { xlarge, large, medium, small } = data.attributes.formats || {};
 
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   xlarge && (xlarge.minWidth = 1420);
@@ -26,8 +26,7 @@ const responsiveImages = ({ data }: Data) => {
     ...(xlarge && { xlarge }),
     ...(large && { large }),
     ...(medium && { medium }),
-    ...(small && { small }),
-    ...(thumbnail && { thumbnail })
+    ...(small && { medium })
   };
 
   const imageSizes = Object.values(reformatted);
@@ -41,7 +40,7 @@ const responsiveImages = ({ data }: Data) => {
 
     // fallback/smallest will always be the thumbnail
     imageSources.push(
-      url?.includes("-thumbnail")
+      url?.includes("-md")
         ? `<img
             class="w-full h-full object-cover"
             src="${url}"
