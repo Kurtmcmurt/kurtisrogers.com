@@ -1,4 +1,4 @@
-import { For, JSX, ValidComponent, Component } from "solid-js";
+import { For, JSX, ValidComponent, Component, Show } from "solid-js";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import { MetaProvider, Meta, Title } from "@solidjs/meta";
@@ -6,6 +6,8 @@ import { Dynamic } from "solid-js/web";
 import SkipLink from "@/components/atoms/Skiplink";
 import Navigation from "@/components/molecules/Navigation";
 import { main } from "@/data/navigations";
+
+export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? false : true;
 
 type MetaData = {
   type: string;
@@ -39,9 +41,11 @@ export const Layout = (props: Props) => {
           }
         </For>
       </MetaProvider>
-      <Header />
+      <Show when={MAINTENANCE_MODE}>
+        <Header />
+      </Show>
       <main id="maincontent" tabindex="-1">
-        <For each={components} fallback={<div>Loading...</div>}>
+        <For each={components}>
           {item => {
             const { name } = item.component as Component;
             const firstChildCheck = name.includes("Banner") && components[0] === item;
@@ -58,8 +62,10 @@ export const Layout = (props: Props) => {
       </main>
       <Footer>
         <div>
-          <Navigation label="Footer menu" classes={"light-background"} items={main} />
-          <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />
+          <Show when={MAINTENANCE_MODE}>
+            <Navigation label="Footer menu" classes={"light-background"} items={main} />
+            <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />
+          </Show>
         </div>
       </Footer>
     </>

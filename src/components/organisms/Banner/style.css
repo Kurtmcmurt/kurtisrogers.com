@@ -28,15 +28,18 @@
   }
 }
 
-.banner .banner__content {
+.banner__content {
   grid-column: span 14;
   align-self: center;
-  z-index: 1;
+  z-index: 10;
+  padding: 5rem 1rem;
 }
 
-.banner--image .banner__content {
-  position: absolute;
-  padding: 0px 2rem;
+@media screen and (min-width: 1024px) {
+  .banner--image .banner__content {
+    position: absolute;
+    padding: 0px 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -44,7 +47,7 @@
     position: relative;
     grid-column: span 10;
     align-self: center;
-    z-index: 1;
+    z-index: 10;
   }
 }
 @media screen and (min-width: 1279px) {
@@ -62,13 +65,27 @@
 }
 
 .banner__image {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.banner__image {
   grid-column: span 8;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner__image {
+    position: relative;
+  }
 }
 
 .banner--image img {
   display: block;
   object-fit: cover;
-  height: calc(100vh - 107px);
+  height: 100%;
   width: 100%;
 }
 

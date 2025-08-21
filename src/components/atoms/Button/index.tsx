@@ -38,6 +38,7 @@ export default function Button({
       onClick={callback}
     >
       {children}
+      {href?.target === "_blank" && <span class="sr-only"> (opens a new tab)</span>}
     </Dynamic>
   );
 }

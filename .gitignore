@@ -5,7 +5,6 @@ storybook-static
 
 # files
 .env
-.env.example
 *storybook.log
 
 # Apple

@@ -2,8 +2,6 @@ import { A } from "@solidjs/router";
 import { For } from "solid-js";
 import "./style.css";
 
-// faking a request for the navigation items which are already statically set
-
 type NavElements = {
   link: string;
   text: string;
