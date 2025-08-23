@@ -11,16 +11,22 @@ export interface Props {
   firstChild: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
+  sectionLink?: string;
 }
 
 export default function Content(props: Readonly<Props>) {
-  const { children, gridLayout, variant = "black", firstChild } = props;
+  const { children, gridLayout, variant = "black", sectionLink, firstChild } = props;
 
   const colourClasses = createMemo(() => handleColourClasses(variant, "background"));
+
+  const attributes = {
+    id: sectionLink ?? ""
+  };
 
   return (
     <section
       class={`${gridLayout ?? ""} content-grid ${colourClasses()} ${firstChild ? "first-element" : "page-sibling"}`}
+      {...attributes}
     >
       {children}
     </section>

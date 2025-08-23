@@ -1,16 +1,22 @@
 header {
-  padding: 0 1rem;
+  padding: 1rem;
   max-width: 100%;
   z-index: 20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
 }
 
 header > .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   max-width: var(--brand-base-grid);
-  margin: 0 auto;
+  margin: 0px auto;
+  background: var(--brand-white);
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  box-shadow: inset 4px 1px 20px var(--brand-black);
 }
 
 header nav.site-navigation > ul {
@@ -25,10 +31,16 @@ header nav.site-navigation li {
 header nav.site-navigation a {
   padding: .5rem .75rem;
   margin-left: .5rem;
-  outline: 2px solid var(--brand-black);
-  color: var(--brand-white);
+  outline: 2px solid var(--brand-white);
+  color: var(--brand-black);
 }
 
 header nav.site-navigation a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 1376px) {
+  header > .content {
+    width: 100%;
+  }
 }

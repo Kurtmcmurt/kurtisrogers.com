@@ -32,7 +32,7 @@ footer nav:not(.socials) li {
 
 footer nav a {
   display: inline-flex;
-  color: var(--brand-black);
+  color: var(--brand-white);
   padding: 0px;
   outline: none;
   font-weight: 600;

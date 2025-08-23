@@ -4,11 +4,10 @@ button,
 button.btn,
 button.btn--outline,
 a.btn--outline {
+  position: relative;
   display: inline-block;
-  min-width: 120px;
-  text-align: center;
-  padding: .5rem 1.125rem;
-  border-radius: 20px;
+  text-align: end;
+  padding: 1rem 0.25rem 0px 2rem;
   font-weight: bold;
   cursor: pointer;
   outline: none;
@@ -34,4 +33,19 @@ button,
 
 .btn--secondary.btn--outline {
   border: 2px solid var(--brand-red);
+}
+
+a.btn:before,
+button:before,
+button.btn:before,
+button.btn--outline:before,
+a.btn--outline:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  height: 5px;
+  width: 5px;
+  border-top: 2px solid;
+  border-left: 2px solid;
 }

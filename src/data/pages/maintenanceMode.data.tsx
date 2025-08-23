@@ -87,7 +87,8 @@ const MaintenanceModeData = {
           }
         }
       },
-      gridLayout: "wide"
+      gridLayout: "wide",
+      reversed: true
     }
   ]
 };

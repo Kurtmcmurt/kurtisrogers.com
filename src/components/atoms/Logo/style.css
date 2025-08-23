@@ -1,8 +1,13 @@
 .logo {
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
+  text-rendering: optimizeLegibility;
   outline: 2px solid var(--brand-black);
-  padding: .5rem .75rem;
+  padding: 1rem 0.25rem 0px 2rem;
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
+  text-align: end;
 }
 
 .logo:focus-visible {
@@ -13,4 +18,15 @@
 
 .logo > small {
   display: block;
+}
+
+.logo:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  height: 5px;
+  width: 5px;
+  border-top: 2px solid;
+  border-left: 2px solid;
 }

@@ -18,14 +18,13 @@ const NotFound = {
       title: {
         text: "404",
         headingLevel: 1,
-        headingClass: "text-size-h2"
+        headingClass: "text-size-h3"
       },
       children: (
         <>
-          <h2>You're out of this world!</h2>
-          <p>I mean, this page doesn't exist - you're not meant to be here!</p>
+          <p>You're not meant to be here!</p>
           <Button variant="secondary" outline={true} href={{ url: "/" }}>
-            <span>Go back to the homepage</span>
+            <span>Take me home</span>
           </Button>
         </>
       )

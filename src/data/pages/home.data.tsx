@@ -23,24 +23,38 @@ const HomeData = {
       },
       children: (
         <>
-          <p>My name is Kurtis Rogers, a proper Software Engineer from Bristol, UK</p>
+          <p>
+            My name is Kurtis Rogers and I'm an experienced fullstack software engineer from
+            Bristol, UK.
+          </p>
+          <hr />
           <ul>
-            <li>Specialising in Frontend technology since 2018</li>
             <li>
-              Expert in leading frameworks including serverside Node development (Express/Koa)
+              An expert in popular frontend frameworks including serverside Node development
+              (Express/Koa)
             </li>
             <li>
-              Experienced in building and developing accessible themes in both Drupal and WordPress
+              Effective and approachable mentor to less experienced colleagues, always willing to
+              help folks where I can.
             </li>
-            <li>Effective and approachable mentor</li>
             <li>
-              Team player, able to build robust yet relaxed relationships with colleagues and
-              stakeholders alike
+              A team player, able to build robust yet relaxed relationships with colleagues and
+              stakeholders alike.
             </li>
           </ul>
-          <p>Want to know more?</p>
-          <Button variant="primary" outline={true} href={{ url: "/about" }}>
-            <span>Read more about me</span>
+          <Button
+            variant="primary"
+            outline={true}
+            href={{ url: "https://www.linkedin.com/in/roguetrufflepig/", target: "_blank" }}
+          >
+            <span>Visit my LinkedIn</span>
+          </Button>
+          <p></p>
+          <Button
+            variant="secondary"
+            href={{ url: "https://github.com/Kurtmcmurt/kurtisrogers.com", target: "_blank" }}
+          >
+            <span>GitHub</span>
           </Button>
         </>
       ),

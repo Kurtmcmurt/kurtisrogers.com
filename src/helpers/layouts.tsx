@@ -1,4 +1,4 @@
-import { For, JSX, ValidComponent, Component, Show } from "solid-js";
+import { For, JSX, ValidComponent, Component } from "solid-js";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import { MetaProvider, Meta, Title } from "@solidjs/meta";
@@ -41,9 +41,8 @@ export const Layout = (props: Props) => {
           }
         </For>
       </MetaProvider>
-      <Show when={MAINTENANCE_MODE}>
-        <Header />
-      </Show>
+      <SkipLink id="main" name="main content" isTag={true} visibleOnFocusOnly={true} />
+      <Header />
       <main id="maincontent" tabindex="-1">
         <For each={components}>
           {item => {
@@ -62,10 +61,8 @@ export const Layout = (props: Props) => {
       </main>
       <Footer>
         <div>
-          <Show when={MAINTENANCE_MODE}>
-            <Navigation label="Footer menu" classes={"light-background"} items={main} />
-            <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />
-          </Show>
+          <Navigation label="Footer menu" classes={"light-background"} items={main} />
+          <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />
         </div>
       </Footer>
     </>

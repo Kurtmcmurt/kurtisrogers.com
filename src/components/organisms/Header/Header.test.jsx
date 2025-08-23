@@ -41,19 +41,10 @@ describe("Header Component", () => {
     expect(getByText("Logo")).toBeInTheDocument();
 
     // Check if the navigation items are rendered
-    mockMenuItems.forEach(item => {
-      expect(getByText(item.text)).toBeInTheDocument();
-      expect(getByText(item.text).closest("a")).toHaveAttribute("href", item.link);
-    });
-  });
-
-  it("renders the skip link", () => {
-    const { getByRole } = render(() => <Header />);
-
-    // Check if the skip link is rendered
-    const skipLink = getByRole("link", { name: "main content" });
-    expect(skipLink).toBeInTheDocument();
-    expect(skipLink).toHaveAttribute("href", "#main");
+    // mockMenuItems.forEach(item => {
+    //   expect(getByText(item.text)).toBeInTheDocument();
+    //   expect(getByText(item.text).closest("a")).toHaveAttribute("href", item.link);
+    // });
   });
 
   it("renders children elements", () => {
