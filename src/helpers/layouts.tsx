@@ -6,7 +6,7 @@ import { Dynamic } from "solid-js/web";
 import SkipLink from "@/components/atoms/Skiplink";
 import Navigation from "@/components/molecules/Navigation";
 import { main } from "@/data/navigations";
-// import { layoutSpacingHandler } from "./layoutSpacingHandler";
+import { LayoutSpacingDataType, layoutSpacingHandler } from "./layoutSpacingHandler";
 
 export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? false : true;
 
@@ -44,7 +44,7 @@ export const Layout = (props: Props) => {
       </MetaProvider>
       <SkipLink id="main" name="main content" isTag={true} visibleOnFocusOnly={true} />
       <Header />
-      <main id="maincontent" tabindex="-1" style="margin-top: calc(-54px + -2rem);">
+      <main id="maincontent" tabindex="-1">
         <For each={components}>
           {item => {
             const { name } = item.component as Component;
@@ -52,9 +52,8 @@ export const Layout = (props: Props) => {
 
             const componentData = {
               ...item,
-              firstChild: firstChildCheck
-              // check and implement spacing data
-              // [{ size, orientation, type }, { ... }] will need for multiple types
+              firstChild: firstChildCheck,
+              ...layoutSpacingHandler(item.layoutSpacing as LayoutSpacingDataType)
             };
 
             return <Dynamic {...componentData} />;

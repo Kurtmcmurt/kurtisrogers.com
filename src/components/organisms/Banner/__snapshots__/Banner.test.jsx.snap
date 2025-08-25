@@ -3,7 +3,7 @@
 exports[`Banner > renders 1`] = `
 <div>
   <section
-    class="content-grid wide page-sibling content-grid--dark"
+    class="banner content-grid wide page-sibling content-grid--dark"
   >
     <div
       class="banner--image"

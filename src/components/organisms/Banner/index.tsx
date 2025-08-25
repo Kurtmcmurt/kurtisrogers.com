@@ -6,6 +6,7 @@ import type { gridLayoutOptions } from "@/types/grid";
 import responsiveImages from "@/helpers/responsiveImages";
 import CSSFilterPanel from "@/components/atoms/CSSFilterPanel";
 import { Dynamic } from "solid-js/web";
+import { LayoutSpacingDataType } from "@/helpers/layoutSpacingHandler";
 
 type Title = {
   text: string;
@@ -28,6 +29,7 @@ interface Props {
   children?: JSX.Element;
   firstChild: boolean;
   variant: "light" | "dark";
+  spacing: LayoutSpacingDataType;
 }
 
 export default function Banner(props: Readonly<Props>) {
@@ -35,7 +37,7 @@ export default function Banner(props: Readonly<Props>) {
 
   return (
     <section
-      class={`content-grid ${gridLayout ?? ""} ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
+      class={`banner content-grid ${gridLayout ?? ""} ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
     >
       <div class={`banner${!!backgroundImage ? "--image" : ""}`}>
         <div class={`banner__content`}>
