@@ -17,18 +17,16 @@ type Props = {
 
 export default function Header({ children }: Readonly<Props>) {
   return (
-    <>
-      <header tabindex="-1">
-        <div class="content">
-          <Logo variant="secondary" />
-          <div class="navigation">
-            <Show when={MAINTENANCE_MODE}>
-              <Navigation classes={"site-navigation"} items={main} />
-            </Show>
-            {children}
-          </div>
+    <header tabindex="-1">
+      <div class="content">
+        <Logo variant="secondary" />
+        <div class="navigation">
+          <Show when={MAINTENANCE_MODE}>
+            <Navigation classes={"site-navigation"} items={main} />
+          </Show>
+          {children}
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 }

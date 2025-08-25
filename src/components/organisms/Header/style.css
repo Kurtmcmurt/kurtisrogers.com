@@ -1,6 +1,5 @@
 header {
-  padding: 1rem;
-  max-width: 100%;
+  width: 100%;
   z-index: 20;
   position: -webkit-sticky;
   position: sticky;
@@ -12,11 +11,9 @@ header > .content {
   align-items: center;
   justify-content: space-between;
   max-width: var(--brand-base-grid);
-  margin: 0px auto;
+  margin: 1rem;
   background: var(--brand-white);
-  padding: 0.5rem 2rem;
-  border-radius: 50px;
-  box-shadow: inset 4px 1px 20px var(--brand-black);
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
 }
 
 header nav.site-navigation > ul {
@@ -39,8 +36,9 @@ header nav.site-navigation a:hover {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 1376px) {
+@media screen and (min-width: 1320px) {
   header > .content {
     width: 100%;
+    margin: 1rem auto;
   }
 }
