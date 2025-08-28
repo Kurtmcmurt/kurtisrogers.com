@@ -19,16 +19,20 @@ export const layoutSpacingHandler = (LayoutSpacingDataType: LayoutSpacingDataTyp
       md: "2rem",
       lg: "3rem",
       xl: "4.5rem",
-      default: "1rem"
+      default: "0px"
     };
 
     return sizes[size] || sizes["default"];
   };
 
-  return {
-    paddingTop: sizeConverter(paddingTop),
-    paddingBottom: sizeConverter(paddingBottom),
-    marginTop: sizeConverter(marginTop),
-    marginBottom: sizeConverter(marginBottom)
+  const styles = {
+    "padding-top": sizeConverter(paddingTop),
+    "padding-bottom": sizeConverter(paddingBottom),
+    "margin-top": sizeConverter(marginTop),
+    "margin-bottom": sizeConverter(marginBottom)
   };
+
+  return Object.entries(styles)
+    .map(([k, v]) => `${k}:${v}`)
+    .join(";");
 };

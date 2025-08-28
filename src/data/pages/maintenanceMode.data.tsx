@@ -87,13 +87,7 @@ const MaintenanceModeData = {
           }
         }
       },
-      gridLayout: "wide",
-      layoutSpacing: {
-        paddingTop: "xs",
-        paddingBottom: "default",
-        marginTop: "lg",
-        marginBottom: "xl"
-      }
+      gridLayout: "wide"
     }
   ]
 };

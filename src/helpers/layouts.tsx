@@ -53,7 +53,7 @@ export const Layout = (props: Props) => {
             const componentData = {
               ...item,
               firstChild: firstChildCheck,
-              ...layoutSpacingHandler(item.layoutSpacing as LayoutSpacingDataType)
+              style: layoutSpacingHandler(item.layoutSpacing as LayoutSpacingDataType)
             };
 
             return <Dynamic {...componentData} />;

@@ -69,6 +69,7 @@ h5 {
   font-family: var(--heading-font);
   font-weight: true;
   line-height: 1;
+  margin: 0px;
 }
 
 h1,
@@ -88,20 +89,20 @@ h1,
 
 h2,
 .text-size-h2 {
-  font-size: var(--text-size-2xl);
+  font-size: var(--text-size-xl);
   line-height: 1;
 }
 
 @media screen and (min-width: 480px) {
   h2,
   .text-size-h2 {
-    font-size: var(--text-size-3xl);
+    font-size: var(--text-size-2xl);
   }
 }
 
 h3,
 .text-size-h3 {
-  font-size: var(--text-size-1xl);
+  font-size: var(--text-size-xl);
   line-height: 1;
 }
 

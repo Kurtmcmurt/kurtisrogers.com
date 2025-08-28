@@ -16,13 +16,13 @@ const AboutData = {
     {
       component: Banner,
       title: {
-        text: "Space.",
-        headingLevel: "1"
+        text: "About",
+        headingLevel: "2",
+        headingClass: "text-size-h3"
       },
       children: (
         <>
-          <p>I love space.</p>
-          <p>I love the mystery which surrounds space.</p>
+          <p>As well as having a keen interest in web technologies, I'm also REALLY into space.</p>
         </>
       ),
       backgroundImage: {
@@ -61,7 +61,7 @@ const AboutData = {
       component: Content,
       children: (
         <>
-          <h2>Classic nerd.</h2>
+          <h2>Experience</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis sodales arcu. Ut
             nec imperdiet orci. Mauris ullamcorper lacus tincidunt dolor semper interdum. Nulla
@@ -72,7 +72,12 @@ const AboutData = {
           </p>
         </>
       ),
-      variant: "white"
+      variant: "yellow",
+      layoutSpacing: {
+        paddingTop: "xl",
+        paddingBottom: "xl"
+      },
+      gridLayout: "wide"
     }
   ]
 };

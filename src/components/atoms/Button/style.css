@@ -49,3 +49,10 @@ a.btn--outline:before {
   border-top: 2px solid;
   border-left: 2px solid;
 }
+
+a.btn:before,
+button:before,
+button.btn:before {
+  left: 0px;
+  top: 0px;
+}

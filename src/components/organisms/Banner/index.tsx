@@ -7,21 +7,10 @@ import responsiveImages from "@/helpers/responsiveImages";
 import CSSFilterPanel from "@/components/atoms/CSSFilterPanel";
 import { Dynamic } from "solid-js/web";
 import { LayoutSpacingDataType } from "@/helpers/layoutSpacingHandler";
-
-type Title = {
-  text: string;
-  headingLevel: "1" | "2" | "3" | "4" | "5" | "6";
-  headingClass:
-    | "text-size-h1"
-    | "text-size-h2"
-    | "text-size-h3"
-    | "text-size-h4"
-    | "text-size-h5"
-    | "text-size-h6";
-};
+import type { Heading } from "@/types/branding";
 
 interface Props {
-  title?: Title | string;
+  title?: Heading | string;
   backgroundImage: {
     data: ImageResponse;
   };
