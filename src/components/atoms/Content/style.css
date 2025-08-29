@@ -7,7 +7,7 @@
   grid-column: breakout;
 }
 
-.content-grid.full {
+.content-grid:not(.banner) {
   padding: 1rem;
   margin: 1rem;
 }
