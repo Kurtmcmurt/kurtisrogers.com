@@ -30,25 +30,18 @@ const AboutData = {
           attributes: {
             alternativeText:
               "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
-            url: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp",
+            url: "/images/optimised/milkyway-galaxy-md.webp",
             formats: {
-              thumbnail: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp"
-              },
-              small: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-sm.webp",
-                minWidth: 320
-              },
               medium: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-md.webp",
+                src: "/images/optimised/milkyway-galaxy-md.webp",
                 minWidth: 768
               },
               large: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-lg.webp",
+                src: "/images/optimised/milkyway-galaxy-lg.webp",
                 minWidth: 960
               },
               xlarge: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-xl.webp",
+                src: "/images/optimised/milkyway-galaxy-xl.webp",
                 minWidth: 1420
               }
             }
@@ -63,21 +56,17 @@ const AboutData = {
         <>
           <h2>Experience</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis sodales arcu. Ut
-            nec imperdiet orci. Mauris ullamcorper lacus tincidunt dolor semper interdum. Nulla
-            luctus ex vel volutpat ultricies. Mauris vel magna diam. Quisque non congue diam. Sed
-            neque lacus, auctor vitae arcu eu, pellentesque condimentum lorem. Donec at rutrum
-            mauris. Fusce molestie, metus vel aliquet elementum, felis dolor placerat nisi, a
-            ultricies eros ipsum id lacus. Donec eget dolor lacus.
+            I have been working as a web developer in the South West of England for over the past
+            decade.
           </p>
         </>
       ),
       variant: "yellow",
       layoutSpacing: {
         paddingTop: "xl",
-        paddingBottom: "xl"
-      },
-      gridLayout: "wide"
+        paddingBottom: "xl",
+        marginBottom: "xs"
+      }
     }
   ]
 };

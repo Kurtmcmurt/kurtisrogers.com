@@ -2,13 +2,13 @@ footer {
   background: var(--brand-yellow);
   background: var(--brand-primary-gradient);
   padding: 4rem 1rem;
+  max-width: var(--brand-base-grid);
+  margin: 1rem;
 }
 
 footer .filterPanel--blur {
   display: flex;
   justify-content: space-between;
-  max-width: var(--brand-base-grid);
-  margin: 0 auto;
 }
 
 footer .logo {
@@ -42,7 +42,7 @@ footer div.filterPanel > :first-child {
   width: calc(100% - 4rem);
 }
 
-.footer .footer__socials {
+footer .content .footer__socials {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,4 +52,10 @@ footer .socials ul {
   display: flex;
   flex-direction: row;
   margin: 0px;
+}
+
+@media screen and (min-width: 1280px) {
+  footer {
+    margin: 0px auto 1rem;
+  }
 }

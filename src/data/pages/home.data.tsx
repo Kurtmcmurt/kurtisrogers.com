@@ -65,13 +65,6 @@ const HomeData = {
               "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
             url: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp",
             formats: {
-              thumbnail: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp"
-              },
-              small: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-sm.webp",
-                minWidth: 320
-              },
               medium: {
                 src: "/images/optimised/pexels-jack-davis-86003658-9069564-md.webp",
                 minWidth: 768

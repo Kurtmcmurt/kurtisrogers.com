@@ -11,7 +11,7 @@ interface Props {
 export default function Footer({ children }: Readonly<Props>) {
   return (
     <footer tabindex="-1">
-      <div class="footer">
+      <div class="content">
         <CSSFilterPanel variant="blur">
           <div class="footer__socials">
             <Logo variant="secondary" />
