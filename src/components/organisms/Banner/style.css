@@ -1,3 +1,7 @@
+.banner {
+  overflow: hidden;
+}
+
 .banner.first-element {
   margin: 1rem;
 }
