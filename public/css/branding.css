@@ -150,3 +150,7 @@ button:focus-visible {
   height: 1px;
   overflow: hidden;
 }
+
+#maincontent {
+  margin: 1rem;
+}

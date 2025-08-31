@@ -65,6 +65,7 @@ const AboutData = {
       layoutSpacing: {
         paddingTop: "xl",
         paddingBottom: "xl",
+        marginTop: "xs",
         marginBottom: "xs"
       }
     }
