@@ -120,6 +120,8 @@ const MaintenanceModeData = {
       ),
       variant: "white",
       layoutSpacing: {
+        paddingTop: "xs",
+        paddingBottom: "xs",
         marginBottom: "lg"
       },
       gridLayout: "wide"
