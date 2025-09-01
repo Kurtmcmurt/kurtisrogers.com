@@ -57,8 +57,6 @@ body {
   font-family: var(--normal-font);
   font-weight: false;
   word-break: all;
-  text-underline-offset: 0.125rem;
-  text-underline-position: under;
 }
 
 h1,

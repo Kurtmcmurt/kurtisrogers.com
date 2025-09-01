@@ -36,6 +36,8 @@ footer nav a {
   padding: 0px;
   outline: none;
   font-weight: 600;
+  text-underline-offset: 0.125rem;
+  text-underline-position: under;
 }
 
 footer div.filterPanel > :first-child {

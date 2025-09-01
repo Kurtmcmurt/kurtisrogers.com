@@ -35,6 +35,8 @@ header nav.site-navigation a {
   margin-left: .5rem;
   outline: 2px solid var(--brand-white);
   color: var(--brand-black);
+  text-underline-offset: 0.125rem;
+  text-underline-position: under;
 }
 
 header nav.site-navigation a:hover {

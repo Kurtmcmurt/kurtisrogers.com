@@ -1,10 +1,12 @@
 nav.socials a {
   display: flex;
   color: var(--brand-white);
+  outline: 2px solid transparent;
 }
 
 nav.socials a:focus {
-  color: var(--brand-black);
+  outline: 2px solid white;
+  background: var(--brand-black);
 }
 
 nav.socials ul {

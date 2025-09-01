@@ -6,7 +6,7 @@ import {
   NotFound as NotFoundContent
 } from "@/data/content";
 
-const handleMaintenanceContent = !MAINTENANCE_MODE ? MaintenanceModeContent : HomeContent;
+const handleMaintenanceContent = MAINTENANCE_MODE ? MaintenanceModeContent : HomeContent;
 
 export const Navigation = () => [
   {

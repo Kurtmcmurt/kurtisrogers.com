@@ -57,17 +57,20 @@ const AboutData = {
           <h2>Experience</h2>
           <p>
             I have been working as a web developer in the South West of England for over the past
-            decade.
+            decade. During this time I have worked in multiple small and large agencies being an
+            effective participant in many cross disicinpline teams, and sometimes alongside
+            stakeholders and their teams too!
           </p>
         </>
       ),
       variant: "yellow",
       layoutSpacing: {
-        paddingTop: "xl",
-        paddingBottom: "xl",
+        paddingTop: "lg",
+        paddingBottom: "lg",
         marginTop: "xs",
         marginBottom: "xs"
-      }
+      },
+      gridLayout: "wide"
     }
   ]
 };

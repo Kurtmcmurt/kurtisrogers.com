@@ -21,7 +21,7 @@ export default function Header({ children }: Readonly<Props>) {
       <div class="content">
         <Logo variant="secondary" />
         <div class="navigation">
-          <Show when={MAINTENANCE_MODE}>
+          <Show when={!MAINTENANCE_MODE}>
             <Navigation classes={"site-navigation"} items={main} />
           </Show>
           {children}

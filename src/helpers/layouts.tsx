@@ -8,7 +8,7 @@ import Navigation from "@/components/molecules/Navigation";
 import { main } from "@/data/navigations";
 import { LayoutSpacingDataType, layoutSpacingHandler } from "./layoutSpacingHandler";
 
-export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? false : true;
+export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? true : false;
 
 type MetaData = {
   type: string;
@@ -42,7 +42,9 @@ export const Layout = (props: Props) => {
           }
         </For>
       </MetaProvider>
+      <SkipLink id="header" name="header content" isTag={true} visibleOnFocusOnly={true} />
       <SkipLink id="main" name="main content" isTag={true} visibleOnFocusOnly={true} />
+      <SkipLink id="footer" name="footer content" isTag={true} visibleOnFocusOnly={true} />
       <Header />
       <main id="maincontent" tabindex="-1">
         <For each={components}>

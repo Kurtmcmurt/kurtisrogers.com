@@ -1,5 +1,6 @@
 import Button from "@/components/atoms/Button";
 import Banner from "@/components/organisms/Banner";
+import Content from "@/components/atoms/Content";
 
 const MaintenanceModeData = {
   meta: [
@@ -86,6 +87,40 @@ const MaintenanceModeData = {
             }
           }
         }
+      },
+      gridLayout: "wide"
+    },
+    {
+      component: Content,
+      children: (
+        <>
+          <h2>Maintenance mode</h2>
+          <p>I have been working on this site for far too long...</p>
+        </>
+      ),
+      variant: "red",
+      layoutSpacing: {
+        paddingTop: "md",
+        paddingBottom: "md",
+        marginTop: "lg"
+      },
+      gridLayout: "wide"
+    },
+    {
+      component: Content,
+      children: (
+        <>
+          <p>
+            In the meantime if you wish to get a hold of me{" "}
+            <a href="https://linktr.ee/kurtisrogers" target="_blank">
+              check out my linkt.ree
+            </a>
+          </p>
+        </>
+      ),
+      variant: "white",
+      layoutSpacing: {
+        marginBottom: "lg"
       },
       gridLayout: "wide"
     }
