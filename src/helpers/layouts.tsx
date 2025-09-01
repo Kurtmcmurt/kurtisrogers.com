@@ -64,8 +64,10 @@ export const Layout = (props: Props) => {
         {props.children}
       </main>
       <Footer>
-        <Navigation label="Footer menu" classes={"light-background"} items={main} />
-        <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />
+        <div>
+          <Navigation label="Footer menu" classes={"light-background"} items={main} />
+          <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />
+        </div>
       </Footer>
     </>
   );
