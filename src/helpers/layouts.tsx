@@ -42,9 +42,9 @@ export const Layout = (props: Props) => {
           }
         </For>
       </MetaProvider>
-      <SkipLink id="header" name="header content" isTag={true} visibleOnFocusOnly={true} />
+      <SkipLink id="header" name="navigation" isTag={true} visibleOnFocusOnly={true} />
       <SkipLink id="main" name="main content" isTag={true} visibleOnFocusOnly={true} />
-      <SkipLink id="footer" name="footer content" isTag={true} visibleOnFocusOnly={true} />
+      <SkipLink id="footer" name="footer" isTag={true} visibleOnFocusOnly={true} />
       <Header />
       <main id="maincontent" tabindex="-1">
         <For each={components}>

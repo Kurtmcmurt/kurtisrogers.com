@@ -7,15 +7,25 @@ type NavElements = {
   text: string;
 };
 
+type Attributes = {
+  [key: string]: string | boolean;
+};
+
 interface Props {
   label?: string;
   classes?: string;
   items?: NavElements[];
+  attributes?: Attributes;
 }
 
-export default function Navigation({ label, classes, items }: Props) {
+export default function Navigation({ label, classes, items, attributes }: Props) {
   return (
-    <nav class={`navigation ${classes}`} aria-label={label ?? "Main"} role="navigation">
+    <nav
+      class={`navigation ${classes}`}
+      aria-label={label ?? "Main"}
+      role="navigation"
+      {...attributes}
+    >
       <ul>
         <For each={items}>
           {item => {

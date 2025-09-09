@@ -8,12 +8,17 @@ type Href = {
   target?: "_blank" | "_self";
 };
 
+type Attributes = {
+  [key: string]: string | boolean;
+};
+
 export interface Props {
   children?: JSX.Element | string;
   href?: Href;
   variant?: "primary" | "secondary";
   outline?: boolean;
-  callback?: (event: MouseEvent) => void;
+  callback?: (event: Event) => void;
+  attributes?: Attributes;
 }
 
 export default function Button({
@@ -21,7 +26,8 @@ export default function Button({
   callback,
   variant = "primary",
   outline = false,
-  href
+  href,
+  attributes
 }: Readonly<Props>) {
   const handleButtonStyle = createMemo(() =>
     variant === "primary"
@@ -36,6 +42,7 @@ export default function Button({
       target={href?.target ?? "_self"}
       class={`${handleButtonStyle()} ${outline ? "btn--outline" : "btn"} btn--${variant}`}
       onClick={callback}
+      {...attributes}
     >
       {children}
       {href?.target === "_blank" && <span class="sr-only"> (opens a new tab)</span>}

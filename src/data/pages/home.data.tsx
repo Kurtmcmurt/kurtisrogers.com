@@ -11,7 +11,7 @@ const HomeData = {
     },
     {
       type: "description",
-      content: "This is some content describing the home page"
+      content: "Welcome to the website for Kurtis Rogers, Software Engineer"
     }
   ],
   components: [
@@ -38,8 +38,7 @@ const HomeData = {
               help folks where I can.
             </li>
             <li>
-              A team player, able to build robust yet relaxed relationships with colleagues and
-              stakeholders alike.
+              A team player, able to build robust yet relaxed relationships with all stakeholders.
             </li>
           </ul>
           <Button
@@ -62,19 +61,19 @@ const HomeData = {
         data: {
           attributes: {
             alternativeText:
-              "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
-            url: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp",
+              "A photo of The Milky Way, taken from the surface of Earth in a heavily wooded area. The silouhette of trees wrap the image with the sky in the background emphasising the expanse of our galaxy.",
+            url: "/images/optimised/milkyway-galaxy-forest-md.webp",
             formats: {
               medium: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-md.webp",
+                src: "/images/optimised/milkyway-galaxy-forest-md.webp",
                 minWidth: 768
               },
               large: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-lg.webp",
+                src: "/images/optimised/milkyway-galaxy-forest-lg.webp",
                 minWidth: 960
               },
               xlarge: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-xl.webp",
+                src: "/images/optimised/milkyway-galaxy-forest-xl.webp",
                 minWidth: 1420
               }
             }

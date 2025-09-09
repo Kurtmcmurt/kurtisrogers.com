@@ -1,6 +1,8 @@
 .content-grid > *,
 .content-grid.full {
   grid-column: content;
+  word-wrap: break-word;
+  width: 100%;
 }
 
 .content-grid.wide > * {
@@ -8,6 +10,7 @@
 }
 
 .content-grid:not(.banner) {
+  display: flex;
   padding: 1rem;
 }
 
@@ -25,6 +28,7 @@
 
 @media screen and (min-width: 1024px) {
   .content-grid,
+  .content-grid:not(.banner),
   .content-grid.full {
     display: grid;
     grid-template-columns: 

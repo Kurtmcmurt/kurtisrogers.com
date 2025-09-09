@@ -10,14 +10,14 @@ const MaintenanceModeData = {
     },
     {
       type: "description",
-      content: "Welcome to the website for Kurtis Rogers, Senior Software Engineer"
+      content: "Welcome to the website for Kurtis Rogers, Software Engineer"
     }
   ],
   components: [
     {
       component: Banner,
       title: {
-        text: "Hello.",
+        text: "Software Engineer",
         headingLevel: "1",
         headingClass: "text-size-h2"
       },
@@ -38,8 +38,7 @@ const MaintenanceModeData = {
               help folks where I can.
             </li>
             <li>
-              A team player, able to build robust yet relaxed relationships with colleagues and
-              stakeholders alike.
+              A team player, able to build robust yet relaxed relationships with all stakeholders.
             </li>
           </ul>
           <Button
@@ -62,26 +61,19 @@ const MaintenanceModeData = {
         data: {
           attributes: {
             alternativeText:
-              "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
-            url: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp",
+              "A photo of The Milky Way, taken from the surface of Earth in a heavily wooded area. Teh silouhette of trees wrap the image with the sky in the background emphasising the expanse of our galaxy.",
+            url: "/images/optimised/milkyway-galaxy-forest-md.webp",
             formats: {
-              thumbnail: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-thumbnail.webp"
-              },
-              small: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-sm.webp",
-                minWidth: 320
-              },
               medium: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-md.webp",
+                src: "/images/optimised/milkyway-galaxy-forest-md.webp",
                 minWidth: 768
               },
               large: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-lg.webp",
+                src: "/images/optimised/milkyway-galaxy-forest-lg.webp",
                 minWidth: 960
               },
               xlarge: {
-                src: "/images/optimised/pexels-jack-davis-86003658-9069564-xl.webp",
+                src: "/images/optimised/milkyway-galaxy-forest-xl.webp",
                 minWidth: 1420
               }
             }
@@ -94,15 +86,14 @@ const MaintenanceModeData = {
       component: Content,
       children: (
         <>
-          <h2>Maintenance mode</h2>
-          <p>I have been working on this site for far too long...</p>
+          <h2>Work in progress</h2>
         </>
       ),
       variant: "red",
       layoutSpacing: {
         paddingTop: "md",
         paddingBottom: "md",
-        marginTop: "lg"
+        marginTop: "xs"
       },
       gridLayout: "wide"
     },
@@ -120,9 +111,7 @@ const MaintenanceModeData = {
       ),
       variant: "white",
       layoutSpacing: {
-        paddingTop: "xs",
-        paddingBottom: "xs",
-        marginBottom: "lg"
+        marginBottom: "xs"
       },
       gridLayout: "wide"
     }

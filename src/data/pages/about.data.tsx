@@ -22,14 +22,17 @@ const AboutData = {
       },
       children: (
         <>
-          <p>As well as having a keen interest in web technologies, I'm also REALLY into space.</p>
+          <p>
+            Technology is where I live, and my mind is often wondering if our species will ever
+            reach Alpha Centauri... And if I'll ever be able to forgive Heinz for trying to sell 4
+            tins of Baked Beans for £7 during Covid.
+          </p>
         </>
       ),
       backgroundImage: {
         data: {
           attributes: {
-            alternativeText:
-              "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
+            alternativeText: "A photo of The Milky Way.",
             url: "/images/optimised/milkyway-galaxy-md.webp",
             formats: {
               medium: {
@@ -58,7 +61,7 @@ const AboutData = {
           <p>
             I have been working as a web developer in the South West of England for over the past
             decade. During this time I have worked in multiple small and large agencies being an
-            effective participant in many cross disicinpline teams, and sometimes alongside
+            effective participant in many cross-discipline teams, and sometimes alongside client
             stakeholders and their teams too!
           </p>
         </>

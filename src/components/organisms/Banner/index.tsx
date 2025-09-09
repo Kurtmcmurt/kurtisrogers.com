@@ -39,6 +39,7 @@ export default function Banner(props: Readonly<Props>) {
                 {typeof title === "string" ? title : title?.text}
               </Dynamic>
             </Show>
+            {/* I'll need to render elements dynamically from data in future - BannerContent will return an array of components */}
             {children}
           </CSSFilterPanel>
         </div>

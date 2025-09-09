@@ -1,10 +1,12 @@
 header {
+  display: flex;
+  flex-direction: column-reverse;
   width: 100%;
   z-index: 20;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  background: var(--brand-yellow);
+  background: var(--brand-black);
   background-color: rgb(0 0 0 / 30%);
   backdrop-filter: blur(8px);
   padding: 1rem 0px;
@@ -23,18 +25,26 @@ header > .content {
 
 header nav.site-navigation > ul {
   display: flex;
+  flex-direction: column;
   padding: 0px;
+  margin: 0px 1rem 1rem;
 }
 
 header nav.site-navigation li {
+  display: block;
   list-style-type: none;
 }
 
+header nav.site-navigation li > a {
+  font-size: var(--text-size-xl);
+}
+
 header nav.site-navigation a {
+  display: block;
   padding: .5rem .75rem;
-  margin-left: .5rem;
-  outline: 2px solid var(--brand-white);
-  color: var(--brand-black);
+  margin-left: 0px;
+  outline: none;
+  color: var(--brand-white);
   text-underline-offset: 0.125rem;
   text-underline-position: under;
 }

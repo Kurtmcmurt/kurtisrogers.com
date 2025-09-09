@@ -65,8 +65,8 @@ h3,
 h4,
 h5 {
   font-family: var(--heading-font);
-  font-weight: true;
   line-height: 1;
+  word-wrap: break-word;
   margin: 0px;
 }
 
