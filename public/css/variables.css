@@ -15,7 +15,7 @@
 
   /* gradients */
   --brand-primary-gradient: linear-gradient(-45deg, var(--brand-black), var(--brand-red), var(--brand-yellow), var(--brand-white));
-  --brand-secondary-gradient: linear-gradient(-45deg, var(--brand-black), var(--brand-white));
+  --brand-secondary-gradient: linear-gradient(-45deg, var(--brand-black), var(--brand-white), var(--brand-black));
 
   /* focus colour */
   --a11y-focus-yellow: yellow;
@@ -42,5 +42,5 @@
   
   /* animations */
   --transition: .3s ease-in-out;
-  --brand-gradient-transiiton: gradient 15s ease infinite;
+  --brand-gradient-transition: gradient 15s ease infinite;
 }
