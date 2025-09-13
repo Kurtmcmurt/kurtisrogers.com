@@ -15,15 +15,17 @@ interface Props {
   label?: string;
   classes?: string;
   items?: NavElements[];
+  ref?: HTMLElement;
   attributes?: Attributes;
 }
 
-export default function Navigation({ label, classes, items, attributes }: Props) {
+export default function Navigation({ label, classes, items, ref, attributes }: Props) {
   return (
     <nav
       class={`navigation ${classes}`}
       aria-label={label ?? "Main"}
       role="navigation"
+      ref={ref}
       {...attributes}
     >
       <ul>

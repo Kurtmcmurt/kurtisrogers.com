@@ -12,7 +12,7 @@ export const main = [
     link: "/blog"
   },
   {
-    text: "Contact us",
-    link: "/contact-us"
+    text: "Contact",
+    link: "/contact"
   }
 ];

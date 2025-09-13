@@ -1,9 +1,11 @@
 footer {
   background: var(--brand-yellow);
   background: var(--brand-primary-gradient);
-  padding: 4rem 1rem;
+  padding: 1rem;
   max-width: var(--brand-base-grid);
   margin: 1rem;
+	animation: gradient 15s ease infinite;
+	background-size: 400% 400%;
 }
 
 footer .filterPanel--blur {
@@ -58,6 +60,6 @@ footer .socials ul {
 
 @media screen and (min-width: 1280px) {
   footer {
-    margin: 0px auto 1rem;
+    margin: 3rem auto;
   }
 }

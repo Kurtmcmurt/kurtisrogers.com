@@ -61,8 +61,8 @@ const AboutData = {
           <p>
             I have been working as a web developer in the South West of England for over the past
             decade. During this time I have worked in multiple small and large agencies being an
-            effective participant in many cross-discipline teams, and sometimes alongside client
-            stakeholders and their teams too!
+            effective team member in many cross-discipline teams, and sometimes alongside client
+            teams too!
           </p>
         </>
       ),

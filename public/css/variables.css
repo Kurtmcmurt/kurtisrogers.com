@@ -14,8 +14,8 @@
   --brand-yellow: #FAA916;
 
   /* gradients */
-  --brand-primary-gradient: linear-gradient(135deg, var(--brand-black) 0%, var(--brand-red) 50%, var(--brand-yellow) 100%);
-  --brand-secondary-gradient: linear-gradient(90deg, var(--brand-red) 0%, var(--brand-black) 0%, var(--brand-white) 100%);
+  --brand-primary-gradient: linear-gradient(-45deg, var(--brand-black), var(--brand-red), var(--brand-yellow), var(--brand-white));
+  --brand-secondary-gradient: linear-gradient(-45deg, var(--brand-black), var(--brand-white));
 
   /* focus colour */
   --a11y-focus-yellow: yellow;
@@ -33,13 +33,14 @@
 
   /* border radius */
   --border-radius: .5rem;
-
-  /* transitions */
-  --transition: .3s ease-in-out;
-
+  
   /* breakpoints */
   --breakpoint-xs: 320;
   --breakpoint-sm: 768;
   --breakpoint-md: 960;
   --breakpoint-lg: 1420;
+  
+  /* animations */
+  --transition: .3s ease-in-out;
+  --brand-gradient-transiiton: gradient 15s ease infinite;
 }

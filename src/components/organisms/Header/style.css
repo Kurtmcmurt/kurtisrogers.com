@@ -21,6 +21,21 @@ header > .content {
   margin: 0px 1rem;
   padding: 1rem;
   background: var(--brand-white);
+  background: var(--brand-secondary-gradient);
+	animation: var(--brand-gradient-transition);
+	background-size: 400% 400%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 header nav.site-navigation > ul {
