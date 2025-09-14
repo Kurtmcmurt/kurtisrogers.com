@@ -1,5 +1,4 @@
 import { handleColourClasses } from "@/helpers/colours";
-import "./style.css";
 import { JSX, createMemo } from "solid-js";
 import { Dynamic } from "solid-js/web";
 

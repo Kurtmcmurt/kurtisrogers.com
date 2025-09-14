@@ -1,5 +1,4 @@
 import Button from "./index";
-import "./style.css";
 
 export default {
   title: "Atoms/Button",

@@ -19,6 +19,7 @@
 
 .skiplink--visible {
   position: relative !important;
+  display: block;
   inset: 0px;
   font-size: 1em;
   margin: .5rem;

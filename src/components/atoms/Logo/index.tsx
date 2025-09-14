@@ -1,15 +1,21 @@
 import { A } from "@solidjs/router";
+import { Dynamic } from "solid-js/web";
 import "./style.css";
 
 interface Props {
   variant?: "primary" | "secondary";
   text?: string;
+  isButton?: boolean;
 }
 
-export default function Logo({ variant = "primary", text = "Kurtis Rogers" }: Props) {
+export default function Logo({
+  variant = "primary",
+  text = "Kurtis Rogers",
+  isButton = false
+}: Props) {
   const variantStyle = variant === "primary" ? "bg-red text-white" : "bg-white text-black";
 
-  const windowWidth = window.innerWidth ?? 769;
+  const windowWidth = window?.innerWidth ?? 769;
   const handleLogoStringResize =
     windowWidth > 768
       ? text
@@ -19,8 +25,13 @@ export default function Logo({ variant = "primary", text = "Kurtis Rogers" }: Pr
           .join("");
 
   return (
-    <A href="/" class={`logo ${variantStyle}`} aria-label="Go to the homepage">
+    <Dynamic
+      component={isButton ? "button" : A}
+      href="/"
+      class={`logo ${variantStyle}`}
+      aria-label="Go to the homepage"
+    >
       <strong>{handleLogoStringResize}</strong>
-    </A>
+    </Dynamic>
   );
 }
