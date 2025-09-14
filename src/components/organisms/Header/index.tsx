@@ -17,8 +17,6 @@ type Props = {
 
 export default function Header({ children }: Readonly<Props>) {
   let mainNavigation: HTMLElement | undefined;
-  let headerRef: HTMLHeadElement | undefined;
-  let mainNavigationButton: HTMLButtonElement | undefined;
 
   const [pending, start] = useTransition();
   const [showNavigation, setShowNavigation] = createSignal(false);
@@ -41,7 +39,7 @@ export default function Header({ children }: Readonly<Props>) {
     }
   };
 
-  const handleToggleNavigation = () =>
+  const handleToggleNavigation = () => {
     start(() => {
       setShowNavigation(!showNavigation());
       setNavButtonAttributes({
@@ -52,37 +50,30 @@ export default function Header({ children }: Readonly<Props>) {
     }).then(() => {
       handleMenuItemFocusOnOpen();
     });
+  };
 
   const handleAttributes = createMemo(
     () => navButtonAttributes as unknown as { [key: string]: string | boolean }
   );
 
-  const handleFocusOut = () => {
-    // Small delay to allow focus to settle on new element
+  const handleMenuFocusOut = () => {
     setTimeout(() => {
-      if (headerRef && !headerRef.contains(document.activeElement)) {
+      const newFocusTarget = document.activeElement;
+      const isWithinNavigation = mainNavigation?.contains(newFocusTarget as Node);
+
+      if (!isWithinNavigation && showNavigation()) {
         handleToggleNavigation();
       }
     }, 0);
   };
 
   return (
-    <header
-      ref={headerRef}
-      tabindex="-1"
-      classList={{ "nav-pending": pending() }}
-      onFocusOut={handleFocusOut}
-    >
+    <header tabindex="-1" classList={{ "nav-pending": pending() }} onFocusOut={handleMenuFocusOut}>
       <div class="content">
         <Logo variant="secondary" />
         <div class="navigation">{children}</div>
-        <Button
-          ref={mainNavigationButton}
-          callback={handleToggleNavigation}
-          attributes={handleAttributes()}
-          outline
-        >
-          <span>{showNavigation() ? "Close" : "Menu"}</span>
+        <Button callback={handleToggleNavigation} attributes={handleAttributes()} outline>
+          <span>{showNavigation() ? "Close menu" : "Open menu"}</span>
         </Button>
       </div>
       <Show when={showNavigation()}>
