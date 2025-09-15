@@ -1,33 +1,29 @@
 import Content from "@/components/atoms/Content";
 import Banner from "@/components/organisms/Banner";
 
-const AboutData = {
+const ContactData = {
   meta: [
     {
       type: "name",
       title: "title",
-      content: "About"
+      content: "Contact"
     },
     {
       type: "name",
       title: "description",
-      content: "This is some content describing the about page"
+      content: "Get in touch with me and let's talk tech"
     }
   ],
   components: [
     {
       component: Banner,
       title: {
-        text: "About",
+        text: "Contact",
         headingLevel: "2"
       },
       children: (
         <>
-          <p>
-            Technology is where I live, and my mind is often wondering if our species will ever
-            reach Alpha Centauri... And if I'll ever be able to forgive Heinz for trying to sell 4
-            tins of Baked Beans for £7 during Covid.
-          </p>
+          <p>Fancy a chat? About tech? Or speciality biscuits? Get in touch!</p>
         </>
       ),
       backgroundImage: {
@@ -56,18 +52,8 @@ const AboutData = {
     },
     {
       component: Content,
-      children: (
-        <>
-          <h2>Experience</h2>
-          <p>
-            I have been working as a web developer in the South West of England for over the past
-            decade. During this time I have worked in multiple small and large agencies being an
-            effective team member in many cross-discipline teams, and sometimes alongside client
-            teams too!
-          </p>
-        </>
-      ),
-      variant: "yellow",
+      children: <h2>Awaiting service</h2>,
+      variant: "grey",
       layoutSpacing: {
         paddingTop: "lg",
         paddingBottom: "lg",
@@ -79,4 +65,4 @@ const AboutData = {
   ]
 };
 
-export default AboutData;
+export default ContactData;

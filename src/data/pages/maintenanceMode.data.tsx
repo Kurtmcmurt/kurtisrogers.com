@@ -5,11 +5,13 @@ import Content from "@/components/atoms/Content";
 const MaintenanceModeData = {
   meta: [
     {
-      type: "title",
+      type: "name",
+      title: "title",
       content: "Home"
     },
     {
-      type: "description",
+      type: "name",
+      title: "description",
       content: "Welcome to the website for Kurtis Rogers, Software Engineer"
     }
   ],

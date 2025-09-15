@@ -4,12 +4,14 @@ import Banner from "@/components/organisms/Banner";
 const NotFound = {
   meta: [
     {
-      type: "title",
-      content: "404"
+      type: "name",
+      title: "title",
+      content: "Not found"
     },
     {
-      type: "description",
-      content: "This is some content describing the 404 page"
+      type: "name",
+      title: "description",
+      content: "The page you're looking for doesn't exist."
     }
   ],
   components: [
@@ -18,7 +20,7 @@ const NotFound = {
       title: {
         text: "404",
         headingLevel: 1,
-        headingClass: "text-size-h3"
+        headingClass: "text-size-h2"
       },
       children: (
         <>

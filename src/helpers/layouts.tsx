@@ -11,7 +11,8 @@ import { LayoutSpacingDataType, layoutSpacingHandler } from "./layoutSpacingHand
 export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? true : false;
 
 type MetaData = {
-  type: string;
+  title: string;
+  [key: string]: string | boolean;
   content: string;
 };
 
@@ -33,11 +34,11 @@ export const Layout = (props: Props) => {
     <>
       <MetaProvider>
         <For each={meta}>
-          {item =>
-            item.type === "title" ? (
-              <Title>{`${item.content} | kurtisrogers.com`}</Title>
+          {({ type, title, content }) =>
+            type === "title" ? (
+              <Title>{`${content} | kurtisrogers.com`}</Title>
             ) : (
-              <Meta name={item.type} content={item.content} />
+              <Meta {...{ [`${type}`]: title, content: content }} />
             )
           }
         </For>
