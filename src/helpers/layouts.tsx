@@ -59,7 +59,7 @@ export const Layout = (props: Props) => {
           domain={locationHostname}
           title={title}
           description={description}
-          image={image.data.attributes.url}
+          image={`${locationOrigin + image.data.attributes.url}`}
         />
       </MetaProvider>
       <SkipLink id="header" name="navigation" isTag={true} visibleOnFocusOnly={true} />
