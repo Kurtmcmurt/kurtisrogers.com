@@ -3,6 +3,31 @@ import Banner from "@/components/organisms/Banner";
 import Content from "@/components/atoms/Content";
 
 const MaintenanceModeData = {
+  title: "Maintenance page",
+  description:
+    "This is the maintenance page. It usually shows up when the site is under active development",
+  image: {
+    data: {
+      attributes: {
+        alternativeText: "A photo of The Milky Way.",
+        url: "/images/optimised/milkyway-galaxy-md.webp",
+        formats: {
+          medium: {
+            src: "/images/optimised/milkyway-galaxy-md.webp",
+            minWidth: 768
+          },
+          large: {
+            src: "/images/optimised/milkyway-galaxy-lg.webp",
+            minWidth: 960
+          },
+          xlarge: {
+            src: "/images/optimised/milkyway-galaxy-xl.webp",
+            minWidth: 1420
+          }
+        }
+      }
+    }
+  },
   meta: [
     {
       type: "name",

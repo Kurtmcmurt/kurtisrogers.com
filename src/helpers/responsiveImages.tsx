@@ -21,7 +21,6 @@ const responsiveImages = ({ data }: Data) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   small && (small.minWidth = 480);
 
-  // reorder the object in a way which makes sense for the images sort i the DOM (biggest first)
   const reformatted = {
     ...(xlarge && { xlarge }),
     ...(large && { large }),
@@ -38,7 +37,6 @@ const responsiveImages = ({ data }: Data) => {
     const url = size?.src;
     const altText = _default.alternativeText ? _default.alternativeText : "";
 
-    // fallback/smallest will always be the thumbnail
     imageSources.push(
       url?.includes("-md")
         ? `<img

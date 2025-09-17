@@ -2,6 +2,30 @@ import Content from "@/components/atoms/Content";
 import Banner from "@/components/organisms/Banner";
 
 const ContactData = {
+  title: "Contact",
+  description: "Want a chat? Get in touch!",
+  image: {
+    data: {
+      attributes: {
+        alternativeText: "A photo of The Milky Way.",
+        url: "/images/optimised/deepspace-md.webp",
+        formats: {
+          medium: {
+            src: "/images/optimised/deepspace-md.webp",
+            minWidth: 768
+          },
+          large: {
+            src: "/images/optimised/deepspace-lg.webp",
+            minWidth: 960
+          },
+          xlarge: {
+            src: "/images/optimised/deepspace-xl.webp",
+            minWidth: 1420
+          }
+        }
+      }
+    }
+  },
   meta: [
     {
       type: "name",
@@ -30,18 +54,18 @@ const ContactData = {
         data: {
           attributes: {
             alternativeText: "A photo of The Milky Way.",
-            url: "/images/optimised/milkyway-galaxy-md.webp",
+            url: "/images/optimised/deepspace-md.webp",
             formats: {
               medium: {
-                src: "/images/optimised/milkyway-galaxy-md.webp",
+                src: "/images/optimised/deepspace-md.webp",
                 minWidth: 768
               },
               large: {
-                src: "/images/optimised/milkyway-galaxy-lg.webp",
+                src: "/images/optimised/deepspace-lg.webp",
                 minWidth: 960
               },
               xlarge: {
-                src: "/images/optimised/milkyway-galaxy-xl.webp",
+                src: "/images/optimised/deepspace-xl.webp",
                 minWidth: 1420
               }
             }

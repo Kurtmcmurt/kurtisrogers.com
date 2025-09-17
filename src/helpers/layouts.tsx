@@ -1,12 +1,15 @@
 import { For, JSX, ValidComponent, Component } from "solid-js";
+import { MetaProvider, Meta, Title } from "@solidjs/meta";
+import { useLocation } from "@solidjs/router";
+import { Dynamic } from "solid-js/web";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
-import { MetaProvider, Meta, Title } from "@solidjs/meta";
-import { Dynamic } from "solid-js/web";
 import SkipLink from "@/components/atoms/Skiplink";
 import Navigation from "@/components/molecules/Navigation";
+import MetaCore from "@/components/atoms/MetaCore";
 import { main } from "@/data/navigations";
 import { LayoutSpacingDataType, layoutSpacingHandler } from "./layoutSpacingHandler";
+import type { ImageResponse } from "@/types/branding";
 
 export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? true : false;
 
@@ -22,17 +25,26 @@ type ComponentBlock = {
 };
 
 interface Props {
-  components: ComponentBlock[];
+  title: string;
+  description: string;
+  image: {
+    data: ImageResponse;
+  };
   meta: MetaData[];
+  components: ComponentBlock[];
   children?: JSX.Element;
 }
 
 export const Layout = (props: Props) => {
-  const { components, meta } = props;
+  const { title, description, image, components, meta } = props;
+  const { pathname } = useLocation();
+  const locationOrigin = window.location.origin;
+  const locationHostname = window.location.hostname;
 
   return (
     <>
       <MetaProvider>
+        {/* dynamic meta tags */}
         <For each={meta}>
           {({ type, title, content }) =>
             type === "title" ? (
@@ -42,6 +54,13 @@ export const Layout = (props: Props) => {
             )
           }
         </For>
+        <MetaCore
+          url={`${locationOrigin + pathname}`}
+          domain={locationHostname}
+          title={title}
+          description={description}
+          image={image.data.attributes.url}
+        />
       </MetaProvider>
       <SkipLink id="header" name="navigation" isTag={true} visibleOnFocusOnly={true} />
       <SkipLink id="main" name="main content" isTag={true} visibleOnFocusOnly={true} />

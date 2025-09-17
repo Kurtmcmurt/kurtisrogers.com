@@ -2,6 +2,30 @@ import Content from "@/components/atoms/Content";
 import Banner from "@/components/organisms/Banner";
 
 const BlogData = {
+  title: "Blog",
+  description: "My amazing blog",
+  image: {
+    data: {
+      attributes: {
+        alternativeText: "A photo of The Milky Way.",
+        url: "/images/optimised/desert-night-sky-sand-dune-md.webp",
+        formats: {
+          medium: {
+            src: "/images/optimised/desert-night-sky-sand-dune-md.webp",
+            minWidth: 768
+          },
+          large: {
+            src: "/images/optimised/desert-night-sky-sand-dune-lg.webp",
+            minWidth: 960
+          },
+          xlarge: {
+            src: "/images/optimised/desert-night-sky-sand-dune-xl.webp",
+            minWidth: 1420
+          }
+        }
+      }
+    }
+  },
   meta: [
     {
       type: "name",
@@ -33,18 +57,18 @@ const BlogData = {
         data: {
           attributes: {
             alternativeText: "A photo of The Milky Way.",
-            url: "/images/optimised/milkyway-galaxy-md.webp",
+            url: "/images/optimised/desert-night-sky-sand-dune-md.webp",
             formats: {
               medium: {
-                src: "/images/optimised/milkyway-galaxy-md.webp",
+                src: "/images/optimised/desert-night-sky-sand-dune-md.webp",
                 minWidth: 768
               },
               large: {
-                src: "/images/optimised/milkyway-galaxy-lg.webp",
+                src: "/images/optimised/desert-night-sky-sand-dune-lg.webp",
                 minWidth: 960
               },
               xlarge: {
-                src: "/images/optimised/milkyway-galaxy-xl.webp",
+                src: "/images/optimised/desert-night-sky-sand-dune-xl.webp",
                 minWidth: 1420
               }
             }
