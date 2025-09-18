@@ -1,2 +1,33 @@
 User-agent: *
 Disallow: /
+
+# Specifically allow social media crawlers for OpenGraph
+User-agent: facebookexternalhit/1.1
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: DiscordBot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: SkypeUriPreview
+Allow: /
+
+# Allow crawling of common OpenGraph meta tag resources
+Allow: /public/
+
+# Sitemap location (optional)
+# Sitemap: https://yourdomain.com/sitemap.xml
