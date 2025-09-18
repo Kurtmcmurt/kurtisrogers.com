@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
 
 # Specifically allow social media crawlers for OpenGraph
 User-agent: facebookexternalhit/1.1
