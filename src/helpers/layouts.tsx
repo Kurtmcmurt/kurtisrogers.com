@@ -70,7 +70,7 @@ export const Layout = (props: Props) => {
         <For each={components}>
           {item => {
             const { name } = item.component as Component;
-            const firstChildCheck = name.includes("Banner") && components[0] === item;
+            const firstChildCheck = name.endsWith("Banner") && components[0] === item;
 
             const componentData = {
               ...item,
