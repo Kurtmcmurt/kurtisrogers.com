@@ -9,19 +9,20 @@ const HomeData = {
   image: {
     data: {
       attributes: {
-        alternativeText: "A photo of The Milky Way.",
-        url: "/images/optimised/milkyway-galaxy-md.webp",
+        alternativeText:
+          "A photo of The Milky Way, taken from the surface of Earth in a heavily wooded area. The silouhette of trees wrap the image with the sky in the background emphasising the expanse of our galaxy.",
+        url: "/images/optimised/milkyway-galaxy-forest-md.webp",
         formats: {
           medium: {
-            src: "/images/optimised/milkyway-galaxy-md.webp",
+            src: "/images/optimised/milkyway-galaxy-forest-md.webp",
             minWidth: 768
           },
           large: {
-            src: "/images/optimised/milkyway-galaxy-lg.webp",
+            src: "/images/optimised/milkyway-galaxy-forest-lg.webp",
             minWidth: 960
           },
           xlarge: {
-            src: "/images/optimised/milkyway-galaxy-xl.webp",
+            src: "/images/optimised/milkyway-galaxy-forest-xl.webp",
             minWidth: 1420
           }
         }
