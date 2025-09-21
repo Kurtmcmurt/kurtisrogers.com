@@ -26,18 +26,6 @@ const ContactData = {
       }
     }
   },
-  meta: [
-    {
-      type: "name",
-      title: "title",
-      content: "Contact"
-    },
-    {
-      type: "name",
-      title: "description",
-      content: "Get in touch with me and let's talk tech"
-    }
-  ],
   components: [
     {
       component: Banner,

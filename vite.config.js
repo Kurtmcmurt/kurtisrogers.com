@@ -11,6 +11,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    open: "/",
+  },
   plugins: [
     /* 
     Uncomment the following line to enable solid-devtools.

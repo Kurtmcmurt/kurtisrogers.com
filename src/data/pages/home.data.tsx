@@ -29,18 +29,6 @@ const HomeData = {
       }
     }
   },
-  meta: [
-    {
-      type: "name",
-      title: "title",
-      content: "Home"
-    },
-    {
-      type: "name",
-      title: "description",
-      content: "Welcome to the website for Kurtis Rogers, Software Engineer"
-    }
-  ],
   components: [
     {
       component: Banner,

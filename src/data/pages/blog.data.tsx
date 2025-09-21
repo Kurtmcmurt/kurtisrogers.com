@@ -26,18 +26,6 @@ const BlogData = {
       }
     }
   },
-  meta: [
-    {
-      type: "name",
-      title: "title",
-      content: "Blog"
-    },
-    {
-      type: "name",
-      title: "description",
-      content: "Welcome to my blog"
-    }
-  ],
   components: [
     {
       component: Banner,

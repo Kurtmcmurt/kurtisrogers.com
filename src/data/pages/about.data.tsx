@@ -26,18 +26,6 @@ const AboutData = {
       }
     }
   },
-  meta: [
-    {
-      type: "name",
-      title: "title",
-      content: "About"
-    },
-    {
-      type: "name",
-      title: "description",
-      content: "This is some content describing the about page"
-    }
-  ],
   components: [
     {
       component: Banner,

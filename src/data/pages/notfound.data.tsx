@@ -26,18 +26,6 @@ const NotFound = {
       }
     }
   },
-  meta: [
-    {
-      type: "name",
-      title: "title",
-      content: "Not found"
-    },
-    {
-      type: "name",
-      title: "description",
-      content: "The page you're looking for doesn't exist."
-    }
-  ],
   components: [
     {
       component: Banner,

@@ -6,18 +6,11 @@ import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import SkipLink from "@/components/atoms/Skiplink";
 import Navigation from "@/components/molecules/Navigation";
-import MetaCore from "@/components/atoms/MetaCore";
 import { main } from "@/data/navigations";
 import { LayoutSpacingDataType, layoutSpacingHandler } from "./layoutSpacingHandler";
 import type { ImageResponse } from "@/types/branding";
 
 export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? true : false;
-
-type MetaData = {
-  title: string;
-  [key: string]: string | boolean;
-  content: string;
-};
 
 type ComponentBlock = {
   component: ValidComponent;
@@ -30,13 +23,12 @@ interface Props {
   image: {
     data: ImageResponse;
   };
-  meta: MetaData[];
   components: ComponentBlock[];
   children?: JSX.Element;
 }
 
 export const Layout = (props: Props) => {
-  const { title, description, image, components, meta } = props;
+  const { title, description, image, components } = props;
   const { pathname } = useLocation();
   const locationOrigin = window.location.origin;
   const locationHostname = window.location.hostname;
@@ -44,24 +36,21 @@ export const Layout = (props: Props) => {
   return (
     <>
       <MetaProvider>
-        {/* dynamic meta tags */}
-        <For each={meta}>
-          {({ type, title, content }) =>
-            type === "title" ? (
-              <Title>{`${content} | kurtisrogers.com`}</Title>
-            ) : (
-              <Meta {...{ [`${type}`]: title, content: content }} />
-            )
-          }
-        </For>
-        <MetaCore
-          url={`${locationOrigin + pathname}`}
-          domain={locationHostname}
-          title={title}
-          description={description}
-          image={`${locationOrigin + image.data.attributes.url}`}
-        />
+        <Title>{`${title} | kurtisrogers.com`}</Title>
+        <Meta name="description" content={description ?? ""} />
+        <Meta property="og:url" content={`${locationOrigin + pathname}`} />
+        <Meta property="og:type" content="website" />
+        <Meta property="og:title" content={title} />
+        <Meta property="og:description" content={description} />
+        <Meta property="og:image" content={`${locationOrigin + image.data.attributes.url}`} />
+        <Meta name="twitter:card" content="summary_large_image" />
+        <Meta property="twitter:domain" content={locationHostname} />
+        <Meta property="twitter:url" content={`${locationOrigin + pathname}`} />
+        <Meta name="twitter:title" content={title} />
+        <Meta name="twitter:description" content={description} />
+        <Meta name="twitter:image" content={`${locationOrigin + image.data.attributes.url}`} />
       </MetaProvider>
+
       <SkipLink id="header" name="navigation" isTag={true} visibleOnFocusOnly={true} />
       <SkipLink id="main" name="main content" isTag={true} visibleOnFocusOnly={true} />
       <SkipLink id="footer" name="footer" isTag={true} visibleOnFocusOnly={true} />
