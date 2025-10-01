@@ -8,15 +8,15 @@ const root = document.getElementById("root");
 
 render(
   () => (
-    <Router>
-      <MetaProvider>
+    <MetaProvider>
+      <Router>
         <For each={NavData()}>
           {item => {
             return <Route path={item.path} component={item.component} />;
           }}
         </For>
-      </MetaProvider>
-    </Router>
+      </Router>
+    </MetaProvider>
   ),
   root!
 );

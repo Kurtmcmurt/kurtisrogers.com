@@ -1,5 +1,5 @@
 import { For, JSX, ValidComponent, Component } from "solid-js";
-import { MetaProvider, Meta, Title } from "@solidjs/meta";
+import { Meta, Title } from "@solidjs/meta";
 import { useLocation } from "@solidjs/router";
 import { Dynamic } from "solid-js/web";
 import Header from "@/components/organisms/Header";
@@ -35,21 +35,19 @@ export const Layout = (props: Props) => {
 
   return (
     <>
-      <MetaProvider>
-        <Title>{`${title} | kurtisrogers.com`}</Title>
-        <Meta name="description" content={description ?? ""} />
-        <Meta property="og:url" content={`${locationOrigin + pathname}`} />
-        <Meta property="og:type" content="website" />
-        <Meta property="og:title" content={title} />
-        <Meta property="og:description" content={description} />
-        <Meta property="og:image" content={`${locationOrigin + image.data.attributes.url}`} />
-        <Meta name="twitter:card" content="summary_large_image" />
-        <Meta property="twitter:domain" content={locationHostname} />
-        <Meta property="twitter:url" content={`${locationOrigin + pathname}`} />
-        <Meta name="twitter:title" content={title} />
-        <Meta name="twitter:description" content={description} />
-        <Meta name="twitter:image" content={`${locationOrigin + image.data.attributes.url}`} />
-      </MetaProvider>
+      <Title>{`${title} | kurtisrogers.com`}</Title>
+      <Meta name="description" content={description ?? ""} />
+      <Meta property="og:url" content={`${locationOrigin + pathname}`} />
+      <Meta property="og:type" content="website" />
+      <Meta property="og:title" content={title} />
+      <Meta property="og:description" content={description} />
+      <Meta property="og:image" content={`${locationOrigin + image.data.attributes.url}`} />
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta property="twitter:domain" content={locationHostname} />
+      <Meta property="twitter:url" content={`${locationOrigin + pathname}`} />
+      <Meta name="twitter:title" content={title} />
+      <Meta name="twitter:description" content={description} />
+      <Meta name="twitter:image" content={`${locationOrigin + image.data.attributes.url}`} />
 
       <SkipLink id="header" name="navigation" isTag={true} visibleOnFocusOnly={true} />
       <SkipLink id="main" name="main content" isTag={true} visibleOnFocusOnly={true} />
