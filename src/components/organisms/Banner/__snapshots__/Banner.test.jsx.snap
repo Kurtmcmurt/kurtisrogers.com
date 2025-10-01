@@ -3,55 +3,51 @@
 exports[`Banner > renders 1`] = `
 <div>
   <section
-    class="banner content-grid wide page-sibling content-grid--dark"
+    class="banner--contains-image page-sibling content-grid--dark"
   >
     <div
-      class="banner--image"
+      class="banner__content--contains-image"
     >
       <div
-        class="banner__content"
+        class="banner__content--copy"
       >
-        <div
-          class="filterPanel--blur"
+        <h1
+          class="text-size-h1"
         >
-          <h1
-            class="text-size-h1"
-          >
-            Welcome to my website
-          </h1>
-          <p>
-            My name is Kurtis Rogers, a proper Software Engineer from Bristol, UK
-          </p>
-          <ul>
-            <li>
-              Specialising in Frontend technology since 2018
-            </li>
-            <li>
-              Expert in leading frameworks including serverside Node development (Express/Koa)
-            </li>
-            <li>
-              Experienced in building and developing accessible themes in both Drupal and WordPress
-            </li>
-            <li>
-              Effective and approachable mentor
-            </li>
-            <li>
-              Team player, able to build robust yet relaxed relationships with colleagues and stakeholders alike
-            </li>
-          </ul>
-          <p>
-            Want to know more?
-          </p>
-          <a
-            class="button"
-            href="/about"
-          >
-            Read more about me
-          </a>
-        </div>
+          Welcome to my website
+        </h1>
+        <p>
+          My name is Kurtis Rogers, a proper Software Engineer from Bristol, UK
+        </p>
+        <ul>
+          <li>
+            Specialising in Frontend technology since 2018
+          </li>
+          <li>
+            Expert in leading frameworks including serverside Node development (Express/Koa)
+          </li>
+          <li>
+            Experienced in building and developing accessible themes in both Drupal and WordPress
+          </li>
+          <li>
+            Effective and approachable mentor
+          </li>
+          <li>
+            Team player, able to build robust yet relaxed relationships with colleagues and stakeholders alike
+          </li>
+        </ul>
+        <p>
+          Want to know more?
+        </p>
+        <a
+          class="button"
+          href="/about"
+        >
+          Read more about me
+        </a>
       </div>
       <div
-        class="banner__image"
+        class="banner__content--image"
       >
         <picture>
           <source

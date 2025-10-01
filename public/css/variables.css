@@ -1,7 +1,7 @@
 :root {
   /* fonts */
   --normal-font: 'Open Sans', sans-serif;
-  --heading-font: 'Oswald', serif;
+  --heading-font: 'Times New Roman', Times, Georgia, serif;
 
   /* brand grid width */
   --brand-base-grid: 1280px;

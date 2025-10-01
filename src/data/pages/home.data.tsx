@@ -33,8 +33,9 @@ const HomeData = {
     {
       component: Banner,
       title: {
-        text: "Hello.",
-        headingLevel: "1"
+        text: "Software Engineer",
+        headingLevel: "1",
+        headingClass: "text-size-h3"
       },
       children: (
         <>

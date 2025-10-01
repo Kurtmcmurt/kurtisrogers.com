@@ -42,7 +42,6 @@ const MaintenanceModeData = {
             My name is Kurtis Rogers and I'm an experienced fullstack software engineer from
             Bristol, UK.
           </p>
-          <hr />
           <ul>
             <li>
               An expert in popular frontend frameworks including serverside Node development
@@ -72,43 +71,21 @@ const MaintenanceModeData = {
           </Button>
         </>
       ),
-      backgroundImage: {
-        data: {
-          attributes: {
-            alternativeText:
-              "A photo of The Milky Way, taken from the surface of Earth in a heavily wooded area. Teh silouhette of trees wrap the image with the sky in the background emphasising the expanse of our galaxy.",
-            url: "/images/optimised/milkyway-galaxy-forest-md.webp",
-            formats: {
-              medium: {
-                src: "/images/optimised/milkyway-galaxy-forest-md.webp",
-                minWidth: 768
-              },
-              large: {
-                src: "/images/optimised/milkyway-galaxy-forest-lg.webp",
-                minWidth: 960
-              },
-              xlarge: {
-                src: "/images/optimised/milkyway-galaxy-forest-xl.webp",
-                minWidth: 1420
-              }
-            }
-          }
-        }
-      },
       gridLayout: "wide"
     },
     {
       component: Content,
       children: (
         <>
-          <h2>Work in progress</h2>
+          <h2>Hello.</h2>
         </>
       ),
-      variant: "red",
+      variant: "yellow",
       layoutSpacing: {
-        paddingTop: "md",
-        paddingBottom: "md",
-        marginTop: "xs"
+        paddingTop: "xs",
+        paddingBottom: "xs",
+        marginTop: "lg",
+        marginBottom: "default"
       },
       gridLayout: "wide"
     },
@@ -117,7 +94,7 @@ const MaintenanceModeData = {
       children: (
         <>
           <p>
-            In the meantime if you wish to get a hold of me{" "}
+            In the meantime if you wish to get in tiouch with me{" "}
             <a href="https://linktr.ee/kurtisrogers" target="_blank">
               check out my linkt.ree
             </a>

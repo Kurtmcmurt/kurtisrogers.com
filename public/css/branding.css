@@ -69,10 +69,10 @@ h5 {
 
 h1,
 .text-size-h1 {
-  font-weight: 400;
   margin-top: 0;
   font-size: var(--text-size-2xl);
   line-height: 1;
+  font-weight: normal;
 }
 
 @media screen and (min-width: 768px) {
@@ -85,6 +85,7 @@ h1,
 h2,
 .text-size-h2 {
   font-size: var(--text-size-xl);
+  font-weight: normal;
   line-height: 1;
 }
 
@@ -98,6 +99,7 @@ h2,
 h3,
 .text-size-h3 {
   font-size: var(--text-size-lg);
+  font-weight: normal;
   line-height: 1;
 }
 
@@ -111,12 +113,14 @@ h3,
 h4,
 .text-size-h4 {
   font-size: var(--text-size-xl);
+  font-weight: normal;
   line-height: 1;
 }
 
 h5,
 .text-size-h5 {
   font-size: var(--text-size-lg);
+  font-weight: normal;
   line-height: 1;
 }
 

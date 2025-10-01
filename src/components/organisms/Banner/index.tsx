@@ -2,9 +2,7 @@ import { JSX, Show } from "solid-js";
 import type { ImageResponse } from "@/types/branding";
 import "./style.css";
 
-import type { gridLayoutOptions } from "@/types/grid";
 import responsiveImages from "@/helpers/responsiveImages";
-import CSSFilterPanel from "@/components/atoms/CSSFilterPanel";
 import { Dynamic } from "solid-js/web";
 import { LayoutSpacingDataType } from "@/helpers/layoutSpacingHandler";
 import type { Heading } from "@/types/branding";
@@ -14,7 +12,6 @@ interface Props {
   backgroundImage: {
     data: ImageResponse;
   };
-  gridLayout?: gridLayoutOptions;
   children?: JSX.Element;
   firstChild: boolean;
   variant: "light" | "dark";
@@ -22,34 +19,28 @@ interface Props {
 }
 
 export default function Banner(props: Readonly<Props>) {
-  const { title, backgroundImage, gridLayout, children, firstChild, variant = "dark" } = props;
+  const { title, backgroundImage, children, firstChild, variant = "dark" } = props;
 
   return (
     <section
-      class={`banner content-grid ${gridLayout ?? ""} ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
+      class={`banner${!!backgroundImage ? "--contains-image" : ""} ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
     >
-      <div class={`banner${!!backgroundImage ? "--image" : ""}`}>
-        <div class={`banner__content`}>
-          <CSSFilterPanel variant="blur">
-            <Show when={title}>
-              <Dynamic
-                component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}
-                class={typeof title === "string" ? "text-size-h1" : title?.headingClass}
-              >
-                {typeof title === "string" ? title : title?.text}
-              </Dynamic>
-            </Show>
-            {/* I'll need to render elements dynamically from data in future - BannerContent will return an array of components */}
-            {children}
-          </CSSFilterPanel>
+      <div class={`banner__content${!!backgroundImage ? "--contains-image" : ""}`}>
+        <div class={`banner__content--copy`}>
+          <Show when={title}>
+            <Dynamic
+              component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}
+              class={typeof title === "string" ? "text-size-h1" : title?.headingClass}
+            >
+              {typeof title === "string" ? title : title?.text}
+            </Dynamic>
+          </Show>
+          {children}
         </div>
         {/* weird image/background colour section - not fully made my mind up */}
         <Show when={backgroundImage}>
           {/* create an image component - generate images here: https://isrcset.com/generate */}
-          <div class="banner__image">
-            {/* TODO: create a picture component which accepts an array of responsive images */}
-            {responsiveImages(backgroundImage)}
-          </div>
+          <div class="banner__content--image">{responsiveImages(backgroundImage)}</div>
         </Show>
       </div>
     </section>

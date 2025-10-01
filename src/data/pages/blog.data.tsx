@@ -72,7 +72,7 @@ const BlogData = {
       layoutSpacing: {
         paddingTop: "lg",
         paddingBottom: "lg",
-        marginTop: "xs",
+        marginTop: "lg",
         marginBottom: "xs"
       },
       gridLayout: "wide"

@@ -1,4 +1,18 @@
-.banner--image {
+.banner,
+.banner--contains-image {
+  max-width: calc(var(--brand-base-grid) + 2rem);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner--contains-image.first-element {
+    height: calc(100vh - 7.25rem);
+  }
+}
+
+.banner__content--contains-image {
   position: relative;
   display: grid;
   align-items: center;
@@ -7,7 +21,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .banner--image {
+  .banner__content--contains-image {
     min-height: 100%;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -18,43 +32,33 @@
 }
 
 .banner__content {
+  padding: 5rem 0px;
+}
+
+.banner__content--contains-image {
   grid-column: span 14;
-  align-self: center;
-  z-index: 10;
-  padding: 5rem 1rem;
   max-width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
-  .banner--image .banner__content {
-    position: absolute;
-    padding: 0px 2rem;
-  }
+.banner__content--contains-image .banner__content--copy {
+  position: relative;
+  grid-column: span 6;
+  align-self: end;
+  z-index: 10;
+  padding: 9rem 1rem 1rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .banner--image .banner__content {
-    position: relative;
-    grid-column: span 10;
-    align-self: center;
-    z-index: 10;
-  }
-}
-@media screen and (min-width: 1279px) {
-  .banner--image .banner__content {
-    grid-column: span 6;
-  }
-}
-
-.banner__content ul {
-  padding-left: 1em;
-}
-
-.banner__content h1 {
+.banner__content--copy p:last-of-type {
   margin-bottom: 0px;
 }
 
-.banner__image {
+@media screen and (min-width: 1024px) {
+  .banner__content--contains-image .banner__content--copy {
+    padding: 0rem;
+  }
+}
+
+.banner__content--image {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -62,29 +66,20 @@
   right: 0px;
 }
 
-.banner__image {
+.banner__content--image {
   grid-column: span 8;
+  align-self: stretch;
 }
 
 @media screen and (min-width: 1024px) {
-  .banner__image {
+  .banner__content--image {
     position: relative;
   }
 }
 
-.banner--image img {
+.banner__content--contains-image img {
   display: block;
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  .banner--image img {
-    display: block;
-    object-fit: cover;
-    width: 130%;
-    height: 80vh;
-    margin-left: -30%;
-  }
 }
