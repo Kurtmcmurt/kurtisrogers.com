@@ -7,12 +7,12 @@ import { Dynamic } from "solid-js/web";
 import { LayoutSpacingDataType } from "@/helpers/layoutSpacingHandler";
 import type { Heading } from "@/types/branding";
 
-interface Props {
+export interface Props {
   title?: Heading | string;
   backgroundImage: {
     data: ImageResponse;
   };
-  children?: JSX.Element;
+  children: JSX.Element[];
   firstChild: boolean;
   variant: "light" | "dark";
   spacing: LayoutSpacingDataType;

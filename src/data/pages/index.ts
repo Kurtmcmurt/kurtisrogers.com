@@ -1,5 +1,5 @@
 import HomeData from "./home.data";
-import MaintenanceModeData from "./maintenanceMode.data";
+import MaintenanceModeData from "./maintenanceMode.json";
 import AboutData from "./about.data";
 import BlogData from "./blog.data";
 import ContactData from "./contact.data";
