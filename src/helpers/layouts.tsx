@@ -1,7 +1,6 @@
 import { For } from "solid-js";
 import { Meta, Title } from "@solidjs/meta";
 import { useLocation } from "@solidjs/router";
-import { Dynamic } from "solid-js/web";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import SkipLink from "@/components/atoms/Skiplink";
@@ -15,8 +14,8 @@ export type ValidComponent = keyof typeof renderList; // "Banner" | "Content"
 
 export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? true : false;
 
-type ComponentBlock = {
-  component: ValidComponent;
+export type ComponentBlock = {
+  type: ValidComponent;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -37,8 +36,6 @@ export const Layout = (props: Props) => {
   const { pathname } = useLocation();
   const locationOrigin = window.location.origin;
   const locationHostname = window.location.hostname;
-
-  console.log(components);
 
   return (
     <>
@@ -63,18 +60,16 @@ export const Layout = (props: Props) => {
       <main id="maincontent" tabindex="-1">
         <For each={components}>
           {item => {
-            // const { name } = item.component as Component;
-            const firstChildCheck = item.component === "Banner" && components[0] === item;
-            const Component = renderList[item.component]; // Get the component separately
+            const firstChildCheck = item.component === "banner" && components[0] === item;
+            const Component = renderList[item.type];
 
-            const componentData = {
-              ...item,
-              component: Component,
-              firstChild: firstChildCheck,
-              style: layoutSpacingHandler(item.layoutSpacing as LayoutSpacingDataType)
-            };
-
-            return <Dynamic {...componentData} />;
+            return (
+              <Component
+                {...item}
+                firstChild={firstChildCheck}
+                style={layoutSpacingHandler(item.layoutSpacing as LayoutSpacingDataType)}
+              />
+            );
           }}
         </For>
       </main>

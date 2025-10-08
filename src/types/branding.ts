@@ -24,9 +24,10 @@ export interface ImageResponse {
 }
 
 export interface Heading {
+  title?: string;
   text: string;
   headingLevel: "1" | "2" | "3" | "4" | "5" | "6";
-  headingClass:
+  headingClass?:
     | "text-size-h1"
     | "text-size-h2"
     | "text-size-h3"

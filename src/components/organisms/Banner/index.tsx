@@ -1,4 +1,4 @@
-import { JSX, Show } from "solid-js";
+import { JSX, Show, For } from "solid-js";
 import type { ImageResponse } from "@/types/branding";
 import "./style.css";
 
@@ -6,6 +6,7 @@ import responsiveImages from "@/helpers/responsiveImages";
 import { Dynamic } from "solid-js/web";
 import { LayoutSpacingDataType } from "@/helpers/layoutSpacingHandler";
 import type { Heading } from "@/types/branding";
+import renderList from "@/helpers/renderList";
 
 export interface Props {
   title?: Heading | string;
@@ -35,7 +36,12 @@ export default function Banner(props: Readonly<Props>) {
               {typeof title === "string" ? title : title?.text}
             </Dynamic>
           </Show>
-          {children}
+          <For each={children}>
+            {child => {
+              const Content = renderList[child?.type];
+              return <Content {...child} />;
+            }}
+          </For>
         </div>
         {/* weird image/background colour section - not fully made my mind up */}
         <Show when={backgroundImage}>

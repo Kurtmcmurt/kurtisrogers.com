@@ -14,50 +14,78 @@ describe("Banner", () => {
   });
 
   const propData = {
-    title: "Welcome to my website",
-    children: <>
-      <p>My name is Kurtis Rogers, a proper Software Engineer from Bristol, UK</p>
-      <ul>
-        <li>Specialising in Frontend technology since 2018</li>
-        <li>Expert in leading frameworks including serverside Node development (Express/Koa)</li>
-        <li>Experienced in building and developing accessible themes in both Drupal and WordPress</li>
-        <li>Effective and approachable mentor</li>
-        <li>Team player, able to build robust yet relaxed relationships with colleagues and stakeholders alike</li>
-      </ul>
-      <p>Want to know more?</p>
-      <a class="button" href="/about">Read more about me</a>
-    </>,
-    backgroundImage: {
-      data: {
-        attributes: {
-          alternativeText: "A photo of The Milky Way, lots of stars and some star-making gas clouds far far away...",
-          url: "/images/pexels-jack-davis-86003658-9069564-thumbnail.webp",
-          formats: {
-            thumbnail: {
-              src: "/images/pexels-jack-davis-86003658-9069564-thumbnail.webp",
-            },
-            small: {
-              src: "/images/pexels-jack-davis-86003658-9069564-sm.webp",
-              minWidth: 320,
-            },
-            medium: {
-              src: "/images/pexels-jack-davis-86003658-9069564-md.webp",
-              minWidth: 768,
-            },
-            large: {
-              src: "/images/pexels-jack-davis-86003658-9069564-lg.webp",
-              minWidth: 960,
-            },
-            xlarge: {
-              src: "/images/pexels-jack-davis-86003658-9069564-xl.webp",
-              minWidth: 1420,
-            },
-          },
-        },
-      },
+    "type": "banner",
+    "title": {
+      "text": "Software Engineer",
+      "headingLevel": "1",
+      "headingClass": "text-size-h2"
     },
-    gridLayout: "wide",
-  }
+    "children": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "text": "My name is Kurtis Rogers and I'm an experienced fullstack software engineer from Bristol, UK."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "children": [
+          "An expert in popular frontend frameworks including serverside Node development (Express/Koa)",
+          "Effective and approachable mentor to less experienced colleagues, always willing to help folks where I can.",
+          "A team player, able to build robust yet relaxed relationships with all stakeholders."
+        ]
+      },
+      {
+        "type": "buttongroup",
+        "children": [
+          {
+            "variant": "primary",
+            "outline": true,
+            "href": {
+              "url": "https://www.linkedin.com/in/kurtisrogers",
+              "target": "_blank"
+            },
+            "content": "Visit my LinkedIn"
+          },
+          {
+            "variant": "secondary",
+            "href": {
+              "url": "https://github.com/Kurtmcmurt/kurtisrogers.com",
+              "target": "_blank"
+            },
+            "content": "Repo for the site"
+          }
+        ]
+      }
+    ],
+    "backgroundImage": {
+      "data": {
+        "attributes": {
+          "alternativeText":
+            "A photo of The Milky Way, taken from the surface of Earth in a heavily wooded area. The silouhette of trees wrap the image with the sky in the background emphasising the expanse of our galaxy.",
+          "url": "/images/optimised/milkyway-galaxy-forest-md.webp",
+          "formats": {
+            "medium": {
+              "src": "/images/optimised/milkyway-galaxy-forest-md.webp",
+              "minWidth": 768
+            },
+            "large": {
+              "src": "/images/optimised/milkyway-galaxy-forest-lg.webp",
+              "minWidth": 960
+            },
+            "xlarge": {
+              "src": "/images/optimised/milkyway-galaxy-forest-xl.webp",
+              "minWidth": 1420
+            }
+          }
+        }
+      }
+    },
+    "gridLayout": "wide"
+  };
 
   it("renders", () => {
     const { container } = render(() => <Banner {...propData} />);
@@ -67,14 +95,14 @@ describe("Banner", () => {
   it("has a title", () => {
     const { getByText } = render(() => <Banner {...propData} />);
     
-    expect(getByText(/Welcome to my website/i)).toBeInTheDocument();
+    expect(getByText(/Software Engineer/)).toBeInTheDocument();
   });
   
   it("can have a image", () => {
     render(() => <Banner {...propData} />);
     
     // Find the image inside the picture element
-    const image = screen.getByAltText(/A photo of The Milky Way, lots of stars and some star-making gas clouds far far away.../i);
+    const image = screen.getByAltText(/A photo of The Milky Way, taken from the surface of Earth in a heavily wooded area. The silouhette of trees wrap the image with the sky in the background emphasising the expanse of our galaxy./i);
     
     // Check if the image exists and has the correct alt text
     expect(image).toBeInTheDocument();

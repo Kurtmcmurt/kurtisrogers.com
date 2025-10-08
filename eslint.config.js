@@ -16,6 +16,11 @@ export default [
     ]
   },
   {files: ["**/*.{js,mjs,cjs,ts}"]},
+  {
+    "rules": {
+      "no-console": "error",
+    },
+  },
   {languageOptions: { globals: globals.browser }},
   ...tseslint.configs.recommended,
   eslintConfigPrettier,

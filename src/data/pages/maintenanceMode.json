@@ -26,7 +26,7 @@
   },
   "components": [
     {
-      "component": "Banner",
+      "type": "banner",
       "title": {
         "text": "Software Engineer",
         "headingLevel": "1",
@@ -43,16 +43,16 @@
           ]
         },
         {
-          "element": "list",
-          "items": [
+          "type": "list",
+          "children": [
             "An expert in popular frontend frameworks including serverside Node development (Express/Koa)",
             "Effective and approachable mentor to less experienced colleagues, always willing to help folks where I can.",
             "A team player, able to build robust yet relaxed relationships with all stakeholders."
           ]
         },
         {
-          "element": "buttonGroup",
-          "buttons": [
+          "type": "buttongroup",
+          "children": [
             {
               "variant": "primary",
               "outline": true,
@@ -76,7 +76,7 @@
       "gridLayout": "wide"
     },
     {
-      "component": "Content",
+      "type": "content",
       "children": [
         {
           "element": "heading",
@@ -94,7 +94,7 @@
       "gridLayout": "wide"
     },
     {
-      "component": "Content",
+      "type": "content",
       "children": [
         {
           "element": "paragraph",
