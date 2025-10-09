@@ -43,7 +43,7 @@ export const Navigation = () => [
   {
     path: "*404",
     component: () => (
-      <Layout {...NotFoundContent} components={ContactContent.components as ComponentBlock[]} />
+      <Layout {...NotFoundContent} components={NotFoundContent.components as ComponentBlock[]} />
     )
   }
 ];

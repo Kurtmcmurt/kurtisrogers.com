@@ -16,9 +16,9 @@ exports[`Banner > renders 1`] = `
         >
           Software Engineer
         </h1>
-        <p>
+        <div>
           My name is Kurtis Rogers and I'm an experienced fullstack software engineer from Bristol, UK.
-        </p>
+        </div>
         <ul>
           <li>
             An expert in popular frontend frameworks including serverside Node development (Express/Koa)

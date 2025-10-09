@@ -1,7 +1,8 @@
 import { handleColourClasses } from "@/helpers/colours";
 import type { Branding } from "@/types/branding";
 import type { gridLayoutOptions } from "@/types/grid";
-import { createMemo } from "solid-js";
+import { createMemo, For } from "solid-js";
+import renderList from "@/helpers/renderList";
 import "./style.css";
 
 export interface Props {
@@ -27,7 +28,12 @@ export default function Content(props: Readonly<Props>) {
 
   return (
     <section style={style ?? ""} class={classes} {...attributes}>
-      {children}
+      <For each={children}>
+        {child => {
+          const Content = renderList[child?.type as keyof typeof renderList];
+          return <Content {...child} />;
+        }}
+      </For>
     </section>
   );
 }

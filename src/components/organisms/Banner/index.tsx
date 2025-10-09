@@ -1,4 +1,4 @@
-import { JSX, Show, For } from "solid-js";
+import { Show, For } from "solid-js";
 import type { ImageResponse } from "@/types/branding";
 import "./style.css";
 
@@ -13,7 +13,8 @@ export interface Props {
   backgroundImage: {
     data: ImageResponse;
   };
-  children: JSX.Element[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: any[];
   firstChild: boolean;
   variant: "light" | "dark";
   spacing: LayoutSpacingDataType;
@@ -38,7 +39,7 @@ export default function Banner(props: Readonly<Props>) {
           </Show>
           <For each={children}>
             {child => {
-              const Content = renderList[child?.type];
+              const Content = renderList[child?.type as keyof typeof renderList];
               return <Content {...child} />;
             }}
           </For>

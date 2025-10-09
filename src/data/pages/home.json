@@ -1,23 +1,23 @@
 {
-  "title": "Maintenance page",
-  "description":
-    "This is the maintenance page. It usually shows up when the site is under active development",
+  "title": "Home",
+  "description": "Welcome to the website for Kurtis Rogers, a software engineer from Bristol UK",
   "image": {
     "data": {
       "attributes": {
-        "alternativeText": "A photo of The Milky Way.",
-        "url": "/images/optimised/milkyway-galaxy-md.webp",
+        "alternativeText":
+          "A photo of The Milky Way, taken from the surface of Earth in a heavily wooded area. The silouhette of trees wrap the image with the sky in the background emphasising the expanse of our galaxy.",
+        "url": "/images/optimised/milkyway-galaxy-forest-md.webp",
         "formats": {
           "medium": {
-            "src": "/images/optimised/milkyway-galaxy-md.webp",
+            "src": "/images/optimised/milkyway-galaxy-forest-md.webp",
             "minWidth": 768
           },
           "large": {
-            "src": "/images/optimised/milkyway-galaxy-lg.webp",
+            "src": "/images/optimised/milkyway-galaxy-forest-lg.webp",
             "minWidth": 960
           },
           "xlarge": {
-            "src": "/images/optimised/milkyway-galaxy-xl.webp",
+            "src": "/images/optimised/milkyway-galaxy-forest-xl.webp",
             "minWidth": 1420
           }
         }
@@ -80,37 +80,17 @@
       "type": "content",
       "children": [
         {
-          "type": "heading",
-          "headingLevel": "2",
-          "text": "Hello."
-        }
-      ],
-      "variant": "yellow",
-      "layoutSpacing": {
-        "paddingTop": "xs",
-        "paddingBottom": "xs",
-        "marginTop": "lg",
-        "marginBottom": "default"
-      },
-      "gridLayout": "wide"
-    },
-    {
-      "type": "content",
-      "children": [
-        {
-          "type": "paragraph",
+          "element": "paragraph",
           "children": [
             {
               "type": "text",
-              "text": "Site's under development at the moment. If you wish to get in touch with me <a href='https://linktr.ee/kurtisrogers' target='_blank'> check out my linkt.ree</a>"
+              "text": "In the meantime if you wish to get in tiouch with me <a href='https://linktr.ee/kurtisrogers' target='_blank'> check out my linkt.ree</a>"
             }
           ]
         }
       ],
       "variant": "white",
       "layoutSpacing": {
-        "paddingTop": "xs",
-        "paddingBottom": "xs",
         "marginBottom": "xs"
       },
       "gridLayout": "wide"

@@ -1,16 +1,18 @@
 footer {
-  background: var(--brand-yellow);
-  background: var(--brand-primary-gradient);
-  padding: 1rem;
-  max-width: var(--brand-base-grid);
-  margin: 1rem;
-	animation: gradient 15s ease infinite;
-	background-size: 400% 400%;
+  display: flex;
+  margin: 3rem auto;
+  justify-content: center;
 }
 
-footer .filterPanel--blur {
+footer .content {
   display: flex;
   justify-content: space-between;
+  color: var(--brand-black);
+  background: var(--brand-white);
+  padding: 1rem;
+  width: 100%;
+  max-width: var(--brand-base-grid);
+  margin: 1rem;
 }
 
 footer .logo {
@@ -34,16 +36,12 @@ footer nav:not(.socials) li {
 
 footer nav a {
   display: inline-flex;
-  color: var(--brand-white);
+  color: var(--brand-black);
   padding: 0px;
   outline: none;
   font-weight: 600;
   text-underline-offset: 0.125rem;
   text-underline-position: under;
-}
-
-footer div.filterPanel > :first-child {
-  width: calc(100% - 4rem);
 }
 
 footer .content .footer__socials {
@@ -52,14 +50,12 @@ footer .content .footer__socials {
   justify-content: space-between;
 }
 
+footer svg {
+  color: var(--brand-black);
+}
+
 footer .socials ul {
   display: flex;
   flex-direction: row;
   margin: 0px;
-}
-
-@media screen and (min-width: 1280px) {
-  footer {
-    margin: 3rem auto;
-  }
 }

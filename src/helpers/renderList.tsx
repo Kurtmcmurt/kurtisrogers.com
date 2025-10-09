@@ -24,7 +24,8 @@ export const renderList = {
   paragraph: (props: any) => (
     <For each={props.children}>
       {item => {
-        return <p>{item.text}</p>;
+        // https://developer.mozilla.org/en-US/docs/Web/API/TrustedHTML
+        return <div innerHTML={item.text} />;
       }}
     </For>
   ),
