@@ -1,12 +1,12 @@
 nav.socials a {
   display: flex;
-  color: var(--brand-white);
+  color: currentColor;
   outline: 2px solid transparent;
 }
 
 nav.socials a:focus {
   outline: 2px solid white;
-  background: var(--brand-black);
+  background: yellow;
 }
 
 nav.socials ul {
@@ -15,5 +15,6 @@ nav.socials ul {
 }
 
 nav.socials a:hover {
-  filter: drop-shadow(2px 2px 2px currentColor);
+  filter: invert(1);
+  background: yellow;
 }

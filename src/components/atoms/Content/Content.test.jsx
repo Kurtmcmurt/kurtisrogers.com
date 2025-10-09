@@ -14,6 +14,18 @@ vi.mock("@/helpers/colours", () => ({
 
 import { handleColourClasses } from "@/helpers/colours";
 
+const content = [
+  {
+    type: "paragraph",
+    children: [
+      {
+        "type": "text",
+        "text": "<div data-testid='test-child'>Test Content</div>"
+      }
+    ]
+  }
+];
+
 describe("Content Component", () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -21,9 +33,7 @@ describe("Content Component", () => {
 
   test("renders children correctly", () => {
     render(() => (
-      <Content firstChild={true}>
-        <div data-testid="test-child">Test Content</div>
-      </Content>
+      <Content firstChild={true} children={content} />
     ));
 
     expect(screen.getByTestId("test-child")).toBeInTheDocument();

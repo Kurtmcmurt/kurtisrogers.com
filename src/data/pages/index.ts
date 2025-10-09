@@ -1,8 +1,8 @@
-import HomeData from "./home.data";
-import MaintenanceModeData from "./maintenanceMode.data";
-import AboutData from "./about.data";
-import BlogData from "./blog.data";
-import ContactData from "./contact.data";
-import NotfoundData from "./notfound.data";
+import HomeData from "./home.json";
+import MaintenanceModeData from "./maintenanceMode.json";
+import AboutData from "./about.json";
+import BlogData from "./blog.json";
+import ContactData from "./contact.json";
+import NotfoundData from "./notfound.json";
 
 export { AboutData, HomeData, NotfoundData, MaintenanceModeData, BlogData, ContactData };

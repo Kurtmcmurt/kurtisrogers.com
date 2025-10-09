@@ -8,27 +8,42 @@ import {
   NotFound as NotFoundContent
 } from "@/data/content";
 
+import type { ComponentBlock } from "@/helpers/layouts";
+
 const handleMaintenanceContent = MAINTENANCE_MODE ? MaintenanceModeContent : HomeContent;
 
 export const Navigation = () => [
   {
     path: "/",
-    component: () => <Layout {...handleMaintenanceContent} />
+    component: () => (
+      <Layout
+        {...handleMaintenanceContent}
+        components={handleMaintenanceContent.components as ComponentBlock[]}
+      />
+    )
   },
   {
     path: "/about",
-    component: () => <Layout {...AboutContent} />
+    component: () => (
+      <Layout {...AboutContent} components={AboutContent.components as ComponentBlock[]} />
+    )
   },
   {
     path: "/blog",
-    component: () => <Layout {...BlogContent} />
+    component: () => (
+      <Layout {...BlogContent} components={BlogContent.components as ComponentBlock[]} />
+    )
   },
   {
     path: "/contact",
-    component: () => <Layout {...ContactContent} />
+    component: () => (
+      <Layout {...ContactContent} components={ContactContent.components as ComponentBlock[]} />
+    )
   },
   {
     path: "*404",
-    component: () => <Layout {...NotFoundContent} />
+    component: () => (
+      <Layout {...NotFoundContent} components={NotFoundContent.components as ComponentBlock[]} />
+    )
   }
 ];

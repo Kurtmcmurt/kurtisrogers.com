@@ -1,0 +1,91 @@
+{
+  "title": "About",
+  "description": "Find out more about Kurtis Rogers, Software Engineer",
+  "image": {
+    "data": {
+      "attributes": {
+        "alternativeText": "A photo of The Milky Way.",
+        "url": "/images/optimised/milkyway-galaxy-md.webp",
+        "formats": {
+          "medium": {
+            "src": "/images/optimised/milkyway-galaxy-md.webp",
+            "minWidth": 768
+          },
+          "large": {
+            "src": "/images/optimised/milkyway-galaxy-lg.webp",
+            "minWidth": 960
+          },
+            "xlarge": {
+            "src": "/images/optimised/milkyway-galaxy-xl.webp",
+            "minWidth": 1420
+          }
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "type": "banner",
+      "title": {
+        "text": "About",
+        "headingLevel": "2"
+      },
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Technology is where I live, and my mind is often wondering if our species will ever reach Alpha Centauri... And if I'll ever be able to forgive Heinz for trying to sell 4 tins of Baked Beans for £7 during Covid."
+            }
+          ]
+        }
+      ],
+      "backgroundImage": {
+        "data": {
+          "attributes": {
+            "alternativeText": "A photo of The Milky Way.",
+            "url": "/images/optimised/milkyway-galaxy-md.webp",
+            "formats": {
+              "medium": {
+                "src": "/images/optimised/milkyway-galaxy-md.webp",
+                "minWidth": 768
+              },
+              "large": {
+                "src": "/images/optimised/milkyway-galaxy-lg.webp",
+                "minWidth": 960
+              },
+              "xlarge": {
+                "src": "/images/optimised/milkyway-galaxy-xl.webp",
+                "minWidth": 1420
+              }
+            }
+          }
+        }
+      },
+      "gridLayout": "wide"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "I have been working as a web developer in the South West of England for over the past decade. During this time I have worked in multiple small and large agencies being an effective team member in many cross-discipline teams, and sometimes alongside client teams too!"
+            }
+          ]
+        }
+      ],
+      "variant": "yellow",
+      "layoutSpacing": {
+        "paddingTop": "lg",
+        "paddingBottom": "lg",
+        "marginTop": "lg",
+        "marginBottom": "xs"
+      },
+      "gridLayout": "wide"
+    }
+  ]
+}

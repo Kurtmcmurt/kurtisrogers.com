@@ -67,6 +67,16 @@ export default function Header({ children }: Readonly<Props>) {
     }, 0);
   };
 
+  window.addEventListener("keydown", (e: KeyboardEvent) => {
+    if (showNavigation() && e.key === "Escape") handleToggleNavigation();
+  });
+
+  setNavButtonAttributes({
+    "aria-expanded": showNavigation(),
+    "aria-controls": "navigation",
+    "data-state": showNavigation() ? "open" : "closed"
+  });
+
   return (
     <header tabindex="-1" classList={{ "nav-pending": pending() }} onFocusOut={handleMenuFocusOut}>
       <div class="content">

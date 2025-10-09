@@ -1,0 +1,87 @@
+{
+  "title": "Contact",
+  "description": "Want a chat? Get in touch!",
+  "image": {
+    "data": {
+      "attributes": {
+        "alternativeText": "A photo of The Milky Way.",
+        "url": "/images/optimised/deepspace-md.webp",
+        "formats": {
+          "medium": {
+            "src": "/images/optimised/deepspace-md.webp",
+            "minWidth": 768
+          },
+          "large": {
+            "src": "/images/optimised/deepspace-lg.webp",
+            "minWidth": 960
+          },
+          "xlarge": {
+            "src": "/images/optimised/deepspace-xl.webp",
+            "minWidth": 1420
+          }
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "type": "banner",
+      "title": {
+        "text": "Contact",
+        "headingLevel": "2"
+      },
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Sometimes I post interesting bits of content on the web. Most of the time I don't, the fact that anything is here is nothing short of a minor miracle."
+            }
+          ]
+        }
+      ],
+      "backgroundImage": {
+        "data": {
+          "attributes": {
+            "alternativeText": "A photo of The Milky Way.",
+            "url": "/images/optimised/deepspace-md.webp",
+            "formats": {
+              "medium": {
+                "src": "/images/optimised/deepspace-md.webp",
+                "minWidth": 768
+              },
+              "large": {
+                "src": "/images/optimised/deepspace-lg.webp",
+                "minWidth": 960
+              },
+              "xlarge": {
+                "src": "/images/optimised/deepspace-xl.webp",
+                "minWidth": 1420
+              }
+            }
+          }
+        }
+      },
+      "gridLayout": "wide"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Awaiting service."
+        }
+      ],
+      "variant": "grey",
+      "layoutSpacing": {
+        "paddingTop": "lg",
+        "paddingBottom": "lg",
+        "marginTop": "lg",
+        "marginBottom": "xs"
+      },
+      "gridLayout": "wide"
+    }
+  ]
+}

@@ -1,7 +1,6 @@
-import { For, JSX, ValidComponent, Component } from "solid-js";
+import { For } from "solid-js";
 import { Meta, Title } from "@solidjs/meta";
 import { useLocation } from "@solidjs/router";
-import { Dynamic } from "solid-js/web";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import SkipLink from "@/components/atoms/Skiplink";
@@ -10,11 +9,17 @@ import { main } from "@/data/navigations";
 import { LayoutSpacingDataType, layoutSpacingHandler } from "./layoutSpacingHandler";
 import type { ImageResponse } from "@/types/branding";
 
+import renderList from "./renderList";
+export type ValidComponent = keyof typeof renderList; // "Banner" | "Content"
+
 export const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "enabled" ? true : false;
 
-type ComponentBlock = {
-  component: ValidComponent;
-  [key: string]: unknown;
+export type ComponentBlock = {
+  type: ValidComponent;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children?: any[]; // Add children to ComponentBlock
 };
 
 interface Props {
@@ -24,7 +29,6 @@ interface Props {
     data: ImageResponse;
   };
   components: ComponentBlock[];
-  children?: JSX.Element;
 }
 
 export const Layout = (props: Props) => {
@@ -56,19 +60,18 @@ export const Layout = (props: Props) => {
       <main id="maincontent" tabindex="-1">
         <For each={components}>
           {item => {
-            const { name } = item.component as Component;
-            const firstChildCheck = name.endsWith("Banner") && components[0] === item;
+            const firstChildCheck = item.component === "banner" && components[0] === item;
+            const Component = renderList[item.type];
 
-            const componentData = {
-              ...item,
-              firstChild: firstChildCheck,
-              style: layoutSpacingHandler(item.layoutSpacing as LayoutSpacingDataType)
-            };
-
-            return <Dynamic {...componentData} />;
+            return (
+              <Component
+                {...item}
+                firstChild={firstChildCheck}
+                style={layoutSpacingHandler(item.layoutSpacing as LayoutSpacingDataType)}
+              />
+            );
           }}
         </For>
-        {props.children}
       </main>
       <Footer>
         <div>

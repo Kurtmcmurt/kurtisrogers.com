@@ -1,0 +1,119 @@
+{
+  "title": "Maintenance page",
+  "description":
+    "This is the maintenance page. It usually shows up when the site is under active development",
+  "image": {
+    "data": {
+      "attributes": {
+        "alternativeText": "A photo of The Milky Way.",
+        "url": "/images/optimised/milkyway-galaxy-md.webp",
+        "formats": {
+          "medium": {
+            "src": "/images/optimised/milkyway-galaxy-md.webp",
+            "minWidth": 768
+          },
+          "large": {
+            "src": "/images/optimised/milkyway-galaxy-lg.webp",
+            "minWidth": 960
+          },
+          "xlarge": {
+            "src": "/images/optimised/milkyway-galaxy-xl.webp",
+            "minWidth": 1420
+          }
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "type": "banner",
+      "title": {
+        "text": "Software Engineer",
+        "headingLevel": "1",
+        "headingClass": "text-size-h2"
+      },
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "My name is Kurtis Rogers and I'm an experienced fullstack software engineer from Bristol, UK."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "children": [
+            "An expert in popular frontend frameworks including serverside Node development (Express/Koa)",
+            "Effective and approachable mentor to less experienced colleagues, always willing to help folks where I can.",
+            "A team player, able to build robust yet relaxed relationships with all stakeholders."
+          ]
+        },
+        {
+          "type": "buttongroup",
+          "children": [
+            {
+              "variant": "primary",
+              "outline": true,
+              "href": {
+                "url": "https://www.linkedin.com/in/kurtisrogers",
+                "target": "_blank"
+              },
+              "content": "Visit my LinkedIn"
+            },
+            {
+              "variant": "secondary",
+              "outline": true,
+              "href": {
+                "url": "https://github.com/Kurtmcmurt/kurtisrogers.com",
+                "target": "_blank"
+              },
+              "content": "Repo for the site"
+            }
+          ]
+        }
+      ],
+      "gridLayout": "wide"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Hello."
+        }
+      ],
+      "variant": "yellow",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginTop": "lg",
+        "marginBottom": "default"
+      },
+      "gridLayout": "wide"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Site's under development at the moment. If you wish to get in touch with me <a href='https://linktr.ee/kurtisrogers' target='_blank'> check out my linkt.ree</a>"
+            }
+          ]
+        }
+      ],
+      "variant": "white",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginBottom": "xs"
+      },
+      "gridLayout": "wide"
+    }
+  ]
+}

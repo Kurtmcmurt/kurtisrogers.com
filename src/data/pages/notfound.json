@@ -1,0 +1,61 @@
+{
+  "title": "404",
+  "description": "Page has not been found",
+  "image": {
+    "data": {
+      "attributes": {
+        "alternativeText": "A photo of The Milky Way.",
+        "url": "/images/optimised/milkyway-galaxy-md.webp",
+        "formats": {
+          "medium": {
+            "src": "/images/optimised/milkyway-galaxy-md.webp",
+            "minWidth": 768
+          },
+          "large": {
+            "src": "/images/optimised/milkyway-galaxy-lg.webp",
+            "minWidth": 960
+          },
+          "xlarge": {
+            "src": "/images/optimised/milkyway-galaxy-xl.webp",
+            "minWidth": 1420
+          }
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "type": "banner",
+      "title": {
+        "text": "404",
+        "headingLevel": 1,
+        "headingClass": "text-size-h2"
+      },
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "You're not meant to be here!"
+            }
+          ]
+        },
+        {
+          "type": "buttongroup",
+          "children": [
+            {
+              "variant": "primary",
+              "outline": true,
+              "href": {
+                "url": "/",
+                "target": "_self"
+              },
+              "content": "Take me home"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
