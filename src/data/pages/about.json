@@ -36,7 +36,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Technology is where I live, and my mind is often wondering if our species will ever reach Alpha Centauri... And if I'll ever be able to forgive Heinz for trying to sell 4 tins of Baked Beans for £7 during Covid."
+              "text": "Technology is where I live but I also love anything to do with space. Will our species ever reach Alpha Centauri? Probably not, especially when you consider the pathetic state of public transport in the UK."
             }
           ]
         }
@@ -70,25 +70,37 @@
         {
           "type": "heading",
           "headingLevel": "2",
-          "text": "Technology"
+          "text": "Career"
         },
         {
           "type": "paragraph",
           "children": [
             {
               "type": "text",
-              "text": "I have been working as a web developer in the South West of England for over the past decade. During this time I have worked in multiple small and large agencies being an effective team member in many cross-discipline teams. And sometimes alongside client teams too!"
+              "text": "I'm a skilled developer with over a decade of experience, consistently delivering high-quality work across various government and private clients. I excel at breaking down complex problems and developing simple solutions, collaborating with colleagues from all disciplines to find the best approach possible."
+            },
+            {
+              "type": "text",
+              "text": "My technical expertise spans the modern web stack — TypeScript, React, Vue, Next.js, Nuxt.js, Node.js, and Express — alongside a strong foundation in semantic accessible HTML and WCAG standards. I'm experienced with comprehensive testing practices using Cypress, Jest, and AVA, and have worked extensively with both custom applications and CMS platforms including WordPress and Drupal."
+            },
+            {
+              "type": "text",
+              "text": "Since joining Nomensa/GAIN in 2020 as a Senior Frontend Developer, I've made significant contributions to projects for organizations like the NHS East of England Ambulance Service and Development Bank of Wales. I've been proactive in mentoring junior team members and sharing knowledge on relevant technologies with the wider team."
+            },
+            {
+              "type": "text",
+              "text": "Throughout my career, I prioritise refactoring and reusing existing code patterns wherever possible to maintain compliance within established codebases and champion existing team practice. I foster strong relationships with all stakeholders and have progressed from junior developer roles to confidently leading technical decisions and supporting those around me."
             }
           ]
         }
       ],
-      "variant": "red",
+      "variant": "yellow",
       "layoutSpacing": {
-        "paddingTop": "lg",
-        "paddingBottom": "lg",
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
         "marginTop": "lg"
       },
-      "gridLayout": "content"
+      "gridLayout": "grid"
     },
     {
       "type": "content",
@@ -96,23 +108,138 @@
         {
           "type": "heading",
           "headingLevel": "2",
-          "text": "A legend was born."
+          "text": "Technology"
+        },
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Languages and tooling"
         },
         {
           "type": "paragraph",
           "children": [
             {
               "type": "text",
-              "text": "I have been working as a web developer in the South West of England for over the past decade. During this time I have worked in multiple small and large agencies being an effective team member in many cross-discipline teams. And sometimes alongside client teams too!"
+              "text": "A list of the languages I am proficient in and have used commercially:"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "children": [
+            "JavaScript (vanilla)",
+            "TypeScript",
+            "Node",
+            "Semantic, accessible HTML",
+            "CSS",
+            "PHP (probably)"
+          ]
+        },
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Frameworks"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "A list of the frameworks I have used professionally:"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "children": [
+            "Next",
+            "Nuxt",
+            "React",
+            "Vue",
+            "Solid",
+            "Express/Koa/Nest",
+            "Storybook",
+            "Cypress/Vitest/Jest/Ava"
+          ]
+        },
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Content Management Systems"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "A list of Content Managemnt System's I can build with and extend:"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "children": [
+            "Strapi (Adding custom controllers, mutating data, joining data, the fun things in life)",
+            "WordPress (Custom Theme and Plugin development - have yet to develop custom blocks)",
+            "Drupal (mostly theming with SDC but capable of developing custom modules if required)"
+          ]
+        }
+      ],
+      "variant": "white",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginTop": "xs"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Looking for a dev?"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lucky you! I'm looking for my next gig. Interested in this exciting opportunity? You know what to do."
+            }
+          ]
+        },
+        {
+          "type": "buttongroup",
+          "children": [
+            {
+              "variant": "primary",
+              "outline": true,
+              "href": {
+                "url": "https://www.linkedin.com/in/kurtisrogers",
+                "target": "_blank"
+              },
+              "content": "Visit my LinkedIn"
+            },
+            {
+              "variant": "secondary",
+              "outline": true,
+              "href": {
+                "url": "/KurtisRogersCV.pdf",
+                "target": "_blank"
+              },
+              "content": "Resume"
             }
           ]
         }
       ],
-      "variant": "yellow",
+      "variant": "red",
       "layoutSpacing": {
-        "paddingTop": "lg",
-        "paddingBottom": "lg",
-        "marginBottom": "xs"
+        "paddingTop": "sm",
+        "paddingBottom": "sm",
+        "marginTop": "xl",
+        "marginBottom": "xl"
       },
       "gridLayout": "content"
     }

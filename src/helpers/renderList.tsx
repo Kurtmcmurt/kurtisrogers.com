@@ -21,11 +21,12 @@ export const renderList = {
       {typeof title === "string" ? title : text}
     </Dynamic>
   ),
+  // this may change in the future depending on 3rd party editor and the data recieved
   paragraph: (props: any) => (
     <For each={props.children}>
       {item => {
         // https://developer.mozilla.org/en-US/docs/Web/API/TrustedHTML
-        return <div innerHTML={item.text} />;
+        return <p innerHTML={item.text} />;
       }}
     </For>
   ),

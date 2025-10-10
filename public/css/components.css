@@ -1,3 +1,7 @@
+.buttongroup {
+  margin: 1rem 0px;
+}
+
 .buttongroup button,
 .buttongroup a {
   margin-right: 0.5rem;

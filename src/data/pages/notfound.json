@@ -55,6 +55,56 @@
           ]
         }
       ]
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Keep getting lost?"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Fear not! I'm looking for my next opportunity, maybe we can find a path forward together? Get in touch!"
+            }
+          ]
+        },
+        {
+          "type": "buttongroup",
+          "children": [
+            {
+              "variant": "primary",
+              "outline": true,
+              "href": {
+                "url": "https://www.linkedin.com/in/kurtisrogers",
+                "target": "_blank"
+              },
+              "content": "Visit my LinkedIn"
+            },
+            {
+              "variant": "secondary",
+              "outline": true,
+              "href": {
+                "url": "/KurtisRogersCV.pdf",
+                "target": "_blank"
+              },
+              "content": "Resume"
+            }
+          ]
+        }
+      ],
+      "variant": "red",
+      "layoutSpacing": {
+        "paddingTop": "sm",
+        "paddingBottom": "sm",
+        "marginTop": "xl",
+        "marginBottom": "xl"
+      },
+      "gridLayout": "content"
     }
   ]
 }

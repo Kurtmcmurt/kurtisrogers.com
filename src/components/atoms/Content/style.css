@@ -22,6 +22,10 @@
   color: var(--brand-white);
 }
 
+.content-grid p:last-of-type {
+  margin-bottom: 0px;
+}
+
 @media screen and (min-width: 1024px) {
   .content-grid:not(.banner),
   .content-grid.full {
