@@ -1,4 +1,4 @@
-export type gridLayoutOptions = "wide" | "full";
+export type gridLayoutOptions = "grid" | "content";
 
 export type sizes = "xs" | "sm" | "md" | "lg" | "xl" | "default";
 

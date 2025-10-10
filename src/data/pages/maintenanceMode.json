@@ -29,8 +29,7 @@
       "type": "banner",
       "title": {
         "text": "Software Engineer",
-        "headingLevel": "1",
-        "headingClass": "text-size-h2"
+        "headingLevel": "1"
       },
       "children": [
         {
@@ -73,8 +72,7 @@
             }
           ]
         }
-      ],
-      "gridLayout": "wide"
+      ]
     },
     {
       "type": "content",
@@ -92,7 +90,7 @@
         "marginTop": "lg",
         "marginBottom": "default"
       },
-      "gridLayout": "wide"
+      "gridLayout": "grid"
     },
     {
       "type": "content",
@@ -113,7 +111,7 @@
         "paddingBottom": "xs",
         "marginBottom": "xs"
       },
-      "gridLayout": "wide"
+      "gridLayout": "grid"
     }
   ]
 }

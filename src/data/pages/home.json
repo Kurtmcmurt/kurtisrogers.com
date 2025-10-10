@@ -29,8 +29,7 @@
       "type": "banner",
       "title": {
         "text": "Software Engineer",
-        "headingLevel": "1",
-        "headingClass": "text-size-h2"
+        "headingLevel": "1"
       },
       "children": [
         {
@@ -73,27 +72,46 @@
             }
           ]
         }
-      ],
-      "gridLayout": "wide"
+      ]
     },
     {
       "type": "content",
       "children": [
         {
-          "element": "paragraph",
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Hello."
+        }
+      ],
+      "variant": "yellow",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginTop": "lg",
+        "marginBottom": "default"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "paragraph",
           "children": [
             {
               "type": "text",
-              "text": "In the meantime if you wish to get in tiouch with me <a href='https://linktr.ee/kurtisrogers' target='_blank'> check out my linkt.ree</a>"
+              "text": "Site's under development at the moment. If you wish to get in touch with me <a href='https://linktr.ee/kurtisrogers' target='_blank'> check out my linkt.ree</a>"
             }
           ]
         }
       ],
       "variant": "white",
       "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
         "marginBottom": "xs"
       },
-      "gridLayout": "wide"
+      "gridLayout": "grid"
     }
   ]
 }

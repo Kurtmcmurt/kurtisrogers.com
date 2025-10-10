@@ -84,7 +84,7 @@ describe("Banner", () => {
         }
       }
     },
-    "gridLayout": "wide"
+    "gridLayout": "content"
   };
 
   it("renders", () => {

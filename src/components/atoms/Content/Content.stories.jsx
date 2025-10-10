@@ -10,7 +10,7 @@ export default {
       control: { type: "select" }
     },
     gridLayout: {
-      options: ["wide", "full", undefined],
+      options: ["grid", "content", undefined],
       control: { type: "select" }
     }
   },
@@ -31,6 +31,6 @@ const Template = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   variant: "red",
-  gridLayout: "wide",
+  gridLayout: "content",
   children: <p>Hello, I'm some content!</p>
 };

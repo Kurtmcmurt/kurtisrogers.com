@@ -28,7 +28,7 @@
       "type": "banner",
       "title": {
         "text": "Contact",
-        "headingLevel": "2"
+        "headingLevel": "1"
       },
       "children": [
         {
@@ -62,8 +62,7 @@
             }
           }
         }
-      },
-      "gridLayout": "wide"
+      }
     },
     {
       "type": "content",
@@ -81,7 +80,7 @@
         "marginTop": "lg",
         "marginBottom": "xs"
       },
-      "gridLayout": "wide"
+      "gridLayout": "content"
     }
   ]
 }
