@@ -8,14 +8,14 @@
 
   /* brand colours */
   --brand-red: #96031A;
-  --brand-black: #1B1B1E;
+  --brand-black: #171717;
   --brand-grey: #6D676E;
   --brand-white: #FBFFFE;
   --brand-yellow: #FAA916;
 
   /* gradients */
   --brand-primary-gradient: linear-gradient(-45deg, var(--brand-black), var(--brand-red), var(--brand-yellow), var(--brand-white));
-  --brand-secondary-gradient: linear-gradient(-45deg, var(--brand-black), var(--brand-white), var(--brand-black));
+  --brand-secondary-gradient: linear-gradient(180deg, var(--brand-black), var(--brand-white));
 
   /* focus colour */
   --a11y-focus-yellow: yellow;

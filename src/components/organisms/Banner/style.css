@@ -48,10 +48,6 @@
   padding: 9rem 1rem 1rem;
 }
 
-.banner__content--copy p:last-of-type {
-  margin-bottom: 0px;
-}
-
 @media screen and (min-width: 1024px) {
   .banner__content--contains-image .banner__content--copy {
     padding: 0rem;
@@ -67,6 +63,7 @@
 }
 
 .banner__content--image {
+  width: 100%;
   grid-column: span 8;
   align-self: stretch;
   aspect-ratio: 2/1.5;

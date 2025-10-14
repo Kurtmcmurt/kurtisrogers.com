@@ -36,7 +36,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Sometimes I post interesting bits of content on the web. Most of the time I don't, the fact that anything is here is nothing short of a minor miracle."
+              "text": "Fancy a chat? Want to know more about me? Get in touch!"
             }
           ]
         }
@@ -70,15 +70,47 @@
         {
           "type": "heading",
           "headingLevel": "2",
-          "text": "Awaiting service."
+          "text": "A Contact form is on its way..."
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "I'm looking for my next gig. Interested in this exciting opportunity? You know what to do."
+            }
+          ]
+        },
+        {
+          "type": "buttongroup",
+          "children": [
+            {
+              "variant": "primary",
+              "outline": true,
+              "href": {
+                "url": "https://www.linkedin.com/in/kurtisrogers",
+                "target": "_blank"
+              },
+              "content": "Visit my LinkedIn"
+            },
+            {
+              "variant": "secondary",
+              "outline": true,
+              "href": {
+                "url": "/KurtisRogersCV.pdf",
+                "target": "_blank"
+              },
+              "content": "Resume"
+            }
+          ]
         }
       ],
-      "variant": "grey",
+      "variant": "red",
       "layoutSpacing": {
-        "paddingTop": "lg",
-        "paddingBottom": "lg",
-        "marginTop": "lg",
-        "marginBottom": "xs"
+        "paddingTop": "sm",
+        "paddingBottom": "sm",
+        "marginTop": "xl",
+        "marginBottom": "xl"
       },
       "gridLayout": "content"
     }

@@ -28,24 +28,20 @@
     {
       "type": "banner",
       "title": {
-        "text": "Software Engineer",
+        "text": "Kurtis Rogers",
         "headingLevel": "1"
       },
       "children": [
         {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "text": "My name is Kurtis Rogers and I'm an experienced fullstack software engineer from Bristol, UK."
-            }
-          ]
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Experienced fullstack software engineer"
         },
         {
           "type": "list",
           "children": [
             "An expert in popular frontend frameworks including serverside Node development (Express/Koa)",
-            "Effective and approachable mentor to less experienced colleagues, always willing to help folks where I can.",
+            "Effective and approachable mentor to less experienced colleagues, always willing to help folks where I can in a relaxed and respectful way.",
             "A team player, able to build robust yet relaxed relationships with all stakeholders."
           ]
         },
@@ -80,15 +76,15 @@
         {
           "type": "heading",
           "headingLevel": "2",
-          "text": "Hello."
+          "text": "Me"
         }
       ],
       "variant": "yellow",
       "layoutSpacing": {
-        "paddingTop": "xs",
-        "paddingBottom": "xs",
         "marginTop": "lg",
-        "marginBottom": "default"
+        "marginBottom": "xs",
+        "paddingTop": "xs",
+        "paddingBottom": "xs"
       },
       "gridLayout": "grid"
     },
@@ -100,7 +96,102 @@
           "children": [
             {
               "type": "text",
-              "text": "Site's under development at the moment. If you wish to get in touch with me <a href='https://linktr.ee/kurtisrogers' target='_blank'> check out my linkt.ree</a>"
+              "text": "I've lived in Bristol my entire life and consider it to be a proper lush place to live. My family are everything to me."
+            },
+            {
+              "type": "text",
+              "text": "A few other things you might like to know:"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "children": [
+            "Quite an interest in space but I'm not at the stage of camping in a field all night with a telescope - it's probably going to happen though",
+            "The Indigo League Pokemon series is still amazing 27 years on",
+            "Really enjoy listening to most types of music but my favourite? Metal",
+            "My neck is destroyed after every gig I go to and I never learn - moshing is a young man's game",
+            "I have a guitar which I sometimes hold; I've been holding guitars for 20 years and still don't know any scales - pathetic",
+            "My favourite guitar brand has to be ESP/LTD",
+            "Enjoy swimming"
+          ]
+        }
+      ],
+      "variant": "white",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Developer"
+        }
+      ],
+      "variant": "yellow",
+      "layoutSpacing": {
+        "marginTop": "lg",
+        "marginBottom": "xs",
+        "paddingTop": "xs",
+        "paddingBottom": "xs"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Architecting Clean Code from Design to Deployment"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "I transform design specifications into robust, type-safe data architectures that serve as the foundation for scalable applications. With fullstack expertise spanning backend to frontend implementation, I create comprehensive TypeScript schemas early in the development cycle establishing a single source of truth that prevents technical debt before it accumulates. This design-first approach eliminates the costly refactoring that plagues many projects. By defining well-structured data models upfront, I ensure consistency across your entire application stack, streamline team collaboration, and accelerate development velocity. The result? Clean, maintainable codebases that scale with your business."
+            },
+            {
+              "type": "text",
+              "text": "This design-first approach eliminates the costly refactoring that plagues many projects. By defining well-structured data models upfront, I ensure consistency across your entire application stack, streamline onboarding and collaboration, and accelerate development velocity. The result? Clean, maintainable codebases that scale with your business—not against it."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "What I bring to your team"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "With experience across the complete development lifecycle, I bridge the gap between design and implementation. I've worked on projects from initial architecture through to production deployment, working seamlessly  and collaboratively within a fast-paced agency environment where adaptability and technical precision are non-negotiable. Whether building greenfield applications or modernising legacy systems, I deliver solutions that prioritise long-term maintainability without sacrificing speed to market."
+            },
+            {
+              "type": "text",
+              "text": "My approach centers on pragmatic technical leadership establishing patterns that empower teams, creating developer experiences with ease in mind, creating documentation that actually gets used, and making architectural decisions that serve both immediate needs and future growth."
+            }
+          ]
+        },
+        {
+          "type": "buttongroup",
+          "children": [
+            {
+              "variant": "primary",
+              "outline": true,
+              "href": {
+                "url": "/about",
+                "target": "_self"
+              },
+              "content": "Visit About for more information"
             }
           ]
         }
@@ -108,10 +199,59 @@
       "variant": "white",
       "layoutSpacing": {
         "paddingTop": "xs",
-        "paddingBottom": "xs",
-        "marginBottom": "xs"
+        "paddingBottom": "xs"
       },
       "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
+        {
+          "type": "heading",
+          "headingLevel": "2",
+          "text": "Looking for a dev?"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lucky you! I'm looking for my next gig. Interested in this exciting opportunity? You know what to do."
+            }
+          ]
+        },
+        {
+          "type": "buttongroup",
+          "children": [
+            {
+              "variant": "primary",
+              "outline": true,
+              "href": {
+                "url": "https://www.linkedin.com/in/kurtisrogers",
+                "target": "_blank"
+              },
+              "content": "Visit my LinkedIn"
+            },
+            {
+              "variant": "secondary",
+              "outline": true,
+              "href": {
+                "url": "/KurtisRogersCV.pdf",
+                "target": "_blank"
+              },
+              "content": "Resume"
+            }
+          ]
+        }
+      ],
+      "variant": "red",
+      "layoutSpacing": {
+        "paddingTop": "sm",
+        "paddingBottom": "sm",
+        "marginTop": "xl",
+        "marginBottom": "xl"
+      },
+      "gridLayout": "content"
     }
   ]
 }

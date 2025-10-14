@@ -208,6 +208,10 @@ button.btn:before {
 }
 
 p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-block-start: 0px;
+  margin-block-end: 1rem;
+}
+
+p:only-of-type {
+  margin-block-end: 0px;
 }

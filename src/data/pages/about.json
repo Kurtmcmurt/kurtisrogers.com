@@ -36,7 +36,15 @@
           "children": [
             {
               "type": "text",
-              "text": "Technology is where I live but I also love anything to do with space. Will our species ever reach Alpha Centauri? Probably not, especially when you consider the pathetic state of public transport in the UK."
+              "text": "Technology is where I live. I also love anything to do with space."
+            },
+            {
+              "type": "text",
+              "text": "Will our species ever reach Alpha Centauri? Propulsion technology has come a long way since we last went to the Moon. A simple laser-powered lightsail? Theoretically this could reach 20% speed of light (0.2c). So Alpha Centauri in a cool 21.41 years. Not sure about the return journey though..."
+            },
+            {
+              "type": "text",
+              "text": "Time dialation? 0.44 years. And roughly half an hour away via radio contact..."
             }
           ]
         }
@@ -71,7 +79,20 @@
           "type": "heading",
           "headingLevel": "2",
           "text": "Career"
-        },
+        }
+      ],
+      "variant": "yellow",
+      "layoutSpacing": {
+        "marginTop": "lg",
+        "marginBottom": "xs",
+        "paddingTop": "xs",
+        "paddingBottom": "xs"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
         {
           "type": "paragraph",
           "children": [
@@ -85,7 +106,7 @@
             },
             {
               "type": "text",
-              "text": "Since joining Nomensa/GAIN in 2020 as a Senior Frontend Developer, I've made significant contributions to projects for organizations like the NHS East of England Ambulance Service and Development Bank of Wales. I've been proactive in mentoring junior team members and sharing knowledge on relevant technologies with the wider team."
+              "text": "Since joining Nomensa in 2020 as a Frontend Developer (and being promoted to senior after a year or so), I've made significant contributions to projects for organizations like the NHS East of England Ambulance Service and The Ramblers. I've been proactive in mentoring junior team members and sharing knowledge on relevant technologies with the wider team during team meetings sharing my infectious enthusiasm for emerging technology."
             },
             {
               "type": "text",
@@ -94,11 +115,11 @@
           ]
         }
       ],
-      "variant": "yellow",
+      "variant": "white",
       "layoutSpacing": {
         "paddingTop": "xs",
         "paddingBottom": "xs",
-        "marginTop": "lg"
+        "marginTop": "default"
       },
       "gridLayout": "grid"
     },
@@ -109,20 +130,24 @@
           "type": "heading",
           "headingLevel": "2",
           "text": "Technology"
-        },
+        }
+      ],
+      "variant": "yellow",
+      "layoutSpacing": {
+        "marginTop": "lg",
+        "marginBottom": "xs",
+        "paddingTop": "xs",
+        "paddingBottom": "xs"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
         {
           "type": "heading",
           "headingLevel": "3",
           "text": "Languages and tooling"
-        },
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "text": "A list of the languages I am proficient in and have used commercially:"
-            }
-          ]
         },
         {
           "type": "list",
@@ -139,15 +164,6 @@
           "type": "heading",
           "headingLevel": "3",
           "text": "Frameworks"
-        },
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "text": "A list of the frameworks I have used professionally:"
-            }
-          ]
         },
         {
           "type": "list",
@@ -168,20 +184,32 @@
           "text": "Content Management Systems"
         },
         {
-          "type": "paragraph",
+          "type": "list",
           "children": [
-            {
-              "type": "text",
-              "text": "A list of Content Managemnt System's I can build with and extend:"
-            }
+            "Strapi",
+            "WordPress",
+            "Drupal"
           ]
+        },
+        {
+          "type": "heading",
+          "headingLevel": "3",
+          "text": "Cloud Providers"
         },
         {
           "type": "list",
           "children": [
-            "Strapi (Adding custom controllers, mutating data, joining data, the fun things in life)",
-            "WordPress (Custom Theme and Plugin development - have yet to develop custom blocks)",
-            "Drupal (mostly theming with SDC but capable of developing custom modules if required)"
+            "AWS",
+            "Azure"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Important to note that whilst I've got experience using these services, I lack Infrastructure as Code experience (terraform) and this is a gap in my knowledge I hope to address in the future."
+            }
           ]
         }
       ],
@@ -189,7 +217,7 @@
       "layoutSpacing": {
         "paddingTop": "xs",
         "paddingBottom": "xs",
-        "marginTop": "xs"
+        "marginTop": "default"
       },
       "gridLayout": "grid"
     },

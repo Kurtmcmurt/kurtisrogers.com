@@ -6,7 +6,8 @@
 
 .content-grid:not(.banner) {
   display: flex;
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   flex-direction: column;
 }
 
@@ -22,9 +23,9 @@
   color: var(--brand-white);
 }
 
-.content-grid p:last-of-type {
+/* .content-grid p:last-of-type {
   margin-bottom: 0px;
-}
+} */
 
 @media screen and (min-width: 1024px) {
   .content-grid:not(.banner),
