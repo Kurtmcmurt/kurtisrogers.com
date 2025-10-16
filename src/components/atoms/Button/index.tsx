@@ -34,12 +34,20 @@ export default function Button({
       : handleColourClasses("white", "background")
   );
 
+  const isLink = Boolean(href?.url);
+
+  const buttonClasses = [
+    handleButtonStyle(),
+    !isLink && outline ? "btn--outline" : !isLink ? "btn" : "",
+    !isLink ? `btn--${variant}` : ""
+  ].join(" ");
+
   return (
     <Dynamic
       component={href?.url ? "a" : "button"}
       href={href?.url}
       target={href?.target ?? "_self"}
-      class={`${handleButtonStyle()} ${outline ? "btn--outline" : "btn"} btn--${variant}`}
+      class={buttonClasses}
       onClick={callback}
       {...attributes}
     >

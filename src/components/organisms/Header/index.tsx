@@ -87,7 +87,7 @@ export default function Header({ children }: Readonly<Props>) {
         </Button>
       </div>
       <Show when={showNavigation()}>
-        <Navigation ref={mainNavigation} classes="site-navigation" items={main} />
+        <Navigation ref={mainNavigation} classes="site-navigation fade--in" items={main} />
       </Show>
     </header>
   );

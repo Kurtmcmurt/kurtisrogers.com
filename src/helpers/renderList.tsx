@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
-// todo: implemenet correct types and remove any's
 
 import Banner, { Props as BannerProps } from "@/components/organisms/Banner";
 import Content, { Props as ContentProps } from "@/components/atoms/Content";
-import Button, { Props as ButtonProps } from "@/components/atoms/Button";
+import Button from "@/components/atoms/Button";
+
+// TODO: implemenet correct types and remove all any
 
 import { Heading } from "@/types/branding";
 import { Dynamic, For } from "solid-js/web";
@@ -21,11 +20,10 @@ export const renderList = {
       {typeof title === "string" ? title : text}
     </Dynamic>
   ),
-  // this may change in the future depending on 3rd party editor and the data recieved
   paragraph: (props: any) => (
     <For each={props.children}>
       {item => {
-        // https://developer.mozilla.org/en-US/docs/Web/API/TrustedHTML
+        // Security reference: https://developer.mozilla.org/en-US/docs/Web/API/TrustedHTML
         return <p innerHTML={item.text} />;
       }}
     </For>

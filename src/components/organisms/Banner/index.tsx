@@ -7,10 +7,11 @@ import { Dynamic } from "solid-js/web";
 import { LayoutSpacingDataType } from "@/helpers/layoutSpacingHandler";
 import type { Heading } from "@/types/branding";
 import renderList from "@/helpers/renderList";
+import Button from "@/components/atoms/Button";
 
 export interface Props {
   title?: Heading | string;
-  backgroundImage: {
+  image: {
     data: ImageResponse;
   };
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,14 +22,15 @@ export interface Props {
 }
 
 export default function Banner(props: Readonly<Props>) {
-  const { title, backgroundImage, children, firstChild, variant = "dark" } = props;
+  const { title, image, children, firstChild, variant = "dark" } = props;
+  const { data: { attributes: { alternativeText = "", credit } = {} } = {} } = image ?? {};
 
   return (
     <section
-      class={`banner${!!backgroundImage ? "--contains-image" : ""} ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
+      class={`banner ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
     >
-      <div class={`banner__content${!!backgroundImage ? "--contains-image" : ""}`}>
-        <div class={`banner__content--copy`}>
+      <div class={`banner__content`}>
+        <hgroup class={`banner__content--copy fade--in_up`}>
           <Show when={title}>
             <Dynamic
               component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}
@@ -43,12 +45,26 @@ export default function Banner(props: Readonly<Props>) {
               return <Content {...child} />;
             }}
           </For>
+        </hgroup>
+        {/* TODO: weird image/background colour section - not fully made my mind up about this */}
+        {/* TODO: create an image component - generate images here: https://isrcset.com/generate */}
+        <div class="banner__content--image fade--in">
+          <Show when={image}>
+            {responsiveImages(image)}
+            <Show when={alternativeText}>
+              <div class="credit">
+                {/* TODO: will require work on the backend extending the existing image controller */}
+                <Show when={credit}>
+                  <Button href={credit?.link}>
+                    <span class="sr-only">Photo by </span>
+                    {credit?.author}
+                  </Button>
+                </Show>
+                <span>{alternativeText}</span>
+              </div>
+            </Show>
+          </Show>
         </div>
-        {/* weird image/background colour section - not fully made my mind up */}
-        <Show when={backgroundImage}>
-          {/* create an image component - generate images here: https://isrcset.com/generate */}
-          <div class="banner__content--image">{responsiveImages(backgroundImage)}</div>
-        </Show>
       </div>
     </section>
   );

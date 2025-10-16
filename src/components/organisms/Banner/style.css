@@ -7,21 +7,21 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .banner--contains-image.first-element {
+  .banner.first-element {
     height: calc(100vh - 7.25rem);
   }
 }
 
-.banner__content--contains-image {
+.banner__content {
   position: relative;
   display: grid;
-  align-items: center;
-  justify-items: center;
   width: 100%;
+  grid-column: span 14;
+  max-width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  .banner__content--contains-image {
+  .banner__content {
     min-height: 100%;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -31,16 +31,7 @@
   }
 }
 
-.banner__content {
-  padding: 5rem 0px;
-}
-
-.banner__content--contains-image {
-  grid-column: span 14;
-  max-width: 100%;
-}
-
-.banner__content--contains-image .banner__content--copy {
+.banner__content .banner__content--copy {
   position: relative;
   grid-column: span 6;
   align-self: end;
@@ -49,35 +40,74 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .banner__content--contains-image .banner__content--copy {
+  .banner__content .banner__content--copy {
     padding: 0rem;
   }
 }
 
 .banner__content--image {
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-}
-
-.banner__content--image {
   width: 100%;
   grid-column: span 8;
   align-self: stretch;
   aspect-ratio: 2/1.5;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  box-shadow: 1px, 1px, 1px solid black;
+}
+
+.banner__content--image .credit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.25rem;
+  position: absolute;
+  width: calc(100% - 2rem);
+  top: 0px;
+  bottom: auto;
+  left: 0px;
+  padding: 1rem;
+  background: linear-gradient(to top, transparent, black);
+  z-index: 10;
+}
+
+.banner__content--image .credit > span {
+  display: none;
+}
+
+.banner__content--image .credit > span,
+.banner__content--image .credit > a {
+  font-size: 0.75rem;
+  text-align: end;
+}
+
+.banner__content--image .credit > a {
+  margin-right: .5rem;
 }
 
 @media screen and (min-width: 1024px) {
   .banner__content--image {
     position: relative;
   }
+  
+  .banner__content--image .credit {
+    top: auto;
+    bottom: 0px;
+    background: linear-gradient(to bottom, transparent, black);
+    text-align: end;
+  }
+
+  .banner__content--image .credit > span {
+    display: block;
+  }
 }
 
-.banner__content--contains-image img {
+.banner__content img {
   display: block;
   object-fit: cover;
   height: 100%;
   width: 100%;
+  position: absolute;
 }

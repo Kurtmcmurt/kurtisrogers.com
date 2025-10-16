@@ -3,17 +3,11 @@
   text-transform: uppercase;
   text-decoration: none;
   text-rendering: optimizeLegibility;
-  outline: 2px solid var(--brand-black);
+  outline: 2px solid transparent;
   padding: 1rem 0.25rem 0px 2rem;
   -webkit-user-select: none; /* Safari */
   user-select: none;
   text-align: end;
-}
-
-.logo:focus-visible {
-  outline-color: var(--brand-white);
-  color: var(--brand-black);
-  background: var(--a11y-focus-yellow);
 }
 
 .logo > small {

@@ -4,7 +4,7 @@
   "image": {
     "data": {
       "attributes": {
-        "alternativeText": "A photo of The Milky Way.",
+        "alternativeText": "Desert during Nighttime.",
         "url": "/images/optimised/desert-night-sky-sand-dune-md.webp",
         "formats": {
           "medium": {
@@ -28,7 +28,8 @@
       "type": "banner",
       "title": {
         "text": "Blog",
-        "headingLevel": "1"
+        "headingLevel": "1",
+        "headingClass": "text-size-h2"
       },
       "children": [
         {
@@ -41,10 +42,17 @@
           ]
         }
       ],
-      "backgroundImage": {
+      "image": {
         "data": {
           "attributes": {
-            "alternativeText": "A photo of The Milky Way.",
+            "alternativeText": "Desert during Nighttime.",
+            "credit": {
+              "author": "Walid Ahmad",
+              "link": {
+                "url": "https://www.pexels.com/photo/desert-during-nighttime-847402/",
+                "target": "_blank"
+              }
+            },
             "url": "/images/optimised/desert-night-sky-sand-dune-md.webp",
             "formats": {
               "medium": {
@@ -98,14 +106,18 @@
               "outline": true,
               "href": {
                 "url": "/KurtisRogersCV.pdf",
-                "target": "_blank"
+                "target": "_self"
+              },
+              "attributes": {
+                "download": "KurtisRogersCV.pdf",
+                "type": "application/pdf"
               },
               "content": "Resume"
             }
           ]
         }
       ],
-      "variant": "red",
+      "variant": "yellow",
       "layoutSpacing": {
         "paddingTop": "sm",
         "paddingBottom": "sm",
