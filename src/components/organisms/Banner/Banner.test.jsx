@@ -61,7 +61,7 @@ describe("Banner", () => {
         ]
       }
     ],
-    "backgroundImage": {
+    "image": {
       "data": {
         "attributes": {
           "alternativeText":
@@ -106,6 +106,6 @@ describe("Banner", () => {
     
     // Check if the image exists and has the correct alt text
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute("src", propData.backgroundImage.url);
+    expect(image).toHaveAttribute("src", propData.image.url);
   });
 });

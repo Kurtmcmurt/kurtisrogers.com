@@ -4,7 +4,7 @@
   "image": {
     "data": {
       "attributes": {
-        "alternativeText": "A photo of The Milky Way.",
+        "alternativeText": "Milky Way illustration.",
         "url": "/images/optimised/milkyway-galaxy-md.webp",
         "formats": {
           "medium": {
@@ -28,7 +28,8 @@
       "type": "banner",
       "title": {
         "text": "About",
-        "headingLevel": "1"
+        "headingLevel": "1",
+        "headingClass": "text-size-h2"
       },
       "children": [
         {
@@ -49,10 +50,17 @@
           ]
         }
       ],
-      "backgroundImage": {
+      "image": {
         "data": {
           "attributes": {
-            "alternativeText": "A photo of The Milky Way.",
+            "alternativeText": "Milky Way illustration.",
+            "credit": {
+              "author": "Philippe Donn",
+              "link": {
+                "url": "https://www.pexels.com/photo/milky-way-illustration-1169754/",
+                "target": "_blank"
+              }
+            },
             "url": "/images/optimised/milkyway-galaxy-md.webp",
             "formats": {
               "medium": {
@@ -85,8 +93,8 @@
       "layoutSpacing": {
         "marginTop": "lg",
         "marginBottom": "xs",
-        "paddingTop": "xs",
-        "paddingBottom": "xs"
+        "paddingTop": "default",
+        "paddingBottom": "default"
       },
       "gridLayout": "grid"
     },
@@ -136,8 +144,8 @@
       "layoutSpacing": {
         "marginTop": "lg",
         "marginBottom": "xs",
-        "paddingTop": "xs",
-        "paddingBottom": "xs"
+        "paddingTop": "default",
+        "paddingBottom": "default"
       },
       "gridLayout": "grid"
     },
@@ -159,7 +167,19 @@
             "CSS",
             "PHP (probably)"
           ]
-        },
+        }
+      ],
+      "variant": "white",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginTop": "xs"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
         {
           "type": "heading",
           "headingLevel": "3",
@@ -177,7 +197,19 @@
             "Storybook",
             "Cypress/Vitest/Jest/Ava"
           ]
-        },
+        }
+      ],
+      "variant": "white",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginTop": "xs"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
         {
           "type": "heading",
           "headingLevel": "3",
@@ -190,7 +222,19 @@
             "WordPress",
             "Drupal"
           ]
-        },
+        }
+      ],
+      "variant": "white",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "xs",
+        "marginTop": "xs"
+      },
+      "gridLayout": "grid"
+    },
+    {
+      "type": "content",
+      "children": [
         {
           "type": "heading",
           "headingLevel": "3",
@@ -217,7 +261,7 @@
       "layoutSpacing": {
         "paddingTop": "xs",
         "paddingBottom": "xs",
-        "marginTop": "default"
+        "marginTop": "xs"
       },
       "gridLayout": "grid"
     },
@@ -255,14 +299,18 @@
               "outline": true,
               "href": {
                 "url": "/KurtisRogersCV.pdf",
-                "target": "_blank"
+                "target": "_self"
+              },
+              "attributes": {
+                "download": "KurtisRogersCV.pdf",
+                "type": "application/pdf"
               },
               "content": "Resume"
             }
           ]
         }
       ],
-      "variant": "red",
+      "variant": "yellow",
       "layoutSpacing": {
         "paddingTop": "sm",
         "paddingBottom": "sm",

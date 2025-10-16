@@ -13,6 +13,13 @@ export interface Image {
 export interface ImageResponse {
   attributes: {
     alternativeText?: string;
+    credit?: {
+      author?: string;
+      link?: {
+        url: string;
+        target: "_blank" | "_self";
+      };
+    };
     url: string;
     formats: {
       small?: Image;

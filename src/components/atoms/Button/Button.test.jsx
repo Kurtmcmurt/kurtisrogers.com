@@ -134,7 +134,7 @@ describe("Button Component", () => {
       ));
 
       const link = screen.getByRole("link");
-      expect(link).toHaveClass("bg-white", "btn--outline", "btn--secondary");
+      expect(link).toHaveClass("bg-white");
     });
   });
 

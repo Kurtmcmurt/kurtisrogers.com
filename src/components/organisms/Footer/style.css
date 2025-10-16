@@ -1,6 +1,6 @@
 footer {
   display: flex;
-  margin: 3rem auto;
+  margin: 0px auto;
   justify-content: center;
 }
 
@@ -31,7 +31,7 @@ footer nav ul {
 
 footer nav:not(.socials) li {
   list-style-type: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 footer nav a {

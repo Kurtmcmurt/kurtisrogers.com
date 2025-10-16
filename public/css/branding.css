@@ -6,6 +6,7 @@ html, body {
 
 * {
   font-size: 16px;
+  line-height: normal;
 }
 
 .bg-red {
@@ -52,8 +53,6 @@ html, body {
 
 body {
   font-family: var(--normal-font);
-  font-weight: false;
-  word-break: all;
 }
 
 h1,
@@ -128,6 +127,11 @@ small,
 }
 
 /* links */
+a:focus-visible:not(.logo):not(button):not(.btn) {
+  outline-offset: 2px;
+  border: 2px solid var(--brand-black);
+}
+
 a:focus-visible,
 button:focus-visible {
   outline-color: var(--brand-white);
@@ -198,6 +202,10 @@ a.btn--outline:before {
   width: 5px;
   border-top: 2px solid;
   border-left: 2px solid;
+}
+
+a:not(.btn):not(.logo) {
+  padding: 0.125rem;
 }
 
 a.btn:before,

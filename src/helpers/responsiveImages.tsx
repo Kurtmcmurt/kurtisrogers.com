@@ -35,7 +35,7 @@ const responsiveImages = ({ data }: Data) => {
   imageSizes.forEach(size => {
     const _minWidth = `${size?.minWidth}px`;
     const url = size?.src;
-    const altText = _default.alternativeText ? _default.alternativeText : "";
+    const altText = _default.alternativeText ?? "";
 
     imageSources.push(
       url?.includes("-md")
