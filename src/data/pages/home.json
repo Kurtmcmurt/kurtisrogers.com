@@ -182,21 +182,13 @@
             }
           ]
         }
-      ]
-    },
-    {
-      "type": "content",
-      "children": [
-        {
-          "type": "heading",
-          "headingLevel": "2",
-          "text": "Me"
-        }
       ],
       "variant": "white",
       "layoutSpacing": {
         "paddingTop": "xs",
-        "paddingBottom": "xs"
+        "paddingBottom": "default",
+        "marginTop": "xs",
+        "marginBottom": "xl"
       },
       "gridLayout": "grid"
     },
@@ -242,18 +234,6 @@
               },
               "content": "Download My Resume"
             }
-          ]
-        },
-        {
-          "type": "list",
-          "children": [
-            "Quite an interest in space but I'm not at the stage of camping in a field all night with a telescope - it's probably going to happen though",
-            "The Indigo League Pokemon series is still amazing 27 years on",
-            "Really enjoy listening to most types of music but my favourite? Metal",
-            "My neck is destroyed after every gig I go to and I never learn - moshing is a young man's game",
-            "I have a guitar which I sometimes hold; I've been holding guitars for 20 years and still don't know any scales - pathetic",
-            "My favourite guitar brand has to be ESP/LTD",
-            "Enjoy swimming"
           ]
         }
       ],
