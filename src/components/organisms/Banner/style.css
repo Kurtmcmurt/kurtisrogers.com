@@ -58,11 +58,33 @@
   box-shadow: 1px, 1px, 1px solid black;
 }
 
-.banner__content--image {
-  width: 100%;
-  grid-column: span 8;
-  align-self: stretch;
-  aspect-ratio: 2/1.5;
+.banner__content--image .credit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.25rem;
+  position: absolute;
+  width: calc(100% - 2rem);
+  top: 0px;
+  bottom: auto;
+  left: 0px;
+  padding: 1rem;
+  background: linear-gradient(to top, transparent, black);
+  z-index: 10;
+}
+
+.banner__content--image .credit > span {
+  display: none;
+}
+
+.banner__content--image .credit > span,
+.banner__content--image .credit > a {
+  font-size: 0.75rem;
+  text-align: end;
+}
+
+.banner__content--image .credit > a {
+  margin-right: .5rem;
 }
 
 @media screen and (min-width: 1024px) {
