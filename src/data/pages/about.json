@@ -292,7 +292,7 @@
                 "url": "https://www.linkedin.com/in/kurtisrogers",
                 "target": "_blank"
               },
-              "content": "Visit my LinkedIn"
+              "content": "Visit My LinkedIn"
             },
             {
               "variant": "secondary",
@@ -305,7 +305,7 @@
                 "download": "KurtisRogersCV.pdf",
                 "type": "application/pdf"
               },
-              "content": "Resume"
+              "content": "Download My Resume"
             }
           ]
         }
