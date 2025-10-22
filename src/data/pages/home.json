@@ -182,16 +182,6 @@
             }
           ]
         }
-      ]
-    },
-    {
-      "type": "content",
-      "children": [
-        {
-          "type": "heading",
-          "headingLevel": "2",
-          "text": "Me"
-        }
       ],
       "variant": "white",
       "layoutSpacing": {
