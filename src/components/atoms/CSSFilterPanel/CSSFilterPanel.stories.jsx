@@ -8,7 +8,7 @@ export default {
     variant: {
       options: ["blur"],
       control: { type: "select" }
-    },
+    }
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/solid/writing-docs/docs-page
   tags: ["autodocs"],
@@ -18,11 +18,7 @@ export default {
   }
 };
 
-const Template = (args) => (
-  <CSSFilterPanel variant={args.variant}>
-    {args.children}
-  </CSSFilterPanel>
-);
+const Template = args => <CSSFilterPanel variant={args.variant}>{args.children}</CSSFilterPanel>;
 
 export const Default = Template.bind({});
 Default.args = {

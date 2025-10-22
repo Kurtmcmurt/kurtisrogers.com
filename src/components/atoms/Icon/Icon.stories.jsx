@@ -10,7 +10,7 @@ export default {
       control: { type: "color" }
     },
     size: {
-      control: { type: "range", min: 60, max: 200, step: 20 },
+      control: { type: "range", min: 60, max: 200, step: 20 }
     }
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/solid/writing-docs/docs-page
@@ -21,10 +21,14 @@ export default {
   }
 };
 
-const Template = (args) => <div style={`color: ${args.fill};`}><Icon icondata={linkedin} height={args.size} width={args.size} viewbox="0 0 24 24" /></div>;
+const Template = args => (
+  <div style={`color: ${args.fill};`}>
+    <Icon icondata={linkedin} height={args.size} width={args.size} viewbox="0 0 24 24" />
+  </div>
+);
 
 export const Default = Template.bind({});
 Default.args = {
   fill: "#FFFFFF",
-  size: 50,
+  size: 50
 };

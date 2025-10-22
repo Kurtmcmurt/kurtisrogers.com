@@ -6,7 +6,7 @@ export default {
   component: Logo,
   argTypes: {
     variant: {
-      options: ['primary', 'secondary'],
+      options: ["primary", "secondary"],
       control: { type: "radio" }
     },
     text: {
@@ -19,14 +19,14 @@ export default {
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen"
-  },
+  }
 };
 
 export const Default = {
   args: {
     isButton: true,
     variant: "primary",
-    text: "Kurtis Rogers",
+    text: "Kurtis Rogers"
   },
-  render: (args) => <Logo {...args} />
+  render: args => <Logo {...args} />
 };

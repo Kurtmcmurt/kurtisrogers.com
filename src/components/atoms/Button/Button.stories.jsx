@@ -9,7 +9,7 @@ export default {
     variant: {
       options: ["primary", "secondary"],
       control: { type: "radio" }
-    },
+    }
   },
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/solid/configure/story-layout
@@ -17,7 +17,7 @@ export default {
   }
 };
 
-const Template = (args) => <Button {...args}>{args.text}</Button>;
+const Template = args => <Button {...args}>{args.text}</Button>;
 
 export const Default = Template.bind({});
 Default.args = {

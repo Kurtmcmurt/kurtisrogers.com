@@ -22,7 +22,7 @@ export default {
   }
 };
 
-const Template = (args) => (
+const Template = args => (
   <Content variant={args.variant} gridLayout={args.gridLayout}>
     {args.children}
   </Content>

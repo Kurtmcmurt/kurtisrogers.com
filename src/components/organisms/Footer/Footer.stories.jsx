@@ -12,11 +12,7 @@ export default {
   }
 };
 
-const Template = () => {
-  return (
-    <Footer />
-  );
-};
+const Template = () => <Footer />;
 
 export const Default = Template.bind({});
 // Default.args = {
