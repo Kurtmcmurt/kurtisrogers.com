@@ -10,7 +10,6 @@ const root = document.getElementById("root");
 render(
   () => (
     <MetaProvider>
-      {/* <Router preload={true} url={isServer}> Tofu: SSR */}
       <Router preload={true}>
         <For each={NavData()}>
           {item => {

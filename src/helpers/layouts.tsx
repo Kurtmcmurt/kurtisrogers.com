@@ -39,6 +39,7 @@ export const Layout = (props: Props) => {
 
   return (
     <>
+      {/* TODO: SSR prep for dynamic meta tags */}
       <Title>{`${title} | kurtisrogers.com`}</Title>
       <Meta name="description" content={description ?? ""} />
       <Meta property="og:url" content={`${locationOrigin + pathname}`} />

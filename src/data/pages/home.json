@@ -38,11 +38,15 @@
           "children": [
             {
               "type": "text",
-              "text": "Fullstack software engineer"
+              "text": "Fullstack Node Software Engineer"
             },
             {
               "type": "text",
-              "text": "An expert in popular frontend frameworks, with over a decade of software engineering experience delivering innovative web solutions. Effective and approachable mentor to less experienced colleagues, always willing to help folks where I can in a relaxed and respectful way."
+              "text": "An expert in popular frontend frameworks, with over a decade of software engineering experience delivering innovative web solutions."
+            },
+            {
+              "type": "text",
+              "text": "Effective and approachable mentor to less experienced colleagues, always willing to help folks where I can in a relaxed and respectful way."
             },
             {
               "type": "text",
@@ -219,7 +223,7 @@
               "variant": "secondary",
               "outline": true,
               "href": {
-                "url": "/KurtisRogersCV.pdf",
+                "url": "/documents/KurtisRogersCV.pdf",
                 "target": "_self"
               },
               "attributes": {

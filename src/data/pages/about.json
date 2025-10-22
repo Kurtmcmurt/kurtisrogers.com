@@ -163,9 +163,9 @@
             "JavaScript (vanilla)",
             "TypeScript",
             "Node",
+            "PHP",
             "Semantic, accessible HTML",
-            "CSS",
-            "PHP (probably)"
+            "CSS"
           ]
         }
       ],
@@ -298,7 +298,7 @@
               "variant": "secondary",
               "outline": true,
               "href": {
-                "url": "/KurtisRogersCV.pdf",
+                "url": "/documents/KurtisRogersCV.pdf",
                 "target": "_self"
               },
               "attributes": {
