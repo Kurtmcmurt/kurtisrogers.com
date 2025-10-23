@@ -35,7 +35,7 @@ export default defineConfig({
   test: {
     watch: false,
     globals: true, // Use global test functions like describe, it, expect
-    environment: 'jsdom', // Use jsdom for DOM testing
+    environment: 'happy-dom',
     css: false, // Enable CSS support
     server: {
       deps: {
