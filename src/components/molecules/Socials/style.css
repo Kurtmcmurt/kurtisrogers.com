@@ -17,8 +17,3 @@ nav.socials ul {
   padding: 0px;
   list-style-type: none;
 }
-
-nav.socials a:hover {
-  filter: invert(1);
-  background: var(--a11y-focus-yellow);
-}

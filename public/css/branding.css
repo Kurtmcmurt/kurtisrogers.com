@@ -117,8 +117,7 @@ a:hover,
 button:hover {
   filter: invert(1);
   color: black !important;
-  background: var(--a11y-focus-yellow);
-  transition: color, background .3s ease-in-out;
+  background: var(--brand-white);
 }
 
 a:focus-visible,
