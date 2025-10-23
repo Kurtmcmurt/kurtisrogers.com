@@ -21,15 +21,16 @@
   --a11y-focus-yellow: yellow;
 
   /* font sizes */
-  --text-size-xs: 0.38rem;
-  --text-size-sm: 0.62rem;
-  --text-size-md: 1rem;
-  --text-size-lg: 1.62rem;
-  --text-size-xl: 2.62rem;
-  --text-size-2xl: 4.24rem;
-  --text-size-3xl: 6.85rem;
-  --text-size-4xl: 11.09rem;
-  --text-size-5xl: 17.94rem;
+  --text-base-min: 1rem;
+  --text-base-max: 1.125rem;
+  --text-scale: 5vw;
+  
+  --text-sm: clamp(0.875rem, var(--text-scale), 1rem);
+  --text-base: clamp(var(--text-base-min), var(--text-scale), var(--text-base-max));
+  --text-lg: clamp(1.125rem, var(--text-scale), 1.5rem);
+  --text-xl: clamp(1.5rem, var(--text-scale), 2rem);
+  --text-2xl: clamp(2rem, var(--text-scale), 3rem);
+  --text-3xl: clamp(2.5rem, var(--text-scale), 4rem);
 
   /* border radius */
   --border-radius: .5rem;
@@ -44,3 +45,50 @@
   --transition: .3s ease-in-out;
   --brand-gradient-transition: gradient 15s ease infinite;
 }
+
+/* Option 1: Deep Blue & Cyan (Tech Professional)
+:root {
+  --primary: #0A192F;
+  --secondary: #112240;
+  --gradient: linear-gradient(180deg, #0A192F 0%, #112240 100%);
+  --accent-primary: #64FFDA;
+  --text-primary: #CCD6F6;
+  --text-secondary: #A8B2D1;
+  --border-color: #64FFDA;
+}
+
+/* Option 2: Charcoal & Electric Purple (Bold Modern)
+:root {
+  --primary: #1A1A2E;
+  --secondary: #16213E;
+  --gradient: none;
+  --accent-primary: #9D4EDD;
+  --accent-secondary: #E0AAFF;
+  --text-primary: #E0AAFF;
+  --text-secondary: #E5E5E5;
+  --border-color: #9D4EDD;
+} */
+
+/* Option 3: Minimal Contrast (Sophisticated)
+:root {
+  --primary: #FFFFFF;
+  --secondary: #F7FAFC;
+  --gradient: none;
+  --accent-primary: #FBD38D;
+  --text-primary: #1A202C;
+  --text-secondary: #4A5568;
+  --text-tertiary: #2D3748;
+  --border-color: #2D3748;
+} */
+
+/* Option 4: Dark Green & Mint (Fresh Professional)
+:root {
+  --primary: #1B2B2B;
+  --secondary: #0F1F1F;
+  --gradient: none;
+  --accent-primary: #00D9A3;
+  --accent-secondary: #B8F5E3;
+  --text-primary: #B8F5E3;
+  --text-secondary: #CBD5E0;
+  --border-color: #00D9A3;
+} */

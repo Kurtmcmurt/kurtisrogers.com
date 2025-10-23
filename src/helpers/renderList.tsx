@@ -39,14 +39,18 @@ export const renderList = {
     </ul>
   ),
   buttongroup: (props: any) => (
-    <div class="buttongroup">
+    <ul class="buttongroup">
       <For each={props.children}>
         {item => {
           const { content, ...rest } = item;
-          return <Button {...rest}>{content}</Button>;
+          return (
+            <li>
+              <Button {...rest}>{content}</Button>
+            </li>
+          );
         }}
       </For>
-    </div>
+    </ul>
   )
 };
 

@@ -28,8 +28,7 @@
       "type": "banner",
       "title": {
         "text": "404",
-        "headingLevel": "1",
-        "headingClass": "text-size-h2"
+        "headingLevel": "1"
       },
       "children": [
         {

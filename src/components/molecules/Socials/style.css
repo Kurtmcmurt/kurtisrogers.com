@@ -6,7 +6,11 @@ nav.socials a {
 
 nav.socials a:focus {
   outline: 2px solid white;
-  background: yellow;
+  background: var(--a11y-focus-yellow);
+}
+
+nav.socials li:not(:first-of-type) {
+  margin-left: 0.5rem;
 }
 
 nav.socials ul {
@@ -16,5 +20,5 @@ nav.socials ul {
 
 nav.socials a:hover {
   filter: invert(1);
-  background: yellow;
+  background: var(--a11y-focus-yellow);
 }

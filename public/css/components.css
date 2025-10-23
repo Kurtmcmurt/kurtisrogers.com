@@ -1,5 +1,14 @@
 .buttongroup {
+  width: 100%;
+  display: block;
   margin: 1rem 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.buttongroup li {
+  display: inline-flex;
+  word-break: break-all;
 }
 
 .buttongroup button,

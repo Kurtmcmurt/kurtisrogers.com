@@ -5,6 +5,8 @@ import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 import SkipLink from "@/components/atoms/Skiplink";
 import Navigation from "@/components/molecules/Navigation";
+import Logo from "@/components/atoms/Logo";
+import Socials from "@/components/molecules/Socials";
 import { main } from "@/data/navigations";
 import { LayoutSpacingDataType, layoutSpacingHandler } from "./layoutSpacingHandler";
 import type { ImageResponse } from "@/types/branding";
@@ -75,6 +77,10 @@ export const Layout = (props: Props) => {
         </For>
       </main>
       <Footer>
+        <div class="footer__socials">
+          <Logo variant="secondary" />
+          <Socials />
+        </div>
         <div>
           <Navigation label="Footer menu" classes={"light-background"} items={main} />
           <SkipLink id="header" isTag={true} name="header" visibleOnFocusOnly={true} />

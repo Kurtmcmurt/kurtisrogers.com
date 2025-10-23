@@ -42,15 +42,16 @@ export default function Button({
     !isLink ? `btn--${variant}` : ""
   ].join(" ");
 
+  const sortedAttributes = {
+    ...(isLink ? { component: "a" } : { component: "button" }),
+    ...(isLink && { href: href?.url }),
+    ...(href?.target && { target: href?.target }),
+    ...(buttonClasses && { class: buttonClasses }),
+    ...(callback && { onClick: callback })
+  };
+
   return (
-    <Dynamic
-      component={href?.url ? "a" : "button"}
-      href={href?.url}
-      target={href?.target ?? "_self"}
-      class={buttonClasses}
-      onClick={callback}
-      {...attributes}
-    >
+    <Dynamic {...sortedAttributes} {...attributes}>
       {children}
       {href?.target === "_blank" && <span class="sr-only"> (opens a new tab)</span>}
     </Dynamic>

@@ -30,34 +30,38 @@ exports[`Banner > renders 1`] = `
             A team player, able to build robust yet relaxed relationships with all stakeholders.
           </li>
         </ul>
-        <div
+        <ul
           class="buttongroup"
         >
-          <a
-            class="bg-red text-white  "
-            href="https://www.linkedin.com/in/kurtisrogers"
-            target="_blank"
-          >
-            Visit my LinkedIn
-            <span
-              class="sr-only"
+          <li>
+            <a
+              class="bg-red text-white  "
+              href="https://www.linkedin.com/in/kurtisrogers"
+              target="_blank"
             >
-               (opens a new tab)
-            </span>
-          </a>
-          <a
-            class="bg-white text-black  "
-            href="https://github.com/Kurtmcmurt/kurtisrogers.com"
-            target="_blank"
-          >
-            Repo for the site
-            <span
-              class="sr-only"
+              Visit my LinkedIn
+              <span
+                class="sr-only"
+              >
+                 (opens a new tab)
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="bg-white text-black  "
+              href="https://github.com/Kurtmcmurt/kurtisrogers.com"
+              target="_blank"
             >
-               (opens a new tab)
-            </span>
-          </a>
-        </div>
+              Repo for the site
+              <span
+                class="sr-only"
+              >
+                 (opens a new tab)
+              </span>
+            </a>
+          </li>
+        </ul>
       </hgroup>
       <div
         class="banner__content--image fade--in"

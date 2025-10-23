@@ -109,12 +109,12 @@ describe("Button Component", () => {
       expect(link).toHaveAttribute("href", "https://example.com/page");
     });
 
-    test("sets target to _self by default", () => {
+    test("no longer sets target to _self by default", () => {
       const href = { url: "https://example.com" };
       render(() => <Button href={href}>Link</Button>);
 
       const link = screen.getByRole("link");
-      expect(link).toHaveAttribute("target", "_self");
+      expect(link).not.toHaveAttribute("target", "_self");
     });
 
     test("sets custom target attribute", () => {
@@ -226,12 +226,12 @@ describe("Button Component", () => {
       expect(button).not.toHaveClass("btn--outline");
     });
 
-    test("uses _self as default target for links", () => {
+    test("doesn't use _self as default target for links", () => {
       const href = { url: "https://example.com" };
       render(() => <Button href={href}>Link</Button>);
 
       const link = screen.getByRole("link");
-      expect(link).toHaveAttribute("target", "_self");
+      expect(link).not.toHaveAttribute("target", "_self");
     });
   });
 
@@ -251,7 +251,7 @@ describe("Button Component", () => {
 
       // Should render as anchor even with empty URL
       const link = screen.getByText("Test");
-      expect(link).toHaveAttribute("href", "");
+      expect(link).not.toHaveAttribute("href", "");
     });
 
     test("readonly props work correctly", () => {

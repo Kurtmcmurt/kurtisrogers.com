@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 html, body {
   background: var(--brand-black);
   margin: 0px;
@@ -5,7 +9,6 @@ html, body {
 }
 
 * {
-  font-size: 16px;
   line-height: normal;
 }
 
@@ -53,6 +56,12 @@ html, body {
 
 body {
   font-family: var(--normal-font);
+  font-size: var(--text-base);
+
+  /* Smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -68,74 +77,56 @@ h5 {
 h1,
 .text-size-h1 {
   margin-top: 0;
-  font-size: var(--text-size-2xl);
+  font-size: var(--text-3xl);
   font-weight: normal;
-}
-
-@media screen and (min-width: 768px) {
-  h1,
-  .text-size-h1 {
-    font-size: var(--text-size-3xl);
-  }
 }
 
 h2,
 .text-size-h2 {
-  font-size: var(--text-size-xl);
+  font-size: var(--text-2xl);
   font-weight: normal;
-}
-
-@media screen and (min-width: 480px) {
-  h2,
-  .text-size-h2 {
-    font-size: var(--text-size-2xl);
-  }
 }
 
 h3,
 .text-size-h3 {
-  font-size: var(--text-size-lg);
+  font-size: var(--text-xl);
   font-weight: normal;
-}
-
-@media screen and (min-width: 480px) {
-  h3,
-  .text-size-h3 {
-    font-size: var(--text-size-xl);
-  }
 }
 
 h4,
 .text-size-h4 {
-  font-size: var(--text-size-xl);
-  font-weight: normal;
-}
-
-h5,
-.text-size-h5 {
-  font-size: var(--text-size-lg);
+  font-size: var(--text-lg);
   font-weight: normal;
 }
 
 .text-caption {
-  font-size: var(--text-size-sm);
+  font-size: var(--text-sm);
 }
 
 small,
 .text-small {
-  font-size: var(--text-size-xs);
+  font-size: 0.62rem;
 }
 
 /* links */
 a:focus-visible:not(.logo):not(button):not(.btn) {
   outline-offset: 2px;
-  border: 2px solid var(--brand-black);
+}
+
+a:hover,
+button:hover {
+  filter: invert(1);
+  color: black !important;
+  background: var(--a11y-focus-yellow);
+  transition: color, background .3s ease-in-out;
 }
 
 a:focus-visible,
-button:focus-visible {
-  outline-color: var(--brand-white);
-  color: var(--brand-black);
+button:focus-visible,
+a:focus,
+button:focus {
+  outline-color: var(--brand-black);
+  color: var(--brand-black) !important;
   background: var(--a11y-focus-yellow);
 }
 
@@ -153,6 +144,15 @@ button:focus-visible {
 }
 
 /* buttons */
+button > span {
+  font-size: var(--text-base);
+}
+
+a {
+  text-underline-offset: 0rem;
+  text-underline-position: under;
+}
+
 a.btn,
 button,
 button.btn,
@@ -166,10 +166,6 @@ a.btn--outline {
   cursor: pointer;
   outline: none;
   text-decoration: none;
-
-  &:focus {
-    text-decoration: underline;
-  }
 }
 
 nav a:not(.current) {

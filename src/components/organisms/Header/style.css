@@ -65,7 +65,7 @@ header nav.site-navigation li {
 }
 
 header nav.site-navigation li > a {
-  font-size: var(--text-size-xl);
+  font-size: var(--text-xl);
 }
 
 header nav.site-navigation a {
@@ -74,8 +74,7 @@ header nav.site-navigation a {
   margin-left: 0px;
   outline: none;
   color: var(--brand-white);
-  text-underline-offset: 0.125rem;
-  text-underline-position: under;
+  text-underline-offset: 0rem;
 }
 
 header nav.site-navigation a:hover {

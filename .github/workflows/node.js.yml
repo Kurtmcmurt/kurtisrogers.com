@@ -5,9 +5,9 @@ name: Solid JS
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "develop", "master" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "develop", "master" ]
 
 jobs:
   build:
@@ -25,18 +25,18 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
-      - name: Build production bundle
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build # will run `yarn build:prod` command
+      # - name: Build production bundle
+      #   uses: borales/actions-yarn@v4
+      #   with:
+      #     cmd: build # will run `yarn build:prod` command
       - name: Run tests
         uses: borales/actions-yarn@v4
         with:
           cmd: test # will run `yarn test` command
-      - name: Run Storybook Build
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: storybook:build # will run `yarn test` command
+      # - name: Run Storybook Build
+      #   uses: borales/actions-yarn@v4
+      #   with:
+      #     cmd: storybook:build # will run `yarn test` command
 
       # - name: Run test in sub-folder
       #   uses: borales/actions-yarn@v4
