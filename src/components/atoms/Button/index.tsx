@@ -18,6 +18,7 @@ export interface Props {
   outline?: boolean;
   callback?: (event: Event) => void;
   attributes?: Attributes;
+  icon?: boolean;
 }
 
 export default function Button({
@@ -26,6 +27,7 @@ export default function Button({
   variant = "primary",
   outline = false,
   href,
+  icon,
   attributes
 }: Readonly<Props>) {
   const handleButtonStyle = createMemo(() =>
@@ -39,7 +41,8 @@ export default function Button({
   const buttonClasses = [
     handleButtonStyle(),
     !isLink && outline ? "btn--outline" : !isLink ? "btn" : "",
-    !isLink ? `btn--${variant}` : ""
+    !isLink ? `btn--${variant}` : "",
+    icon && "icon-only"
   ].join(" ");
 
   const sortedAttributes = {

@@ -4,6 +4,8 @@ import Logo from "@/components/atoms/Logo";
 import { main } from "@/data/navigations";
 import "./style.css";
 import Button from "@/components/atoms/Button";
+import Icon from "@/components/atoms/Icon";
+import icons from "@/data/icons";
 
 type Item = {
   link: string;
@@ -82,8 +84,15 @@ export default function Header({ children }: Readonly<Props>) {
       <div class="content">
         <Logo variant="secondary" />
         <div class="navigation">{children}</div>
-        <Button callback={handleToggleNavigation} attributes={handleAttributes()} outline>
-          <span>{showNavigation() ? "Close menu" : "Open menu"}</span>
+        <Button
+          callback={handleToggleNavigation}
+          attributes={handleAttributes()}
+          outline
+          variant="secondary"
+          icon
+        >
+          <span class="sr-only">{showNavigation() ? "Close Menu" : "Menu"}</span>
+          <Icon width={50} height={38} viewbox={"0 0 100 100"} icondata={icons.hamburger} />
         </Button>
       </div>
       <Show when={showNavigation()}>

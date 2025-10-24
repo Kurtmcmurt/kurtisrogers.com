@@ -15,15 +15,6 @@ export default function Logo({
 }: Props) {
   const variantStyle = variant === "primary" ? "bg-red text-white" : "bg-white text-black";
 
-  const windowWidth = window?.innerWidth ?? 769;
-  const handleLogoStringResize =
-    windowWidth > 768
-      ? text
-      : text
-          .split("")
-          .filter(a => a.match(/[A-Z]/))
-          .join("");
-
   return (
     <Dynamic
       component={isButton ? "button" : A}
@@ -31,7 +22,7 @@ export default function Logo({
       class={`logo ${variantStyle}`}
       aria-label="Go to the homepage"
     >
-      <strong>{handleLogoStringResize}</strong>
+      <strong>{text}</strong>
     </Dynamic>
   );
 }

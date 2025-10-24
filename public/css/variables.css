@@ -42,7 +42,7 @@
   --breakpoint-lg: 1420;
   
   /* animations */
-  --transition: .3s ease-in-out;
+  --transition: .6s ease-in-out;
   --brand-gradient-transition: gradient 15s ease infinite;
 }
 

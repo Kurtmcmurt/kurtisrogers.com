@@ -24,6 +24,23 @@ header > .content {
   background: var(--brand-red);
 }
 
+header > .content button {
+  margin-left: 1rem;
+}
+
+header > .content button[aria-expanded="true"] .line1,
+header > .content button[aria-expanded="true"] .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+header > .content button[aria-expanded="true"] .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
 header nav.site-navigation > ul {
   position: relative;
   display: flex;

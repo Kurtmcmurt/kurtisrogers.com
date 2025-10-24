@@ -124,6 +124,8 @@ a:focus-visible,
 button:focus-visible,
 a:focus,
 button:focus {
+  outline-offset: 2px;
+  outline-width: 2px;
   outline-color: var(--brand-black);
   color: var(--brand-black) !important;
   background: var(--a11y-focus-yellow);
@@ -184,21 +186,6 @@ button,
   border: 2px solid var(--brand-red);
 }
 
-a.btn:before,
-button:before,
-button.btn:before,
-button.btn--outline:before,
-a.btn--outline:before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  height: 5px;
-  width: 5px;
-  border-top: 2px solid;
-  border-left: 2px solid;
-}
-
 a:not(.btn):not(.logo) {
   padding: 0.125rem;
 }
@@ -208,6 +195,12 @@ button:before,
 button.btn:before {
   left: 0px;
   top: 0px;
+}
+
+
+button.icon-only {
+  display: flex;
+  padding: 0px;
 }
 
 p {

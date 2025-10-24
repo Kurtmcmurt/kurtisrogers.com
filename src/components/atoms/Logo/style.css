@@ -8,10 +8,7 @@
   -webkit-user-select: none; /* Safari */
   user-select: none;
   text-align: end;
-}
-
-.logo > small {
-  display: block;
+  letter-spacing: -2px;
 }
 
 .logo:before {
