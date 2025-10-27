@@ -61,17 +61,17 @@
         {
           "type": "heading",
           "headingLevel": "2",
-          "text": "Me"
+          "text": "Introduction"
         }
       ],
-      "variant": "yellow",
+      "variant": "white",
       "layoutSpacing": {
         "marginTop": "lg",
-        "marginBottom": "xs",
-        "paddingTop": "default",
+        "marginBottom": "default",
+        "paddingTop": "xs",
         "paddingBottom": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -81,7 +81,7 @@
           "children": [
             {
               "type": "text",
-              "text": "I've lived in Bristol my entire life and consider it to be a proper lush place to live."
+              "text": "Hi! My name is Kurtis. I've lived in Bristol my whole life and consider it a proper lush place to live."
             },
             {
               "type": "text",
@@ -108,7 +108,7 @@
         "paddingTop": "xs",
         "paddingBottom": "xs"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -116,17 +116,17 @@
         {
           "type": "heading",
           "headingLevel": "2",
-          "text": "Developer"
+          "text": "An honourable developer"
         }
       ],
-      "variant": "yellow",
+      "variant": "default",
       "layoutSpacing": {
         "marginTop": "lg",
         "marginBottom": "xs",
         "paddingTop": "default",
         "paddingBottom": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -135,7 +135,20 @@
           "type": "heading",
           "headingLevel": "3",
           "text": "Architecting Clean Code from Design to Deployment"
-        },
+        }
+      ],
+      "variant": "default",
+      "layoutSpacing": {
+        "marginTop": "default",
+        "marginBottom": "default",
+        "paddingTop": "default",
+        "paddingBottom": "default"
+      },
+      "gridLayout": "content"
+    },
+    {
+      "type": "content",
+      "children": [
         {
           "type": "paragraph",
           "children": [
@@ -148,12 +161,38 @@
               "text": "This design-first approach eliminates the costly refactoring that plagues many projects. By defining well-structured data models upfront, I ensure consistency across your entire application stack, streamline onboarding and collaboration, and accelerate development velocity. The result? Clean, maintainable codebases that scale with your business—not against it."
             }
           ]
-        },
+        }
+      ],
+      "variant": "default",
+      "layoutSpacing": {
+        "paddingTop": "xs",
+        "paddingBottom": "default",
+        "marginTop": "xs",
+        "marginBottom": "md"
+      },
+      "gridLayout": "content"
+    },
+    {
+      "type": "content",
+      "children": [
         {
           "type": "heading",
           "headingLevel": "3",
           "text": "What I bring to your team"
-        },
+        }
+      ],
+      "variant": "default",
+      "layoutSpacing": {
+        "marginTop": "default",
+        "marginBottom": "default",
+        "paddingTop": "default",
+        "paddingBottom": "default"
+      },
+      "gridLayout": "content"
+    },
+    {
+      "type": "content",
+      "children": [
         {
           "type": "paragraph",
           "children": [
@@ -182,14 +221,14 @@
           ]
         }
       ],
-      "variant": "white",
+      "variant": "default",
       "layoutSpacing": {
         "paddingTop": "xs",
         "paddingBottom": "default",
         "marginTop": "xs",
         "marginBottom": "xl"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",

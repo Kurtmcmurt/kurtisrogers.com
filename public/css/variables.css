@@ -13,10 +13,6 @@
   --brand-white: #FBFFFE;
   --brand-yellow: #FAA916;
 
-  /* gradients */
-  --brand-primary-gradient: linear-gradient(-45deg, var(--brand-black), var(--brand-red), var(--brand-yellow), var(--brand-white));
-  --brand-secondary-gradient: linear-gradient(180deg, var(--brand-black), var(--brand-white));
-
   /* focus colour */
   --a11y-focus-yellow: yellow;
 

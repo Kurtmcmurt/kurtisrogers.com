@@ -88,14 +88,14 @@
           "text": "Career"
         }
       ],
-      "variant": "yellow",
+      "variant": "white",
       "layoutSpacing": {
         "marginTop": "lg",
-        "marginBottom": "xs",
-        "paddingTop": "default",
+        "marginBottom": "default",
+        "paddingTop": "xs",
         "paddingBottom": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -128,7 +128,7 @@
         "paddingBottom": "xs",
         "marginTop": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -139,14 +139,14 @@
           "text": "Technology"
         }
       ],
-      "variant": "yellow",
+      "variant": "default",
       "layoutSpacing": {
         "marginTop": "lg",
-        "marginBottom": "xs",
-        "paddingTop": "default",
+        "marginBottom": "default",
+        "paddingTop": "xs",
         "paddingBottom": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -168,13 +168,14 @@
           ]
         }
       ],
-      "variant": "white",
+      "variant": "default",
       "layoutSpacing": {
         "paddingTop": "xs",
         "paddingBottom": "xs",
-        "marginTop": "xs"
+        "marginTop": "default",
+        "marginBottom": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -198,13 +199,14 @@
           ]
         }
       ],
-      "variant": "white",
+      "variant": "default",
       "layoutSpacing": {
         "paddingTop": "xs",
         "paddingBottom": "xs",
-        "marginTop": "xs"
+        "marginTop": "default",
+        "marginBottom": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -223,13 +225,14 @@
           ]
         }
       ],
-      "variant": "white",
+      "variant": "default",
       "layoutSpacing": {
         "paddingTop": "xs",
         "paddingBottom": "xs",
-        "marginTop": "xs"
+        "marginTop": "default",
+        "marginBottom": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",
@@ -256,13 +259,14 @@
           ]
         }
       ],
-      "variant": "white",
+      "variant": "default",
       "layoutSpacing": {
         "paddingTop": "xs",
         "paddingBottom": "xs",
-        "marginTop": "xs"
+        "marginTop": "default",
+        "marginBottom": "default"
       },
-      "gridLayout": "grid"
+      "gridLayout": "content"
     },
     {
       "type": "content",

@@ -9,7 +9,7 @@ export const handleColourClasses = (colour: Branding["colors"], type: "backgroun
     yellow: type === "background" ? "bg-yellow text-black" : "text-yellow",
     grey: type === "background" ? "bg-grey text-white" : "text-grey",
     black: type === "background" ? "bg-black text-white" : "text-black",
-    default: "bg-yellow text-black"
+    default: "bg-transparent text-white"
   };
 
   return (classes[colour] || classes["default"]) as string;
