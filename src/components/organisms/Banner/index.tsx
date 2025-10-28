@@ -16,19 +16,16 @@ export interface Props {
   };
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any[];
-  firstChild: boolean;
-  variant: "light" | "dark";
-  spacing: LayoutSpacingDataType;
+  firstChild?: boolean;
+  spacing?: LayoutSpacingDataType;
 }
 
 export default function Banner(props: Readonly<Props>) {
-  const { title, image, children, firstChild, variant = "dark" } = props;
+  const { title, image, children, firstChild = "dark" } = props;
   const { data: { attributes: { alternativeText = "", credit } = {} } = {} } = image ?? {};
 
   return (
-    <section
-      class={`banner ${firstChild ? "first-element" : "page-sibling"} content-grid--${variant}`}
-    >
+    <section class={`banner ${firstChild ? "parent-section" : "child-section"}`}>
       <div class={`banner__content`}>
         <hgroup class={`banner__content--copy fade--in_up`}>
           <Show when={title}>

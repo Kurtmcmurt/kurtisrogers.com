@@ -8,6 +8,16 @@ html, body {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: var(--normal-font);
+  font-size: var(--text-base);
+
+  /* Smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 * {
   line-height: normal;
 }
@@ -50,18 +60,6 @@ html, body {
 
 .text-yellow {
   color: var(--brand-yellow);
-}
-
-/* text */
-
-body {
-  font-family: var(--normal-font);
-  font-size: var(--text-base);
-
-  /* Smoothing */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -121,9 +119,7 @@ button:hover {
 }
 
 a:focus-visible,
-button:focus-visible,
-a:focus,
-button:focus {
+button:focus-visible {
   outline-offset: 2px;
   outline-width: 2px;
   outline-color: var(--brand-black);

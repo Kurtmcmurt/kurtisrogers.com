@@ -6,12 +6,6 @@
   margin-right: auto;
 }
 
-@media screen and (min-width: 1024px) {
-  .banner.first-element {
-    height: calc(100vh - 7.25rem);
-  }
-}
-
 .banner__content {
   position: relative;
   display: grid;

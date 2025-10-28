@@ -11,11 +11,11 @@ describe("SkipLink Component", () => {
   beforeEach(() => {
     // Reset mocks
     vi.clearAllMocks();
-    
+
     // Mock document methods
     global.document.getElementById = mockGetElementById;
     global.document.querySelector = mockQuerySelector;
-    
+
     // Create mock elements with focus method
     const createMockElement = () => ({ focus: mockFocus });
     mockGetElementById.mockReturnValue(createMockElement());
@@ -52,7 +52,9 @@ describe("SkipLink Component", () => {
   });
 
   test("applies secondary variant when specified", () => {
-    const { container } = render(() => <SkipLink id="main" name="main content" variant="secondary" />);
+    const { container } = render(() => (
+      <SkipLink id="main" name="main content" variant="secondary" />
+    ));
 
     const button = container.querySelector("button");
     expect(button).toHaveClass("btn--secondary");
@@ -121,7 +123,7 @@ describe("SkipLink Component", () => {
   });
 
   test("handles null/undefined id gracefully", () => {
-    render(() => <SkipLink id={null} name="main content" />);
+    render(() => <SkipLink id={undefined} name="main content" />);
 
     const button = screen.getByRole("button");
     fireEvent.click(button);
@@ -142,7 +144,7 @@ describe("SkipLink Component", () => {
   });
 
   test("falls back to main content when name is null/undefined", () => {
-    render(() => <SkipLink id="main" name={null} />);
+    render(() => <SkipLink id="main" name={undefined} />);
 
     expect(screen.getByText("Skip to main content")).toBeInTheDocument();
   });
@@ -183,17 +185,17 @@ describe("SkipLink Component", () => {
     ));
 
     const button = container.querySelector("button");
-    
+
     // Check classes
     expect(button).toHaveClass("skiplink");
     expect(button).toHaveClass("skiplink--visible-on-focus");
     expect(button).toHaveClass("btn--secondary");
-    
+
     // Check text content
     expect(button).toHaveTextContent("Skip to sidebar content");
-    
+
     // Test click behavior
-    fireEvent.click(button);
+    fireEvent.click(button ?? document.body);
     expect(mockQuerySelector).toHaveBeenCalledWith("sidebar");
     expect(mockFocus).toHaveBeenCalled();
   });
@@ -202,7 +204,7 @@ describe("SkipLink Component", () => {
     const { container } = render(() => <SkipLink id="main" name="content" />);
 
     const button = container.querySelector("button");
-    expect(button.tagName).toBe("BUTTON");
+    expect(button?.tagName).toBe("BUTTON");
   });
 
   test("handles focus function with empty id parameter", () => {
@@ -219,15 +221,15 @@ describe("SkipLink Component", () => {
     const { container: container1 } = render(() => (
       <SkipLink id="test" name="test" variant="primary" visibleOnFocusOnly={false} />
     ));
-    
+
     const button1 = container1.querySelector("button");
-    expect(button1.className).toBe("skiplink skiplink--visible btn btn--primary");
+    expect(button1?.className).toBe("skiplink skiplink--visible btn btn--primary");
 
     const { container: container2 } = render(() => (
       <SkipLink id="test" name="test" variant="secondary" visibleOnFocusOnly={true} />
     ));
-    
+
     const button2 = container2.querySelector("button");
-    expect(button2.className).toBe("skiplink skiplink--visible-on-focus btn btn--secondary");
+    expect(button2?.className).toBe("skiplink skiplink--visible-on-focus btn btn--secondary");
   });
 });

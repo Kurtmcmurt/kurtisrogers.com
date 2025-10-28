@@ -4,7 +4,7 @@ import Icon from "./index";
 
 // Mock the SVG parser helper
 vi.mock("@/helpers/parsers", () => ({
-  handleSVGString: vi.fn((icondata) => {
+  handleSVGString: vi.fn(icondata => {
     if (icondata === "test-path") return `<path d="M10 10 L20 20"></path>`;
     if (icondata === "circle-data") return `<circle cx="12" cy="12" r="10"></circle>`;
     if (icondata === null || icondata === undefined) return "";
@@ -83,14 +83,14 @@ describe("Icon Component", () => {
 
     const gElement = container.querySelector("g");
     expect(gElement).toBeInTheDocument();
-    expect(gElement.innerHTML).toBe(`<path d="M10 10 L20 20"></path>`);
+    expect(gElement?.innerHTML).toBe(`<path d="M10 10 L20 20"></path>`);
   });
 
   test("handles different icondata types", () => {
     const { container, unmount } = render(() => <Icon icondata="circle-data" />);
 
     const gElement = container.querySelector("g");
-    expect(gElement.innerHTML).toBe(`<circle cx="12" cy="12" r="10"></circle>`);
+    expect(gElement?.innerHTML).toBe(`<circle cx="12" cy="12" r="10"></circle>`);
     expect(handleSVGString).toHaveBeenCalledWith("circle-data");
 
     unmount();
@@ -101,7 +101,7 @@ describe("Icon Component", () => {
 
     const gElement = container.querySelector("g");
     expect(gElement).toBeInTheDocument();
-    expect(gElement.innerHTML).toBe("");
+    expect(gElement?.innerHTML).toBe("");
     expect(handleSVGString).toHaveBeenCalledWith(null);
   });
 
@@ -110,7 +110,7 @@ describe("Icon Component", () => {
 
     const gElement = container.querySelector("g");
     expect(gElement).toBeInTheDocument();
-    expect(gElement.innerHTML).toBe("");
+    expect(gElement?.innerHTML).toBe("");
     expect(handleSVGString).toHaveBeenCalledWith(undefined);
   });
 
@@ -132,7 +132,7 @@ describe("Icon Component", () => {
     ));
 
     const gElement = container.querySelector("g");
-    expect(gElement.innerHTML).toBe(`<path d="M10 10 L20 20"></path>`);
+    expect(gElement?.innerHTML).toBe(`<path d="M10 10 L20 20"></path>`);
     expect(screen.getByTestId("child-rect")).toBeInTheDocument();
   });
 
@@ -162,14 +162,10 @@ describe("Icon Component", () => {
 
   test("applies all props together", () => {
     const { container } = render(() => (
-      <Icon
-        width={50}
-        height={60}
-        viewbox="0 0 200 200"
-        fill="#00ff00"
-        icondata="circle-data"
-      >
-        <text data-testid="child-text" x="10" y="10">Test</text>
+      <Icon width={50} height={60} viewbox="0 0 200 200" fill="#00ff00" icondata="circle-data">
+        <text data-testid="child-text" x="10" y="10">
+          Test
+        </text>
       </Icon>
     ));
 
@@ -181,7 +177,7 @@ describe("Icon Component", () => {
     expect(svg).toHaveClass("icon");
 
     const gElement = container.querySelector("g");
-    expect(gElement.innerHTML).toBe(`<circle cx="12" cy="12" r="10"></circle>`);
+    expect(gElement?.innerHTML).toBe(`<circle cx="12" cy="12" r="10"></circle>`);
 
     expect(screen.getByTestId("child-text")).toBeInTheDocument();
     expect(handleSVGString).toHaveBeenCalledWith("circle-data");
@@ -199,8 +195,8 @@ describe("Icon Component", () => {
     const { container } = render(() => <Icon />);
 
     const svg = container.querySelector("svg");
-    expect(svg.tagName).toBe("svg");
-    expect(svg.querySelector("g")).toBeInTheDocument();
+    expect(svg?.tagName).toBe("svg");
+    expect(svg?.querySelector("g")).toBeInTheDocument();
     expect(svg).toHaveAttribute("xmlns", "http://www.w3.org/2000/svg");
   });
 });

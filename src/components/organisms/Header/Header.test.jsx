@@ -1,6 +1,7 @@
-import { render } from "@solidjs/testing-library";
+import { render, waitFor } from "@solidjs/testing-library";
 import Header from ".";
 import { describe, it, expect } from "vitest";
+import { userEvent } from "vitest/browser";
 
 vi.mock(import("@solidjs/router"), async (importOriginal) => {
   const actual = await importOriginal()
@@ -29,22 +30,31 @@ vi.mock("@/components/atoms/Logo", () => {
 });
 
 describe("Header Component", () => {
-  const mockMenuItems = [
-    { link: "/", text: "Home" },
-    { link: "/about", text: "About" },
-  ];
+  it("renders the header with logo and navigation", async () => {
+    const { getByText, getByRole } = render(() => <Header />);
+    const menuButton = getByRole("button", { name: /menu/i });
+    const logo = getByText("Logo");
 
-  it("renders the header with logo and navigation", () => {
-    const { getByText } = render(() => <Header menuItems={mockMenuItems} />);
+    expect(logo).toBeInTheDocument();
+    expect(menuButton).toBeInTheDocument();
 
-    // Check if the logo is rendered
-    expect(getByText("Logo")).toBeInTheDocument();
+    await menuButton.click();
 
-    // Check if the navigation items are rendered
-    // mockMenuItems.forEach(item => {
-    //   expect(getByText(item.text)).toBeInTheDocument();
-    //   expect(getByText(item.text).closest("a")).toHaveAttribute("href", item.link);
-    // });
+    const getNavLink = (route) => getByText(`${route}`);
+
+    await waitFor(() => {
+      expect(getNavLink("Home")).toBeInTheDocument();
+      expect(getNavLink("Home").closest("a")).toHaveAttribute("href", "/");
+
+      expect(getNavLink("About")).toBeInTheDocument();
+      expect(getNavLink("About").closest("a")).toHaveAttribute("href", "/about");
+
+      expect(getNavLink("Blog")).toBeInTheDocument();
+      expect(getNavLink("Blog").closest("a")).toHaveAttribute("href", "/blog");
+
+      expect(getNavLink("Contact")).toBeInTheDocument();
+      expect(getNavLink("Contact").closest("a")).toHaveAttribute("href", "/contact");
+    });
   });
 
   it("renders children elements", () => {

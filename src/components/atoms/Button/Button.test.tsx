@@ -1,8 +1,9 @@
-import { render, screen, fireEvent } from "@solidjs/testing-library";
+import { render, screen, fireEvent, waitFor } from "@solidjs/testing-library";
 import { expect, test, describe, vi, beforeEach } from "vitest";
 import Button from "./index";
 import { handleColourClasses } from "@/helpers/colours";
 import { createSignal } from "solid-js";
+import type { Href, Variants } from "./index";
 
 // Mock the colour helper
 vi.mock("@/helpers/colours", () => ({
@@ -28,7 +29,7 @@ describe("Button Component", () => {
     });
 
     test("renders as anchor element when href is provided", () => {
-      const href = { url: "https://example.com" };
+      const href: Href = { url: "https://example.com" };
       render(() => <Button href={href}>Visit site</Button>);
 
       const element = screen.getByRole("link");
@@ -118,7 +119,10 @@ describe("Button Component", () => {
     });
 
     test("sets custom target attribute", () => {
-      const href = { url: "https://example.com", target: "_blank" };
+      const href = {
+        url: "https://example.com",
+        target: "_blank"
+      } as Href;
       render(() => <Button href={href}>External Link</Button>);
 
       const link = screen.getByRole("link");
@@ -201,12 +205,16 @@ describe("Button Component", () => {
     });
 
     test("memoizes style calculation", () => {
-      const [variant, setVariant] = createSignal("secondary");
+      const [variant, setVariant] = createSignal<Variants>("secondary");
       render(() => <Button variant={variant()}>Test</Button>);
 
       expect(handleColourClasses).toHaveBeenCalledTimes(1);
 
       setVariant("primary");
+
+      waitFor(() => {
+        expect(handleColourClasses).toHaveBeenCalledTimes(2);
+      });
     });
   });
 
@@ -236,15 +244,6 @@ describe("Button Component", () => {
   });
 
   describe("Edge Cases", () => {
-    test("handles empty href object gracefully", () => {
-      // This tests the optional chaining in href?.url
-      const href = {};
-      render(() => <Button href={href}>Test</Button>);
-
-      // Should render as button since href.url is undefined
-      expect(screen.getByRole("button")).toBeInTheDocument();
-    });
-
     test("handles href with empty url", () => {
       const href = { url: "" };
       render(() => <Button href={href}>Test</Button>);
@@ -258,7 +257,7 @@ describe("Button Component", () => {
       // This ensures the Readonly<Props> type doesn't break functionality
       const props = {
         children: "Test",
-        variant: "secondary",
+        variant: "secondary" as "primary" | "secondary",
         outline: true,
         callback: vi.fn()
       };

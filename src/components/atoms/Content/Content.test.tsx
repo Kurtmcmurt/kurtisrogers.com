@@ -19,8 +19,8 @@ const content = [
     type: "paragraph",
     children: [
       {
-        "type": "text",
-        "text": "<div data-testid='test-child'>Test Content</div>"
+        type: "text",
+        text: "<div data-testid='test-child'>Test Content</div>"
       }
     ]
   }
@@ -32,9 +32,7 @@ describe("Content Component", () => {
   });
 
   test("renders children correctly", () => {
-    render(() => (
-      <Content firstChild={true} children={content} />
-    ));
+    render(() => <Content firstChild={true} children={content} />);
 
     expect(screen.getByTestId("test-child")).toBeInTheDocument();
     expect(screen.getByText("Test Content")).toBeInTheDocument();
@@ -68,8 +66,8 @@ describe("Content Component", () => {
     ));
 
     const section = container.querySelector("section");
-    expect(section).toHaveClass("first-element");
-    expect(section).not.toHaveClass("page-sibling");
+    expect(section).toHaveClass("parent-section");
+    expect(section).not.toHaveClass("child-section");
   });
 
   test("applies page-sibling class when firstChild is false", () => {
@@ -80,19 +78,19 @@ describe("Content Component", () => {
     ));
 
     const section = container.querySelector("section");
-    expect(section).toHaveClass("page-sibling");
-    expect(section).not.toHaveClass("first-element");
+    expect(section).toHaveClass("child-section");
+    expect(section).not.toHaveClass("parent-section");
   });
 
   test("applies gridLayout class when provided", () => {
     const { container } = render(() => (
-      <Content gridLayout="grid-cols-2" firstChild={true}>
+      <Content gridLayout="grid" firstChild={true}>
         <div>Content</div>
       </Content>
     ));
 
     const section = container.querySelector("section");
-    expect(section).toHaveClass("grid-cols-2");
+    expect(section).toHaveClass("grid");
   });
 
   test("does not apply gridLayout class when not provided", () => {
@@ -109,7 +107,7 @@ describe("Content Component", () => {
 
   test("applies all base classes correctly", () => {
     const { container } = render(() => (
-      <Content variant="white" gridLayout="grid-cols-3" firstChild={false}>
+      <Content variant="white" gridLayout="grid" firstChild={false}>
         <div>Content</div>
       </Content>
     ));
@@ -117,8 +115,8 @@ describe("Content Component", () => {
     const section = container.querySelector("section");
     expect(section).toHaveClass("content-grid");
     expect(section).toHaveClass("bg-white");
-    expect(section).toHaveClass("grid-cols-3");
-    expect(section).toHaveClass("page-sibling");
+    expect(section).toHaveClass("grid");
+    expect(section).toHaveClass("child-section");
   });
 
   test("memoizes colour classes correctly", () => {

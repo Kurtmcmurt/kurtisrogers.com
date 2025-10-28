@@ -24,7 +24,7 @@ export default function Content(props: Readonly<Props>) {
     id: sectionLink ?? ""
   };
 
-  const classes = `${gridLayout ?? ""} content-grid ${colourClasses()} ${firstChild ? "first-element" : "page-sibling"}`;
+  const classes = `${gridLayout ?? ""} content-grid ${colourClasses()} ${firstChild ? "parent-section" : "child-section"}`;
 
   return (
     <section style={style ?? ""} class={classes} {...attributes}>

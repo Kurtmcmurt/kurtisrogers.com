@@ -2,7 +2,7 @@ import { handleColourClasses } from "@/helpers/colours";
 import { JSX, createMemo } from "solid-js";
 import { Dynamic } from "solid-js/web";
 
-type Href = {
+export type Href = {
   url: string;
   target?: "_blank" | "_self";
 };
@@ -11,10 +11,12 @@ type Attributes = {
   [key: string]: string | boolean;
 };
 
+export type Variants = "primary" | "secondary";
+
 export interface Props {
   children?: JSX.Element | string;
   href?: Href;
-  variant?: "primary" | "secondary";
+  variant?: Variants;
   outline?: boolean;
   callback?: (event: Event) => void;
   attributes?: Attributes;

@@ -38,6 +38,7 @@ export const Layout = (props: Props) => {
   const { pathname } = useLocation();
   const locationOrigin = window.location.origin;
   const locationHostname = window.location.hostname;
+  const firstBannerIndex = components.findIndex(element => element.type === "banner");
 
   return (
     <>
@@ -62,14 +63,13 @@ export const Layout = (props: Props) => {
       <Header />
       <main id="maincontent" tabindex="-1">
         <For each={components}>
-          {item => {
-            const firstChildCheck = item.component === "banner" && components[0] === item;
+          {(item, index) => {
             const Component = renderList[item.type];
 
             return (
               <Component
                 {...item}
-                firstChild={firstChildCheck}
+                firstChild={index() === firstBannerIndex}
                 style={layoutSpacingHandler(item.layoutSpacing as LayoutSpacingDataType)}
               />
             );

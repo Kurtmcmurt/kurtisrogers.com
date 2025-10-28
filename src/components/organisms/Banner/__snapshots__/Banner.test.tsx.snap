@@ -1,0 +1,77 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Banner > renders 1`] = `
+<div>
+  <section
+    class="banner parent-section"
+  >
+    <div
+      class="banner__content"
+    >
+      <hgroup
+        class="banner__content--copy fade--in_up"
+      >
+        <h1>
+          About
+        </h1>
+        <p>
+          Technology is where I live. I also love anything to do with space.
+        </p>
+        <p>
+          Will our species ever reach Alpha Centauri? Propulsion technology has come a long way since we last went to the Moon. A simple laser-powered lightsail? Theoretically this could reach 20% speed of light (0.2c). So Alpha Centauri in a cool 21.41 years. Not sure about the return journey though...
+        </p>
+        <p>
+          Time dialation? 0.44 years. And roughly half an hour away via radio contact...
+        </p>
+      </hgroup>
+      <div
+        class="banner__content--image fade--in"
+      >
+        <picture>
+          <source
+            media="(min-width: 1420px)"
+            srcset="/images/optimised/milkyway-galaxy-xl.webp"
+          />
+           
+          <source
+            media="(min-width: 960px)"
+            srcset="/images/optimised/milkyway-galaxy-lg.webp"
+          />
+           
+          <img
+            alt="Milky Way illustration."
+            class="w-full h-full object-cover"
+            decoding="async"
+            loading="lazy"
+            src="/images/optimised/milkyway-galaxy-md.webp"
+          />
+        </picture>
+        <div
+          class="credit"
+        >
+          <a
+            class="bg-red text-white   "
+            href="https://www.pexels.com/photo/milky-way-illustration-1169754/"
+            target="_blank"
+          >
+            <span
+              class="sr-only"
+            >
+              Photo by 
+            </span>
+            Philippe Donn
+            <span
+              class="sr-only"
+            >
+               (opens a new tab)
+            </span>
+          </a>
+          <span>
+            Milky Way illustration.
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

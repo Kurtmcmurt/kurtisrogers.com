@@ -2,9 +2,13 @@ import { render, screen } from "@solidjs/testing-library";
 import { Router, Route } from "@solidjs/router";
 import { describe, test, expect } from "vitest";
 import Logo from ".";
+import { JSX } from "solid-js";
 
 // Helper function to render component with router context
-const renderWithRouter = (component) => {
+const renderWithRouter = (component: {
+  (): JSX.Element;
+  (): number | boolean | Node | (string & {}) | JSX.ArrayElement | null | undefined;
+}) => {
   return render(() => (
     <Router>
       <Route path="/" component={() => component()} />
@@ -82,21 +86,21 @@ describe("Logo Component", () => {
     const { container } = renderWithRouter(() => <Logo variant="primary" />);
 
     const logoLink = container.querySelector("a");
-    expect(logoLink.className).toBe("logo bg-red text-white active");
+    expect(logoLink?.className).toBe("logo bg-red text-white active");
   });
 
   test("combines secondary variant and base classes correctly", () => {
     const { container } = renderWithRouter(() => <Logo variant="secondary" />);
 
     const logoLink = container.querySelector("a");
-    expect(logoLink.className).toBe("logo bg-white text-black active");
+    expect(logoLink?.className).toBe("logo bg-white text-black active");
   });
 
   test("renders as anchor element", () => {
     const { container } = renderWithRouter(() => <Logo />);
 
     const logoElement = container.firstChild;
-    expect(logoElement.tagName).toBe("A");
+    expect(logoElement instanceof Element && logoElement.tagName).toBe("A");
   });
 
   test("applies both variant and text props together", () => {
@@ -121,7 +125,7 @@ describe("Logo Component", () => {
 
     const logoLink = screen.getByRole("link");
     expect(logoLink).toHaveTextContent("");
-    
+
     const strongElement = logoLink.querySelector("strong");
     expect(strongElement).toBeInTheDocument();
     expect(strongElement).toHaveTextContent("");

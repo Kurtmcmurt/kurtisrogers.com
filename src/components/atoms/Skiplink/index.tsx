@@ -1,10 +1,10 @@
 import "./style.css";
 
 interface Props {
-  id: string; // destination of skip link
+  id?: string; // destination of skip link
   isTag?: boolean;
   variant?: "primary" | "secondary";
-  name: string; // where is the user going for this skiplink
+  name?: string; // where is the user going for this skiplink
   visibleOnFocusOnly?: boolean;
 }
 
