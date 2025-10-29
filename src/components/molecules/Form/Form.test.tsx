@@ -100,22 +100,16 @@ describe("Form", () => {
     const inputs = [{ name: "username", element: "input" as InputElements }];
 
     render(() => (
-      <Form title="Test Form" byline="Test byline" formConfig={mockFormConfig} inputs={inputs} />
+      <Form
+        title={{ text: "Test Form", headingLevel: "1" }}
+        byline={{ text: "Test byline", headingLevel: "2" }}
+        formConfig={mockFormConfig}
+        inputs={inputs}
+      />
     ));
 
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Test Form");
     expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent("Test byline");
-  });
-
-  it("should render form without title and byline when not provided", () => {
-    const inputs = [{ name: "username", element: "input" as InputElements }];
-
-    render(() => <Form formConfig={mockFormConfig} inputs={inputs} />);
-
-    const headings = screen.queryAllByRole("heading");
-    expect(headings).toHaveLength(2); // h1 and h2 are rendered but empty
-    expect(headings[0]).toHaveTextContent("");
-    expect(headings[1]).toHaveTextContent("");
   });
 
   it("should apply form configuration attributes", () => {
@@ -200,12 +194,6 @@ describe("Form", () => {
     expect(container.querySelector('[name="description"]')).toBeTruthy();
     expect(container.querySelector('[name="submit-btn"]')).toBeTruthy();
     expect(container.querySelector('[name="hidden-field"]')).toBeTruthy();
-  });
-
-  it("should show fallback when no inputs provided", () => {
-    render(() => <Form formConfig={mockFormConfig} inputs={[]} />);
-
-    expect(screen.getByText("Loading...")).toBeInTheDocument();
   });
 
   it("should handle form with minimal configuration", () => {

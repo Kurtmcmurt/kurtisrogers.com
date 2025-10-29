@@ -1,6 +1,7 @@
-import { Dynamic, For } from "solid-js/web";
+import { Dynamic, For, Show } from "solid-js/web";
 import { JSX } from "solid-js";
 import type { InputElements } from "@/types/forms";
+import type { Heading } from "@/types/branding";
 import "./style.css";
 
 type Inputs = {
@@ -19,8 +20,8 @@ type FormConfig = {
 };
 
 interface Props {
-  title?: string;
-  byline?: string;
+  title?: Heading;
+  byline?: Heading;
   formConfig: FormConfig;
   inputs: Inputs[];
 }
@@ -44,9 +45,23 @@ export const FormInputLabelWrapper = ({ children, element, name }: FormInputLabe
 export default function Form({ title, byline, inputs, formConfig }: Props) {
   return (
     <form {...formConfig}>
-      <h1>{title}</h1>
-      <h2>{byline}</h2>
-      <For each={inputs} fallback={<div>Loading...</div>}>
+      <Show when={title}>
+        <Dynamic
+          component={`h${typeof title === "string" ? "1" : title?.headingLevel}`}
+          class={typeof title === "string" ? "text-size-h1" : title?.headingClass}
+        >
+          {typeof title === "string" ? title : title?.text}
+        </Dynamic>
+      </Show>
+      <Show when={byline}>
+        <Dynamic
+          component={`h${typeof byline === "string" ? "1" : byline?.headingLevel}`}
+          class={typeof byline === "string" ? "text-size-h1" : byline?.headingClass}
+        >
+          {typeof byline === "string" ? byline : byline?.text}
+        </Dynamic>
+      </Show>
+      <For each={inputs}>
         {item => {
           return (
             <FormInputLabelWrapper element={item.element} name={item.name}>
