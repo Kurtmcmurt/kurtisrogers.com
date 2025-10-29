@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Footer /> > has a link to my linkedin profile 1`] = `
+<span
+  class="sr-only"
+>
+  A link to my LinkedIn profile (opens a new tab)
+</span>
+`;
+
+exports[`<Footer /> > has a link to the repo for the website 1`] = `
+<span
+  class="sr-only"
+>
+  A link to the repo for this website (opens a new tab)
+</span>
+`;

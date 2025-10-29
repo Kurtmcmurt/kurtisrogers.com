@@ -14,7 +14,7 @@ type Item = {
 
 type Props = {
   menuItems?: Item[];
-  children?: JSX.Element[];
+  children?: JSX.Element;
 };
 
 export default function Header({ children }: Readonly<Props>) {

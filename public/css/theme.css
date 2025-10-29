@@ -4,6 +4,7 @@ html {
 
 html, body {
   background: var(--brand-black);
+  color: var(--brand-white);
   margin: 0px;
   scroll-behavior: smooth;
 }

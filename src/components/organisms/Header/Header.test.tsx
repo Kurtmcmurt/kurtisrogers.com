@@ -1,31 +1,53 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { render, waitFor } from "@solidjs/testing-library";
 import Header from ".";
 import { describe, it, expect } from "vitest";
-import { userEvent } from "vitest/browser";
+import { JSX } from "solid-js";
 
-vi.mock(import("@solidjs/router"), async (importOriginal) => {
-  const actual = await importOriginal()
+vi.mock("@solidjs/router", async importOriginal => {
+  const actual = (await importOriginal()) ?? {};
   return {
     ...actual,
-    A: (props) => <a {...props} data-testid="mock-link">{props.children}</a>
-  }
-})
+    A: (props: any) => {
+      const { children, ...rest } = props;
+      return (
+        <a {...rest} data-testid="mock-link">
+          {children}
+        </a>
+      );
+    }
+  };
+});
 
 vi.mock("@/components/molecules/Navigation", () => {
   return {
-    default: (props) => <nav class={props.classes}>{props.items.map(item => <a href={item.link}>{item.text}</a>)}</nav>,
+    default: (props: { classes: string | undefined; items: any[] }) => (
+      <nav class={props.classes}>
+        {props.items.map(item => (
+          <a href={item.link}>{item.text}</a>
+        ))}
+      </nav>
+    )
   };
 });
 
 vi.mock("@/components/atoms/Skiplink", () => {
   return {
-    default: (props) => <a href={`#${props.id}`} class={props.visibleOnFocusOnly ? "visible-on-focus" : ""}>{props.name}</a>,
+    default: (props: {
+      id: any;
+      visibleOnFocusOnly: any;
+      name: number | boolean | Node | JSX.ArrayElement | (string & {}) | null | undefined;
+    }) => (
+      <a href={`#${props.id}`} class={props.visibleOnFocusOnly ? "visible-on-focus" : ""}>
+        {props.name}
+      </a>
+    )
   };
 });
 
 vi.mock("@/components/atoms/Logo", () => {
   return {
-    default: () => <div>Logo</div>,
+    default: () => <div>Logo</div>
   };
 });
 
@@ -40,7 +62,7 @@ describe("Header Component", () => {
 
     await menuButton.click();
 
-    const getNavLink = (route) => getByText(`${route}`);
+    const getNavLink = (route: string) => getByText(`${route}`);
 
     await waitFor(() => {
       expect(getNavLink("Home")).toBeInTheDocument();
@@ -58,9 +80,12 @@ describe("Header Component", () => {
   });
 
   it("renders children elements", () => {
-    const { getByText } = render(() => <Header><div>Child Content</div></Header>);
+    const { getByText } = render(() => (
+      <Header>
+        <div>Child Content</div>
+      </Header>
+    ));
 
-    // Check if the child content is rendered
     expect(getByText("Child Content")).toBeInTheDocument();
   });
 });
